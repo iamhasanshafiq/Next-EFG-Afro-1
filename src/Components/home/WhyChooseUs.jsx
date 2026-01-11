@@ -34,7 +34,7 @@ export default function WhyChooseUs() {
       borderColor: "border-orange-400",
       bgColor: "bg-orange-50",
       iconBg: "bg-orange-500",
-      image: "/shipping-cargo-containers.jpg",
+      image: "/images/exportyd.jpg",
       heading: "Fast & Secure Global Shipping",
       content:
         "We provide express shipping options with real-time tracking to ensure your African products reach you fresh and on time, no matter where you are in the world.",
@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
       borderColor: "border-orange-400",
       bgColor: "bg-orange-50",
       iconBg: "bg-orange-500",
-      image: "/team-collaboration.jpg",
+      image: "/images/teamwork-2-1024x702.webp",
       heading: "Your Satisfaction is Our Promise",
       content:
         "We stand behind every product we sell. Our commitment to excellence means you can shop with confidence, knowing we'll make things right if you're not completely satisfied.",

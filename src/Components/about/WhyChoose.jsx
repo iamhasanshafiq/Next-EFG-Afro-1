@@ -27,7 +27,7 @@ function WhyChoose() {
       title: "Integrated Logistics Network",
       desc:
         "From farm to doorstep, our logistics ensure fast and safe global delivery.",
-      image: "/images/glgofficial_cover.jfif",
+      image: "/images/glgofficial_cover.jpg",
       label: "Global Logistics",
       icon: Truck,
       points: [

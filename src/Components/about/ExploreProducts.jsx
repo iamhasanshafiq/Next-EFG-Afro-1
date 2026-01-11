@@ -5,10 +5,10 @@ import { Eye } from "lucide-react"
 function ExploreProducts() {
   return (
     <div className="flex justify-center">
-      <div className="max-w-[1200px] w-full my-10 h-auto">
+      <div className="max-w-300 w-full my-10 h-auto">
         <div
-          className=" relative w-[90%] md:w-[100%] h-auto p-6  bg-green-900  md:bg-[url('/src/images/photo-1614531341773-3bff8b7cb3fc.jfif')]  bg-cover bg-center  rounded-3xl  overflow-hidden">
-          <div className="absolute inset-0 bg-green-900/60 rounded-3xl flex items-center justify-center"></div>
+          className=" relative w-[90%] md:w-[100%] h-auto p-6  bg-green-900  md:bg-[url('/images/photo-1614531341773-3bff8b7cb3fc.jfif')]  bg-cover bg-center  rounded-3xl  overflow-hidden">
+          <div className="absolute inset-0 bg-green-900/70 rounded-3xl flex items-center justify-center"></div>
           <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start justify-between m-auto h-60 md:h-50 gap-4 md:gap-0 px-10">
             <div className="w-full h-full md:w-2/3 text-start md:text-left flex flex-col items-start justify-center">
               <h1 className="text-white text-2xl md:text-3xl font-bold">
