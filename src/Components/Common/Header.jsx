@@ -40,7 +40,7 @@ export default function Header() {
 
           {/* LOGO */}
           <img
-            src="/image/logo.png"
+            src="/images/logo.png"
             alt="EFG Logo"
             className="w-16 h-12 object-contain"
           />
@@ -53,11 +53,10 @@ export default function Header() {
                 <li key={item.path}>
                   <Link
                     href={item.path}
-                    className={`px-4 py-2 rounded-full transition ${
-                      isActive
-                        ? "bg-green-100 text-green-700 font-semibold"
-                        : "hover:bg-green-50 hover:text-green-700"
-                    }`}
+                    className={`px-4 py-2 rounded-full transition ${isActive
+                      ? "bg-green-100 text-green-700 font-semibold"
+                      : "hover:bg-green-50 hover:text-green-700"
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -135,7 +134,7 @@ export default function Header() {
 
             {/* Logo */}
             <img
-              src="/image/logo.png"
+              src="/images/logo.png"
               alt="logo"
               className="w-16 mx-auto mb-4"
             />
@@ -149,11 +148,10 @@ export default function Header() {
                     key={item.path}
                     href={item.path}
                     onClick={() => setMobileOpen(false)}
-                    className={`py-3 rounded-xl text-center font-medium ${
-                      isActive
-                        ? "bg-green-100 text-green-700"
-                        : "bg-gray-50 hover:bg-green-50"
-                    }`}
+                    className={`py-3 rounded-xl text-center font-medium ${isActive
+                      ? "bg-green-100 text-green-700"
+                      : "bg-gray-50 hover:bg-green-50"
+                      }`}
                   >
                     {item.name}
                   </Link>

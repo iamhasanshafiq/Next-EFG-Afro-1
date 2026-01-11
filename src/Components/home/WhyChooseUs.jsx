@@ -15,7 +15,7 @@ export default function WhyChooseUs() {
       borderColor: "border-orange-400",
       bgColor: "bg-orange-50",
       iconBg: "bg-orange-500",
-      image: "/fresh-vegetables-in-wooden-crate.jpg",
+      image: "/images/Veg-basket-1024x673.jpeg.webp",
       heading: "Healthy Food is The Key to Your Good Mood",
       content:
         "Our organic products are carefully selected from certified farms across Africa. Each product undergoes rigorous quality testing to ensure you receive only the finest African produce.",
@@ -90,19 +90,17 @@ export default function WhyChooseUs() {
                 <button
                   key={index}
                   onClick={() => setSelectedFeature(index)}
-                  className={`w-full text-left rounded-2xl p-6 border-2 transition-all duration-300 ${
-                    selectedFeature === index
-                      ? `${feature.borderColor} ${feature.bgColor} shadow-lg scale-105`
-                      : "border-gray-200 bg-white hover:shadow-md"
-                  }`}
+                  className={`w-full text-left rounded-2xl p-6 border-2 transition-all duration-300 ${selectedFeature === index
+                    ? `${feature.borderColor} ${feature.bgColor} shadow-lg scale-105`
+                    : "border-gray-200 bg-white hover:shadow-md"
+                    }`}
                 >
                   <div className="flex items-start gap-4">
                     <div
-                      className={`w-14 h-14 rounded-lg ${
-                        selectedFeature === index
-                          ? feature.iconBg
-                          : "bg-gray-200"
-                      } flex items-center justify-center text-white text-2xl`}
+                      className={`w-14 h-14 rounded-lg ${selectedFeature === index
+                        ? feature.iconBg
+                        : "bg-gray-200"
+                        } flex items-center justify-center text-white text-2xl`}
                     >
                       {feature.icon}
                     </div>

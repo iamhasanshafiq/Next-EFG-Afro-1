@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {Mail} from "lucide-react";
+import { Mail } from "lucide-react";
 export default function CategoriesProduct({ categories = [], products = [] }) {
   const [activeCategory, setActiveCategory] = useState("All");
   // Filter products based on selected category

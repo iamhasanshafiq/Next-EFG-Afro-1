@@ -30,23 +30,23 @@ function Footer() {
       <div
         className="relative w-full"
         style={{
-          backgroundImage: "url('/image/footerImage.png')",
+          backgroundImage: "url('/images/footerImage.png')",
           backgroundRepeat: "repeat",
           backgroundSize: "auto",
         }}
       >
 
-        <div className="absolute inset-0 bg-[#FAF5EB]/[0.92]" />
+        <div className="absolute inset-0 bg-[#FAF5EB]/92" />
 
         <div className="relative z-10 w-full">
-          <div className="h-[3px] w-full bg-[#D67C2A]" />
+          <div className="h-0.75 w-full bg-[#D67C2A]" />
 
           <div className="w-full">
             <div className="max-w-7xl mx-auto px-6 py-16">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
                 <div className="flex flex-col gap-6">
                   <img
-                    src="/image/logo.png"
+                    src="/images/logo.png"
                     alt="EFG Afro Market"
                     className="h-16 w-fit"
                   />
@@ -79,7 +79,7 @@ function Footer() {
                 <div className="md:justify-self-end max-w-md w-full">
                   <h3 className="text-lg font-bold text-[#0B4E3C] mb-6 relative inline-block">
                     Contact Us
-                    <span className="absolute left-0 -bottom-2 h-[3px] w-10 bg-[#D67C2A]" />
+                    <span className="absolute left-0 -bottom-2 h-0.75 w-10 bg-[#D67C2A]" />
                   </h3>
 
                   <div className="space-y-6">
@@ -142,7 +142,7 @@ function SocialIcon({ children, label }) {
 function ContactRow({ icon, text }) {
   return (
     <div className="flex items-start gap-4 text-gray-700">
-      <div className="mt-[2px] text-[#D67C2A]">{icon}</div>
+      <div className="mt-0.5 text-[#D67C2A]">{icon}</div>
       <p className="leading-7">{text}</p>
     </div>
   );

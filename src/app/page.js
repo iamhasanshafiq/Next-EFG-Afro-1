@@ -35,16 +35,16 @@ function Home() {
         highlight="African Excellence"
         description="Connecting global markets with premium African products."
         badgeText="100% Authentic African Products"
-          badgeIcon="shield"  // ✅ related authentic icon
+        badgeIcon="shield"  // ✅ related authentic icon
         btnPrimary="Explore Products"
         btnSecondary="Learn More"
         showImages={true}
         showStats={true}
         images={{
-          left: "/image/bag.png",
-          right: "/image/mango.png",
-          bottomLeft: "/image/gold.png",
-          bottomRight: "/image/coffee.png",
+          left: "/images/bag.png",
+          right: "/images/mango.png",
+          bottomLeft: "/images/gold.png",
+          bottomRight: "/images/coffee.png",
         }}
       />
 

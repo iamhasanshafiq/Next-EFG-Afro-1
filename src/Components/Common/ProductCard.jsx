@@ -84,9 +84,8 @@ function InquiryDialog({ open, onClose, product }) {
     // Prefill message with product name
     setForm((prev) => ({
       ...prev,
-      message: `I am interested in ${
-        product?.name || "this product"
-      }. Please send me more information about pricing, availability, and shipping options.`,
+      message: `I am interested in ${product?.name || "this product"
+        }. Please send me more information about pricing, availability, and shipping options.`,
     }));
 
     const onKeyDown = (e) => {
@@ -205,11 +204,10 @@ function InquiryDialog({ open, onClose, product }) {
           {/* status */}
           {(formError || formSuccess) && (
             <div
-              className={`mb-5 rounded-xl px-4 py-3 text-sm font-semibold ${
-                formError
-                  ? "bg-red-50 text-red-700 border border-red-200"
-                  : "bg-green-50 text-green-700 border border-green-200"
-              }`}
+              className={`mb-5 rounded-xl px-4 py-3 text-sm font-semibold ${formError
+                ? "bg-red-50 text-red-700 border border-red-200"
+                : "bg-green-50 text-green-700 border border-green-200"
+                }`}
             >
               {formError || formSuccess}
             </div>

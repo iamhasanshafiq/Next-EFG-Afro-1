@@ -9,48 +9,48 @@ function WhyChoose() {
   const [imageScale, setImageScale] = useState(1);
 
   const TABS = {
-  technology: {
-    title: "Advanced Technology Stack",
-    desc:
-      "Our platform leverages AI, blockchain, and IoT technologies to provide real-time tracking and secure transactions.",
-    image: "/images/The-10-Biggest-Technology-Trends-That-Will-Transform-The-Next-Decade.jpg",
-    label: "Advanced Technology",
-    icon: Settings,
-    points: [
-      "AI-powered quality verification",
-      "Blockchain-secured transactions",
-      "IoT-enabled supply chain tracking",
-      "Mobile-first design",
-    ],
-  },
-  logistics: {
-    title: "Integrated Logistics Network",
-    desc:
-      "From farm to doorstep, our logistics ensure fast and safe global delivery.",
-    image: "/images/glgofficial_cover.jfif",
-    label: "Global Logistics",
-    icon: Truck,
-    points: [
-      "Cold-chain facilities",
-      "Express shipping",
-      "Customs clearance",
-      "Real-time tracking",
-    ],
-  },
-  support: {
-    title: "Dedicated Support System",
-    desc: "Our multilingual team provides 24/7 assistance worldwide.",
-    image: "/images/360_F_542604531_DGyPu4WuqiUykOtt6DwadjlRmgOzQaM5.jpg",
-    label: "Dedicated Support",
-    icon: Headset,
-    points: [
-      "24/7 customer support",
-      "Multilingual help",
-      "Producer training",
-      "Market insights",
-    ],
-  },
-};
+    technology: {
+      title: "Advanced Technology Stack",
+      desc:
+        "Our platform leverages AI, blockchain, and IoT technologies to provide real-time tracking and secure transactions.",
+      image: "/images/The-10-Biggest-Technology-Trends-That-Will-Transform-The-Next-Decade.jpg",
+      label: "Advanced Technology",
+      icon: Settings,
+      points: [
+        "AI-powered quality verification",
+        "Blockchain-secured transactions",
+        "IoT-enabled supply chain tracking",
+        "Mobile-first design",
+      ],
+    },
+    logistics: {
+      title: "Integrated Logistics Network",
+      desc:
+        "From farm to doorstep, our logistics ensure fast and safe global delivery.",
+      image: "/images/glgofficial_cover.jfif",
+      label: "Global Logistics",
+      icon: Truck,
+      points: [
+        "Cold-chain facilities",
+        "Express shipping",
+        "Customs clearance",
+        "Real-time tracking",
+      ],
+    },
+    support: {
+      title: "Dedicated Support System",
+      desc: "Our multilingual team provides 24/7 assistance worldwide.",
+      image: "/images/360_F_542604531_DGyPu4WuqiUykOtt6DwadjlRmgOzQaM5.jpg",
+      label: "Dedicated Support",
+      icon: Headset,
+      points: [
+        "24/7 customer support",
+        "Multilingual help",
+        "Producer training",
+        "Market insights",
+      ],
+    },
+  };
 
 
   const current = TABS[activeTab];
@@ -96,10 +96,9 @@ function WhyChoose() {
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300
-                  ${
-                    activeTab === tab
-                      ? "bg-green-900 text-white scale-105"
-                      : "border text-gray-500 hover:bg-green-900 hover:text-white"
+                  ${activeTab === tab
+                    ? "bg-green-900 text-white scale-105"
+                    : "border text-gray-500 hover:bg-green-900 hover:text-white"
                   }`}
               >
                 {tab === "technology" && <Settings />}
@@ -126,7 +125,7 @@ function WhyChoose() {
 
         {/* RIGHT IMAGE */}
         <div className="w-full md:w-[40%] relative flex justify-center">
-          
+
           {/* IMAGE CONTAINER (FIXED + ROUNDED) */}
           <div
             className="w-full h-[400px] overflow-hidden rounded-2xl transition-transform duration-500"

@@ -142,7 +142,7 @@ const HeroSection = ({
                 >
                   <div className="bg-yellow-600 p-4 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-green-100">
                     {/* <Shield className="w-16 h-16 text-white" strokeWidth={1.5} /> */}
-                   <ShieldCheck className="w-16 h-16 text-white" />
+                    <ShieldCheck className="w-16 h-16 text-white" />
 
 
                   </div>
