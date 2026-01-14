@@ -34,7 +34,7 @@ function Footer() {
 
   return (
     <footer className="w-full m-0 p-0">
-      <Container>
+      
       <div
         className="relative w-full"
         style={{
@@ -139,7 +139,7 @@ function Footer() {
           <ChevronUp size={22} />
         </button>
       )}
-      </Container>
+      
     </footer>
   );
 }
@@ -153,12 +153,13 @@ function SocialIcon({ children, label }) {
     <a
       href="#"
       aria-label={label}
-      className="h-10 w-10 rounded-full border border-[#0B4E3C]/40 bg-white/50 backdrop-blur flex items-center justify-center text-[#0B4E3C] hover:bg-white transition cursor-pointer"
+      className="h-10 w-10 rounded-full border border-[#0B4E3C]/40 bg-white/50 backdrop-blur flex items-center justify-center text-[#0B4E3C] transition-all duration-300 ease-out hover:-translate-y-1 hover:text-white hover:bg-gradient-to-br hover:from-green-900 hover:to-orange-400/80 shadow-sm hover:shadow-lg cursor-pointer"
     >
       {children}
     </a>
   );
 }
+
 
 function ContactRow({ icon, text, isRTL }) {
   return (
