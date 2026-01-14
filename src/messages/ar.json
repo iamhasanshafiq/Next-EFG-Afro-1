@@ -1,0 +1,574 @@
+{
+  "Header": {
+    "Home": "الرئيسية",
+    "AboutUs": "من نحن",
+    "Products": "المنتجات",
+    "Services": "الخدمات",
+    "Blog": "المدونة",
+    "Contact": "اتصل بنا",
+    "LoginRegister": "تسجيل الدخول"
+  },
+  "Home": {
+    "Title": "بوابتك إلى",
+    "highlight": "التميز الأفريقي",
+    "Description": "ربط الأسواق العالمية بالمنتجات الزراعية الأفريقية الفاخرة والموارد الطبيعية والكنوز المصنوعة يدوياً.",
+    "BadgeText": "100% منتجات أفريقية أصيلة",
+    "BtnPrimary": "استكشف المنتجات",
+    "BtnSecondary": "تعرف أكثر"
+  },
+  "Stats": {
+    "Products": "منتج",
+    "Countries": "دولة",
+    "Customers": "عميل راضي"
+  },
+  "ExploreSection": {
+    "EXPLORE": "استكشف",
+    "PopularCategories": "الفئات الشائعة",
+    "EXPLOREDescription": "اكتشف مجموعتنا الواسعة من المنتجات الأفريقية الأصيلة"
+  },
+  "ProductSection": {
+    "PRODUCTS": "المنتجات",
+    "RecommendedForYou": "موصى به لك",
+    "PRODUCTSDescription": "منتجات مختارة يدوياً بناءً على الطلب العالمي"
+  },
+  "WhyChooseUs": {
+    "WHYCHOOSEUS": "لماذا تختارنا",
+    "WhyChooseEFGAfroMarket": "لماذا تختار ماركت EFG أفرو ",
+    "OrganicProducts": "منتجات عضوية %100",
+    "OrganicProductsDescription": "منتجات عضوية معتمدة مباشرة من المزارع الأفريقية",
+    "ExpressGlobalDelivery": "التوصيل العالمي السريع",
+    "ExpressGlobalDeliveryDescription": "شحن سريع وآمن في جميع أنحاء العالم",
+    "SatisfactionGuarantee": "ضمان الرضا 100%",
+    "SatisfactionGuaranteeDescription": "رضاكم هو أولويتنا القصوى",
+    "OrganicProductsTitle": "الطعام الصحي هو مفتاح مزاجك الجيد",
+    "OrganicProductsContent1": "يتم اختيار منتجاتنا العضوية بعناية من المزارع المعتمدة في جميع أنحاء أفريقيا. يخضع كل منتج لاختبارات جودة صارمة لضمان حصولك على أجود المنتجات الأفريقية فقط.",
+    "OrganicProductsContent2": "مزارع عضوية معتمدة في جميع أنحاء أفريقيا",
+    "OrganicProductsContent3": "معايير اختبار جودة صارمة",
+    "OrganicProductsContent4": "مباشرة من المزرعة إلى السوق",
+    "OrganicProductsContent5": "ممارسات زراعية مستدامة",
+    "ExpressGlobalDeliveryTitle": "شحن عالمي سريع وآمن",
+    "ExpressGlobalDeliveryContent1": "نوفر خيارات الشحن السريع مع التتبع في الوقت الفعلي لضمان وصول منتجاتك الأفريقية إليك طازجة وفي الوقت المحدد، بغض النظر عن مكانك في العالم.",
+    "ExpressGlobalDeliveryContent2": "خيارات الشحن السريع متاحة",
+    "ExpressGlobalDeliveryContent3": "التتبع في الوقت الفعلي لجميع الطلبات",
+    "ExpressGlobalDeliveryContent4": "النقل المتحكم في درجة الحرارة",
+    "ExpressGlobalDeliveryContent5": "تغليف آمن مضمون",
+    "SatisfactionGuaranteeTitle": "رضاكم هو وعدنا",
+    "SatisfactionGuaranteeContent1": "نقف وراء كل منتج نبيعه. التزامنا بالتميز يعني أنه يمكنك التسوق بثقة، مع العلم أننا سنصلح الأمور إذا لم تكن راضيًا تمامًا.",
+    "SatisfactionGuaranteeContent2": "ضمان استرداد الأموال لمدة 30 يومًا",
+    "SatisfactionGuaranteeContent3": "دعم العملاء 24/7",
+    "SatisfactionGuaranteeContent4": "ضمان الجودة على كل طلب",
+    "SatisfactionGuaranteeContent5": "إرجاع وتبديل بدون متاعب"
+  },
+  "ExcellenceSection": {
+    "OUREXCELLENCE": "تميزنا",
+    "ComprehensiveServicesActivities": "الخدمات والأنشطة الشاملة",
+    "OUREXCELLENCEDescription": "اكتشف مجموعتنا الكاملة من الخدمات المهنية",
+    "Card1Title": "منصة السوق العالمية",
+    "Card1Description": "قائمة المنتجات عبر الإنترنت وفهرسة السلع الأفريقية والسلع الثقافية والموارد الطبيعية.",
+    "Card2Title": "إدارة سلسلة التوريد",
+    "Card2Description": "تصميم سلسلة التوريد الكاملة، من بوابة المزرعة إلى المشتري النهائي مع التتبع في الوقت الفعلي.",
+    "Card3Title": "تكامل التكنولوجيا الزراعية",
+    "Card3Description": "ممارسات الزراعة الذكية من خلال الأدوات الرقمية وأجهزة الاستشعار وخدمات الاستشارة المحمولة.",
+    "Card4Title": "أنظمة الدفع الآمنة",
+    "Card4Description": "بوابة دفع متعددة العملات مع التحقق من المعاملات المدعومة بتقنية البلوك تشين.",
+    "Card5Title": "تسهيل التصدير والاستيراد",
+    "Card5Description": "التخليص الجمركي والتوثيق واستشارات الوصول إلى السوق الدولي.",
+    "Card6Title": "استكشف جميع الخدمات",
+    "Card6Description": "اكتشف مجموعتنا الكاملة من الخدمات والأنشطة الشاملة مع رؤى مفصلة"
+  },
+  "NewsLetter": {
+    "NewsLetterTitle": "أفرو ماركت EFG لا تفوت تحديثات",
+    "OUREXCELLENCEDescription": "ابقَ على اطلاع بآخر المنتجات والعروض ورؤى السوق",
+    "NewsLetterPlaceHolder": "أدخل عنوان بريدك الإلكتروني",
+    "Send": "إرسال",
+    "WeDeliver": "نحن نوصل",
+    "FRESH": "طازج %100",
+    "HealthyProducts": "منتج صحي",
+    "QUALITYFIRST": "الجودة أولاً",
+    "ECOFRIENDLY": "صديق للبيئة",
+    "FARMFOOD": "طعام المزرعة",
+    "NATURALFOOD": "طعام طبيعي"
+  },
+  "About": {
+    "AboutTitle": "ربط التراث الغني لأفريقيا بالفرص العالمية",
+    "AboutHighlight": "",
+    "AboutDescription": "اكتشف رحلتنا ومهمتنا ورؤيتنا بينما نربط الصناعات الأفريقية التقليدية بالتجارة الرقمية الحديثة",
+    "AboutBadgeText": "حول EFG أفرو ماركت"
+  },
+  "OurStory": {
+    "OurStory": "قصتنا",
+    "OurStoryTitle": "ربط أفريقيا",
+    "OurStoryTitle1": " بالتجارة الرقمية",
+    "OurStoryHighlight": "الصناعات التقليدية",
+    "OurStoryDescription": "شركة EFG أفرو ماركت هي بوابة رقمية ديناميكية تابعة لمجموعة EFG (مؤسسة جيل المستقبل)، تم إنشاؤها لربط مجتمعات أفريقيا ومواردها الطبيعية ومنتجاتها بالسوق الدولي.",
+    "DigitalGatewaytoAfrica": "البوابة الرقمية لأفريقيا",
+    "EmpoweringLocalProducers": "تمكين المنتجين المحليين",
+    "FutureReadyCommerce": "التجارة المستقبلية",
+    "LetsTalk": "دعنا نتحدث",
+    "LearnMore": "تعرّف أكثر",
+    "ConnectingAfricatotheWorld": "ربط أفريقيا بالعالم",
+    "Empoweringcommunitiesthrough": "تمكين المجتمعات من خلال الابتكار الرقمي",
+    "Producers": "1000+",
+    "ProducersHighlight": " منتج أفريقي",
+    "Countries": "50+",
+    "CountriesHighlight": "دولة تم الوصول إليها",
+    "Success": "98%",
+    "SuccessHighlight": "معدل النجاح"
+  },
+  "OurPurpose": {
+    "OurPurpose": "غايتُنا",
+    "OurPurposeTitle": "الرسالة والرؤية",
+    "OurPurposeDescription": "دفع التحوّل الاقتصادي المستدام في جميع أنحاء أفريقيا",
+    "OurMission": "مهمتنا",
+    "OurMissionDescription": "تمكين المنتجين الأفارقة رقمياً، وتبسيط التجارة العالمية، وخلق فرص اقتصادية مستدامة من خلال تقديم منصة متكاملة للمشترين الدوليين وشركاء التنمية.",
+    "DigitallyempowerAfricanproducers": "تمكين المنتجين الأفارقة رقمياً",
+    "Simplifyglobaltradeprocesses": "تبسيط عمليات التجارة العالمية",
+    "Createsustainableeconomicopportunities": "خلق فرص اقتصادية مستدامة",
+    "Connectinternationalbuyersseamlessly": "ربط المشترين الدوليين بسلاسة",
+    "OurVision": "رؤيتُنا",
+    "OurVisionDescription": "أن نصبح المنصة الرقمية الرائدة في أفريقيا الموجّهة للتصدير والخدمات اللوجستية، مع إبراز ثروات القارة ودفع التحوّل الاقتصادي الشامل.",
+    "MarketLeadership": "الريادة في السوق",
+    "MarketLeadershipDescription": "المنصة الأولى للتصدير في أفريقيا",
+    "ResourceShowcase": "عرض الموارد",
+    "ResourceShowcaseDescription": "إبراز التراث الغني لأفريقيا",
+    "InclusiveGrowth": "النمو الشامل",
+    "InclusiveGrowthDescription": "تحوّل اقتصادي للجميع"
+  },
+  "OurFoundation": {
+    "OurFoundation": "أساسُنا",
+    "OurFoundationTitle": "القيم الأساسية",
+    "OurFoundationDescription": "المبادئ التي توجّه كل ما نقوم به",
+    "Authenticity": "الأصالة",
+    "AuthenticityDescription": "نضمن أن تكون جميع المنتجات أفريقية أصيلة، مع الحفاظ على التراث الحقيقي والجودة التي تميّزها.",
+    "Sustainability": "الاستدامة",
+    "SustainabilityDescription": "المسؤولية البيئية والممارسات المستدامة في صميم عملياتنا وشراكاتنا.",
+    "Integrity": "النزاهة",
+    "IntegrityDescription": "تعاملات شفافة وصادقة مع جميع أصحاب المصلحة، بناء الثقة من خلال الممارسات التجارية المتسقة والأخلاقية.",
+    "Innovation": "الابتكار",
+    "InnovationDescription": "الاستفادة من التكنولوجيا المتقدمة لإحداث ثورة في التجارة والأعمال الأفريقية التقليدية.",
+    "Community": "المجتمع",
+    "CommunityDescription": "تمكين المجتمعات المحلية وتعزيز النمو الشامل عبر القارة الأفريقية.",
+    "Excellence": "التميّز",
+    "ExcellenceDescription": "الالتزام بتقديم منتجات وخدمات عالية الجودة تتجاوز المعايير العالمية.",
+    "Collaboration": "التعاون",
+    "CollaborationDescription": "بناء شراكات قوية والعمل معاً لتحقيق أهداف مشتركة لتنمية أفريقيا.",
+    "Passion": "الشغف",
+    "PassionDescription": "مدفوعون بحب حقيقي لأفريقيا والتفاني في إبراز جمالها وإمكاناتها للعالم."
+  },
+  "WhyChoose": {
+    "WhyChoose": "لماذا تختارنا",
+    "WhyChooseTitle": "ما الذي يجعلنا",
+    "WhyChooseHighlight": "مختلفين",
+    "WhyChooseDescription": "لسنا مجرد سوق آخر. نحن نظام بيئي متكامل مصمم خصيصًا للتجارة الأفريقية، يجمع بين القيم التقليدية والتكنولوجيا الحديثة.",
+    "SecurePlatform": "منصة آمنة",
+    "ISOCertified": "معتمد ISO",
+    "Available": "متاح 24/7",
+    "Technology": "التكنولوجيا",
+    "TechnologyTitle": "مجموعة التكنولوجيا المتقدمة",
+    "TechnologyDescription": "تستفيد منصتنا من الذكاء الاصطناعي وبلوك تشين وإنترنت الأشياء للتتبع الفوري وضمان الجودة وتنفيذ معاملات سلسة.",
+    "AIpoweredqualityverification": "التحقق من الجودة بالذكاء الاصطناعي",
+    "Blockchainsecuredtransactions": "معاملات مؤمّنة بتقنية البلوك تشين",
+    "IoTenabledsupplychaintracking": "تتبع سلسلة التوريد بتقنية إنترنت الأشياء",
+    "Mobilefirstdesign": "تصميم يركز على الهاتف المحمول لسهولة الوصول",
+    "AdvancedTechnology": "التكنولوجيا المتقدمة",
+    "Logistics": "اللوجستيات",
+    "LogisticsTitle": "شبكة لوجستيات متكاملة",
+    "LogisticsDescription": "من المزرعة إلى باب المنزل، يضمن حلنا اللوجستي الشامل وصول المنتجات إلى الأسواق العالمية بسرعة وفي حالة مثالية.",
+    "Coldchainfacilities": "مرافق السلسلة الباردة",
+    "Expressshipping": "شراكات الشحن السريع",
+    "Customsclearance": "مساعدة في التخليص الجمركي",
+    "Realtimetracking": "تتبع في الوقت الفعلي",
+    "GlobalLogistics": "اللوجستيات العالمية",
+    "Support": "الدعم",
+    "SupportTitle": "نظام دعم مخصص",
+    "SupportDescription": "يوفر فريقنا متعدد اللغات دعماً على مدار الساعة طوال أيام الأسبوع لضمان العمليات السلسة للمنتجين والمشترين في جميع أنحاء العالم.",
+    "customersupport": "دعم العملاء على مدار الساعة",
+    "Multilingualhelp": "مساعدة متعددة اللغات",
+    "Producertraining": "برامج تدريب المنتجين",
+    "Marketinsights": "تقارير رؤى السوق",
+    "DedicatedSupport": "الدعم المخصص"
+  },
+  "ExploreProducts": {
+    "ExploreProductsTitle": "هل أنت مستعد للانضمام إلى مهمتنا؟",
+    "ExploreProductsDescription": "سواء كنت منتجًا أفريقيًا تتطلع للوصول إلى الأسواق العالمية أو مشتريًا دوليًا يبحث عن منتجات أفريقية أصيلة، نحن هنا للمساعدة.",
+    "ExploreProductsBtn": "استكشف المنتجات"
+  },
+  "Products": {
+    "ProductsTitle": "اكتشف المنتجات الأفريقية الأصيلة",
+    "Productshighlight": "والموارد",
+    "ProductsDescription": "استكشف سوقنا الشامل الذي يضم أجود المنتجات الزراعية والموارد الطبيعية والكنوز المصنوعة يدوياً من جميع أنحاء أفريقيا",
+    "ProductsbadgeText": "منتجات أفريقية فاخرة",
+    "ProductsbtnPrimary": "استكشف المنتجات",
+    "ProductsbtnSecondary": "اعرف المزيد"
+  },
+  "OurProducts": {
+    "ProductsBadge": "المنتجات",
+    "ProductsTitle": "منتجاتنا",
+    "ProductsShowing": "عرض",
+    "ProductsOf": "من",
+    "ProductsError": "فشل في تحميل المنتجات",
+    "ProductsOriginAfrica": "أفريقيا",
+    "ProductsProducts": "منتج",
+    "ProductsLoadingProducts": "جارٍ تحميل المنتجات...",
+    "ProductsSearchPlaceholder": "البحث عن المنتجات...",
+    "ProductsReset": "إعادة تعيين الكل ",
+    "ProductsAll": "الكل",
+    "ProductsPrev": "السابق",
+    "ProductsNext": "التالي",
+    "ProductsPage": "صفحة",
+    "ProductsOfPages": "من"
+  },
+  "ExploreCategories": {
+    "ExploreCategoriesBadge": "استكشف الفئات",
+    "ExploreCategoriesTitle": "فئات المنتجات المميزة",
+    "ExploreCategoriesDescription": "اكتشف فئات المنتجات الأكثر شعبية من جميع أنحاء أفريقيا",
+    "Agriculture": {
+      "AgricultureTitle": "المنتجات الزراعية",
+      "AgricultureDescription": "محاصيل ومنتجات زراعية فاخرة من جميع أنحاء أفريقيا",
+      "AgricultureProducts": "150+ منتج"
+    },
+    "Fruits": {
+      "FruitsTitle": "الفواكه الطازجة",
+      "FruitsDescription": "فواكه استوائية وغريبة من بساتين أفريقيا",
+      "FruitsProducts": "80+ منتج"
+    },
+    "Resources": {
+      "ResourcesTitle": "الموارد الطبيعية",
+      "ResourcesDescription": "معادن وموارد ثمينة من مناجم أفريقيا",
+      "ResourcesProducts": "45+ منتج"
+    },
+    "Crafts": {
+      "CraftsTitle": "الحرف والصناعات اليدوية",
+      "CraftsDescription": "عناصر مصنوعة يدويًا وفنون أفريقية تقليدية",
+      "CraftsProducts": "120+ منتج"
+    }
+  },
+  "productsNewsLetter": {
+    "productsNewsLetterTitle": "هل أنت مستعد لبدء التداول؟",
+    "productsNewsLetterDescription": "تواصل مع الموردين الأفارقة واكتشف منتجات أصلية لعملك. انضم إلى آلاف المشترين الراضين في جميع أنحاء العالم.",
+    "productsNewsLetterButton": "تعرّف أكثر"
+  },
+  "Services": {
+    "HeroTitle": "خدماتنا",
+    "HeroHighlight": "والحلول المهنية",
+    "HeroDescription": "تمكين الأعمال الأفريقية بالتكنولوجيا المتطورة، والدعم الشامل، والوصول إلى الأسواق العالمية. من حلول السوق إلى إدارة سلسلة التوريد، نحن نغطيك.",
+    "HeroBadgeText": "حلول الأعمال الشاملة"
+  },
+  "OurExpertise": {
+    "OurExpertiseBadge": "خبرتنا",
+    "OurExpertiseTitle": "خدمات الأعمال الأساسية",
+    "OurExpertiseDescription": "حلول شاملة مصممة لتسريع نموك.",
+    "Service1Title": "منصة السوق العالمية",
+    "Service1Description": "قائمة المنتجات عبر الإنترنت وفهرسة السلع الأفريقية والسلع الثقافية والموارد الطبيعية.",
+    "Service1One": "إدارة كتالوج المنتجات عبر الإنترنت",
+    "Service1Two": "البحث والتصفية المتقدمة",
+    "Service2Title": "إدارة سلسلة التوريد",
+    "Service2Description": "تصميم سلسلة التوريد الكاملة، من بوابة المزرعة إلى المشتري النهائي مع التتبع في الوقت الفعلي.",
+    "Service2One": "تحسين اللوجستية",
+    "Service2Two": "تتبع من المزرعة إلى السوق ",
+    "Service3Title": "تكامل التكنولوجيا الزراعية",
+    "Service3Description": "ممارسات الزراعة الذكية من خلال الأدوات الرقمية وأجهزة الاستشعار وخدمات الاستشارات.",
+    "Service3One": "نشر أجهزة استشعار إنترنت الأشياء",
+    "Service3Two": "أدوات الزراعة الدقيقة",
+    "Service4Title": "أنظمة الدفع الآمنة",
+    "Service4Description": "بوابة دفع متعددة العملات مع التحقق المدعوم بتقنية البلوك تشين.",
+    "Service4One": "دعم متعدد العملات",
+    "Service4Two": "التحقق من البلوك تشين",
+    "OurExpertiseButton": "تعرّف أكثر"
+  },
+  "SpecializedSolutionAlt": {
+    "Badge": "الحلول المتخصصة",
+    "Title": "الخدمات الإضافية",
+    "Description": "خدمات موسعة لدعم كل جانب من جوانب رحلة عملك",
+    "Service1Title": "تسهيل التصدير والاستيراد",
+    "Service1Feature1": "مساعدة التخليص الجمركي",
+    "Service1Feature2": "دعم التوثيق",
+    "Service1Feature3": "الامتثال الدولي",
+    "Service1Feature4": "إرشادات اللوائح التجارية",
+    "Service2Title": "أبحاث السوق والتحليلات",
+    "Service2Feature1": "تحليل اتجاهات السوق",
+    "Service2Feature2": "مراقبة الأسعار",
+    "Service2Feature3": "توقع الطلب",
+    "Service2Feature4": "الذكاء التنافسي",
+    "Service3Title": "التدريب والاستشارة",
+    "Service3Feature1": "تدريب التسويق الرقمي",
+    "Service3Feature2": "تطوير الأعمال",
+    "Service3Feature3": "تعليم معايير الجودة",
+    "Service3Feature4": "دعم اعتماد التكنولوجيا",
+    "Service4Title": "استشارات الاستدامة",
+    "Service4Feature1": "دعم الشهادات العضوية",
+    "Service4Feature2": "ممارسات الزراعة المستدامة",
+    "Service4Feature3": "الامتثال البيئي",
+    "Service4Feature4": "تقليل البصمة الكربونية",
+    "Service5Title": "خدمات دعم المشترين",
+    "Service5Feature1": "مساعدة في البحث عن المنتجات",
+    "Service5Feature2": "التحقق من الموردين",
+    "Service5Feature3": "برامج ضمان الجودة",
+    "Service5Feature4": "دعم إدارة الطلبات",
+    "Service6Title": "دعم العملاء 24/7",
+    "Service6Feature1": "المساعدة على مدار الساعة",
+    "Service6Feature2": "دعم متعدد اللغات",
+    "Service6Feature3": "استكشاف الأخطاء الفنية وإصلاحها",
+    "Service6Feature4": "نظام الاستجابة ذو الأولوية"
+  },
+  "HowWeWork": {
+    "Badge": "كيف نعمل",
+    "Title": "عملية خدمتنا",
+    "Description": "نهج مبسط لتقديم نتائج استثنائية",
+    "Step1Title": "الاستشارة الأولية",
+    "Step1Desc": "نبدأ بفهم احتياجات عملك وأهدافك وتحدياتك من خلال الاستشارة الشاملة.",
+    "Step2Title": "تصميم الحلول",
+    "Step2Desc": "يقوم خبراؤنا بإنشاء حلول مخصصة مصممة خصيصًا لمتطلباتك وظروف السوق المحددة.",
+    "Step3Title": "التنفيذ",
+    "Step3Desc": "نقوم بنشر حلولنا مع أقل تعطيل لعملياتك، مما يضمن التكامل السلس.",
+    "Step4Title": "المراقبة والدعم",
+    "Step4Desc": "المراقبة المستمرة والدعم المستمر لضمان الأداء الأمثل والنمو المستدام."
+  },
+  "BlogPage": {
+    "BadgeText": "مدونة EFG أفرو ماركت",
+    "Title": "رؤى من  ثورة التجارة ",
+    "Highlight": "الأفريقي",
+    "Description": "ابق على اطلاع بأحدث الاتجاهات ورؤى السوق وقصص النجاح والتطورات في التجارة والزراعة  الأفريقية ",
+    "Stats": {
+      "Articles": "المقالات",
+      "Categories": "الفئات",
+      "Readers": "القراء"
+    }
+  },
+  "BlogCategories": {
+    "Badge": "فئات المدونة",
+    "Title": "فئات المدونة",
+    "Description": "انغمس في مجالات اهتمام محددة في التجارة والزراعة الأفريقية",
+    "AgricultureTitle": "الزراعة والفلاحة",
+    "AgricultureDescription": "أحدث الاتجاهات في الزراعة المستدامة وإدارة المحاصيل والابتكارات الزراعية في جميع أنحاء أفريقيا.",
+    "TechnologyTitle": "التكنولوجيا",
+    "TechnologyDescription": "كيف تعمل التكنولوجيا على تحويل الزراعة الأفريقية وعمليات التجارة.",
+    "MarketInsightsTitle": "رؤى السوق",
+    "MarketInsightsDescription": "تحليل متعمق لاتجاهات السوق واستراتيجيات التسعير والتطورات الاقتصادية.",
+    "SuccessStoriesTitle": "قصص النجاح",
+    "SuccessStoriesDescription": "قصص ملهمة لرجال الأعمال والشركات الأفريقية التي تُحدث تأثيرًا عالميًا."
+  },
+  "RecentPostsSection": {
+    "Badge": "أحدث المقالات",
+    "Title": "المنشورات الحديثة",
+    "EmptyState": "لا توجد منشورات",
+    "Tabs": {
+      "All": "جميع المقالات"
+    },
+    "LoadMore": "تحميل المزيد من المقالات",
+    "Post": {
+      "ReadFull": "اقرأ المقال كاملًا",
+      "Views": "مشاهدة"
+    },
+    "Dialog": {
+      "Bookmark": "حفظ",
+      "Share": "مشاركة",
+      "Close": "إغلاق"
+    }
+  },
+  "TrendingTagsSection": {
+    "Badge": "المواضيع الشائعة",
+    "Title": "العلامات الرائجة",
+    "Tags": {
+      "AfricanTrade": "#AfricanTrade",
+      "SustainableFarming": "#SustainableFarming",
+      "DigitalAgriculture": "#DigitalAgriculture",
+      "ExportOpportunities": "#ExportOpportunities",
+      "MarketAccess": "#MarketAccess",
+      "Blockchain": "#Blockchain",
+      "CoffeeExport": "#CoffeeExport",
+      "SupplyChain": "#SupplyChain",
+      "FairTrade": "#FairTrade",
+      "AgTech": "#AgTech",
+      "CocoaIndustry": "#CocoaIndustry",
+      "TradeFinance": "#TradeFinance",
+      "GreenTechnology": "#GreenTechnology",
+      "FoodSecurity": "#FoodSecurity",
+      "EcommercePlatform": "#EcommercePlatform"
+    }
+  },
+  "contact": {
+    "badgeText": "100% منتجات أفريقية أصيلة",
+    "title": "بوابتك إلى  التميز الأفريقي",
+    "highlight": "وننمو معاً",
+    "description": "ربط الأسواق العالمية بالمنتجات الزراعية الأفريقية الفاخرة والموارد الطبيعية والكنوز المصنوعة يدوياً.",
+    "stats": {
+      "support": "دعم على مدار الساعة 24/7",
+      "responseTime": "وقت الاستجابة (ساعات)",
+      "countries": "الدول"
+    }
+  },
+  "inquiry": {
+  "badge": "كيف يمكننا المساعدة؟",
+  "heading": "اختر نوع استفسارك",
+  "subtitle": "اختر الخيار الذي يصف احتياجاتك بشكل أفضل للحصول على مساعدة مخصصة",
+  "items": {
+    "general": {
+      "title": "استفسار عام",
+      "description": "أسئلة حول خدماتنا أو منصتنا أو معلومات عامة حول الفرص التجارية الأفريقية.",
+      "button": "ابدأ"
+    },
+    "product": {
+      "title": "استفسار المنتج",
+      "description": "تبحث عن منتجات أفريقية محددة؟ دعنا نربطك بموردين معتمدين لتلبية احتياجاتك.",
+      "button": "ابحث عن المنتجات"
+    },
+    "market": {
+      "title": "معلومات السوق",
+      "description": "تحتاج إلى رؤى السوق أو معلومات التسعير أو إحصائيات التجارة للمنتجات الأفريقية؟",
+      "button": "احصل على الرؤى"
+    },
+    "support": {
+      "title": "الدعم الفني",
+      "description": "تحتاج مساعدة مع حسابك أو طلباتك أو المشاكل التقنية؟ فريق الدعم لدينا هنا للمساعدة.",
+      "button": "احصل على الدعم"
+    }
+  }
+},
+
+ "generalInquiry": {
+  "header": {
+    "title": "استفسار عام",
+    "subtitle": "املأ النموذج أدناه وسنعاود الاتصال بك خلال 24 ساعة."
+  },
+  "sections": {
+    "personalInformation": "المعلومات الشخصية",
+    "companyInformation": "معلومات الشركة",
+    "yourMessage": "رسالتك",
+    "communicationPreferences": "تفضيلات التواصل"
+  },
+  "labels": {
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "emailAddress": "عنوان البريد الإلكتروني",
+    "phoneNumber": "رقم الهاتف",
+    "phoneHint": "قم بتضمين رمز البلد (مثال: +1 234 567 8900)",
+    "company": "الشركة / المنظمة",
+    "country": "البلد",
+    "countryPlaceholder": "اختر بلدك",
+    "subject": "الموضوع",
+    "subjectPlaceholder": "وصف مختصر لاستفسارك",
+    "priorityLevel": "مستوى الأولوية",
+    "priorityOptions": {
+      "normal": "عادي",
+      "high": "مرتفع",
+      "urgent": "عاجل"
+    },
+    "message": "الرسالة",
+    "messagePlaceholder": "يرجى تقديم معلومات مفصلة حول استفسارك أو متطلباتك أو أسئلتك."
+  },
+  "communication": {
+    "preferredContactMethod": "طريقة الاتصال المفضلة",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "whatsapp": "واتساب",
+    "yourTimezone": "منطقتك الزمنية",
+    "timezonePlaceholder": "اختر منطقتك الزمنية",
+    "newsletter": "اشترك في نشرتنا الإخبارية للحصول على تحديثات حول الفرص التجارية الأفريقية ورؤى السوق"
+  },
+  "agreement": {
+    "textPrefix": "أوافق على",
+    "terms": "الشروط والأحكام",
+    "and": "و",
+    "privacy": "سياسة الخصوصية"
+  },
+  "submit": {
+    "button": "إرسال الرسالة",
+    "note": "نستجيب عادة خلال 24 ساعة خلال أيام العمل."
+  },
+  "countries": [
+    "الإمارات العربية المتحدة",
+    "المملكة العربية السعودية",
+    "باكستان",
+    "الولايات المتحدة",
+    "المملكة المتحدة",
+    "نيجيريا",
+    "كينيا"
+  ],
+  "timezones": [
+    "GMT +04:00 (دبي)",
+    "GMT +05:00 (باكستان)",
+    "GMT +03:00 (الرياض)",
+    "GMT +00:00 (لندن)",
+    "GMT -05:00 (نيويورك)"
+  ]
+},
+
+  "contactInfo": {
+  "office": {
+    "title": "مكتبنا",
+    "address": "مكتب 206، مبنى أبراج الممزر، بلوك A، طريق الاتحاد، ص.ب 15058، دبي، الإمارات العربية المتحدة",
+    "businessHoursTitle": "ساعات العمل",
+    "hours": {
+      "weekday": {
+        "label": "الاثنين – الجمعة",
+        "time": "9:00 صباحًا – 6:00 مساءً (GST)"
+      },
+      "saturday": {
+        "label": "السبت",
+        "time": "10:00 صباحًا – 4:00 مساءً (GST)"
+      },
+      "sunday": {
+        "label": "الأحد",
+        "time": "مغلق"
+      }
+    }
+  },
+  "responseTimes": {
+    "title": "أوقات الاستجابة",
+    "general": {
+      "label": "الاستفسارات العامة",
+      "time": "خلال 4 ساعات"
+    },
+    "product": {
+      "label": "استفسارات المنتجات",
+      "time": "خلال ساعتين"
+    },
+    "support": {
+      "label": "الدعم الفني",
+      "time": "خلال ساعة واحدة"
+    }
+  }
+},
+
+ "faq": {
+  "badge": "الأسئلة الشائعة",
+  "title": "الأسئلة الشائعة",
+  "subtitle": "  ابحث عن إجابات سريعة للأسئلة الأكثر شيوعاً",
+  "items": [
+    {
+      "question": "كيف يمكنني العثور على موردين أفارقة موثوقين على منصتكم؟",
+      "answer": "تتميز منصتنا بنظام تحقق شامل لجميع الموردين. يمكنك تصفح الموردين المعتمدين، وقراءة مراجعات المشترين الآخرين، والاطلاع على الشهادات. كما نوفر ملفات تعريف تفصيلية للموردين تتضمن كتالوجات المنتجات ومعلومات الشركة."
+    },
+    {
+      "question": "ما أنواع المنتجات الأفريقية المتوفرة على منصتكم؟",
+      "answer": "نقدم مجموعة واسعة من المنتجات الأفريقية الأصيلة بما في ذلك المنتجات الزراعية (القهوة، الكاكاو، الفواكه، التوابل)، والموارد الطبيعية، والمنتجات اليدوية، والمنسوجات، والمنتجات الحرفية. تخضع جميع المنتجات لعمليات تحقق من الجودة وممارسات التوريد المستدام."
+    },
+    {
+      "question": "هل تقدمون المساعدة في الخدمات اللوجستية والشحن؟",
+      "answer": "نعم، نقدم حلولًا لوجستية متكاملة تشمل التخزين، والتغليف، وتنسيق الشحن، والمساعدة في التخليص الجمركي. تضمن شبكة شركائنا وصول منتجاتك بكفاءة وأمان."
+    },
+    {
+      "question": "ما هي الرسوم ونِسَب العمولة لديكم؟",
+      "answer": "هيكل رسومنا شفاف وتنافسي. تختلف الأسعار حسب فئة المنتج والحجم والخدمات المطلوبة. نقدم خصومات على الكمية للمشترين المنتظمين. اتصل بنا للحصول على عرض أسعار مخصص بناءً على احتياجاتك المحددة."
+    },
+    {
+      "question": "كيف تضمنون جودة المنتجات وأصالتها؟",
+      "answer": "لدينا عملية صارمة لضمان الجودة تشمل التحقق من الموردين، وأخذ عينات من المنتجات، والاختبارات من جهات خارجية، ومتطلبات الشهادات. يقوم فريقنا بإجراء عمليات تدقيق منتظمة والحفاظ على معايير جودة صارمة عبر سلسلة التوريد."
+    },
+    {
+      "question": "ما طرق الدفع التي تقبلونها؟",
+      "answer": "ندعم عدة طرق للدفع بما في ذلك التحويلات البنكية، وخطابات الاعتماد، وحلول تمويل التجارة، ومنصات الدفع الرقمية. يضمن نظام الدفع الآمن لدينا معاملات آمنة لجميع المشترين."
+    }
+  ]
+},
+
+  "footer": {
+    "description": "شركة EFG أفرو ماركت هي بوابة رقمية ديناميكية تحت مظلة مركز EFG (مؤسسة الجيل المستقبلي). ربط الأسواق العالمية بالمنتجات الأفريقية الفاخرة.",
+    "contactTitle": "اتصل بنا",
+    "email": "info@efgafromarket.ae",
+    "phone": "+97142390993",
+    "address": "مكتب 206، مبنى أبراج الممزر، المبنى أ، شارع الاتحاد، ص.ب 15058، دبي، الإمارات العربية المتحدة",
+    "copyright": "© 2025 EFG-HUB. All rights reserved | Enterprise of the Future Generation"
+  }
+}

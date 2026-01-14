@@ -1,0 +1,653 @@
+{
+  "Header": {
+    "Home": "Home",
+    "AboutUs": "About Us",
+    "Products": "Products",
+    "Services": "Services",
+    "Blog": "Blog",
+    "Contact": "Contact",
+    "LoginRegister": "Login/Register"
+  },
+  "Home": {
+    "Title": "Your Gateway to",
+    "highlight": "African Excellence",
+    "Description": "Connecting global markets with premium African products.",
+    "BadgeText": "100% Authentic African Products",
+    "BtnPrimary": "Explore Products",
+    "BtnSecondary": "Learn More"
+  },
+    "Stats": {
+    "Products": "Products",
+    "Countries": "Countries",
+    "Customers": "Customers"
+  },
+  
+  "ExploreSection": {
+    "EXPLORE": "EXPLORE",
+    "PopularCategories": "Popular Categories",
+    "EXPLOREDescription": "Discover our wide range of authentic African products"
+  },
+  "ProductSection": {
+    "PRODUCTS": "PRODUCTS",
+    "RecommendedForYou": "Recommended For You",
+    "PRODUCTSDescription": "Handpicked products based on global demand"
+  },
+  "WhyChooseUs": {
+    "WHYCHOOSEUS": "WHY CHOOSE US",
+    "WhyChooseEFGAfroMarket": "Why Choose EFG Afro Market",
+    "OrganicProducts": "100% Organic Products",
+    "OrganicProductsDescription": "Certified organic products straight from African farms",
+    "ExpressGlobalDelivery": "Express Global Delivery",
+    "ExpressGlobalDeliveryDescription": "Fast and secure shipping worldwide",
+    "SatisfactionGuarantee": "Satisfaction Guarantee",
+    "SatisfactionGuaranteeDescription": "Your satisfaction is our top priority",
+    "OrganicProductsTitle": "Healthy Food is The Key to Your Good Mood",
+    "OrganicProductsContent1": "Our organic products are carefully selected from certified farms across Africa. Each product undergoes rigorous quality testing to ensure you receive only the finest African produce.",
+    "OrganicProductsContent2": "Certified organic farms across Africa",
+    "OrganicProductsContent3": "Rigorous quality testing standards",
+    "OrganicProductsContent4": "Direct from farm to market",
+    "OrganicProductsContent5": "Sustainable farming practices",
+    "ExpressGlobalDeliveryTitle": "Fast & Secure Global Shipping",
+    "ExpressGlobalDeliveryContent1": "We provide express shipping options with real-time tracking to ensure your African products reach you fresh and on time, no matter where you are in the world.",
+    "ExpressGlobalDeliveryContent2": "Express shipping options available",
+    "ExpressGlobalDeliveryContent3": "Real-time tracking for all orders",
+    "ExpressGlobalDeliveryContent4": "Temperature-controlled transportation",
+    "ExpressGlobalDeliveryContent5": "Secure packaging guaranteed",
+    "SatisfactionGuaranteeTitle": "Your Satisfaction is Our Promise",
+    "SatisfactionGuaranteeContent1": "We stand behind every product we sell. Our commitment to excellence means you can shop with confidence, knowing we'll make things right if you're not completely satisfied.",
+    "SatisfactionGuaranteeContent2": "30-day money-back guarantee",
+    "SatisfactionGuaranteeContent3": "24/7 customer support",
+    "SatisfactionGuaranteeContent4": "Quality assurance on every order",
+    "SatisfactionGuaranteeContent5": "Hassle-free returns and exchanges"
+  },
+  "ExcellenceSection": {
+    "OUREXCELLENCE": "OUR EXCELLENCE",
+    "ComprehensiveServicesActivities": "Comprehensive Services & Activities",
+    "OUREXCELLENCEDescription": "Discover our complete range of professional services",
+    "Card1Title": "Global Marketplace Platform",
+    "Card1Description": "Online product listing and cataloging of African commodities, cultural goods, and natural resources.",
+    "Card2Title": "Supply Chain Management",
+    "Card2Description": "Complete supply chain design, from farmgate to final buyer with real-time tracking.",
+    "Card3Title": "Agri-Technology Integration",
+    "Card3Description": "Smart agriculture practices through digital tools, sensors, and mobile advisory services.",
+    "Card4Title": "Secure Payment Systems",
+    "Card4Description": "Multi-currency payment gateway with blockchain-backed transaction validation.",
+    "Card5Title": "Export & Import Facilitation",
+    "Card5Description": "Customs clearance, documentation, and international market access consulting.",
+    "Card6Title": "Explore All Services",
+    "Card6Description": "Discover our complete range of comprehensive services & activities with detailed insights"
+  },
+  "NewsLetter": {
+    "NewsLetterTitle": "Don't Miss Out on EFG Afro Market Updates",
+    "OUREXCELLENCEDescription": "Stay updated with the latest products, offers, and market insights",
+    "NewsLetterPlaceHolder": "Enter your email address",
+    "Send": "Send",
+    "WeDeliver": "We Deliver",
+    "FRESH": "100% FRESH",
+    "HealthyProducts": "HEALTHY PRODUCTS",
+    "QUALITYFIRST": "QUALITY FIRST",
+    "ECOFRIENDLY": "ECO FRIENDLY",
+    "FARMFOOD": "FARM FOOD",
+    "NATURALFOOD": "NATURAL FOOD"
+  },
+  "About": {
+    "AboutTitle": "Connecting Africa's Rich Heritage",
+    "AboutHighlight": "Global Opportunities",
+    "AboutDescription": "Discover our journey, mission, and vision as we bridge traditional African industries with modern digital commerce",
+    "AboutBadgeText": "About EFG Afro Market"
+  },
+  "OurStory": {
+    "OurStory": "Our Story",
+    "OurStoryTitle": "Bridging Africa's ",
+    "OurStoryTitle1": " with Digital Commerce",
+    "OurStoryHighlight": "Traditional Industries",
+    "OurStoryDescription": "EFG Afro Market Company is a dynamic digital gateway under the EFG Group (Enterprise of the Future Generation), created to bring Africa's communities, natural resources, and products into the international market.",
+    "DigitalGatewaytoAfrica": "Digital Gateway to Africa",
+    "EmpoweringLocalProducers": "Empowering Local Producers",
+    "FutureReadyCommerce": "Future-Ready Commerce",
+    "LetsTalk": "Let’s Talk",
+    "LearnMore": "Learn More",
+    "ConnectingAfricatotheWorld": "Connecting Africa to the World",
+    "Empoweringcommunitiesthrough": "Empowering communities through digital innovation",
+    "Producers": "1000+",
+    "ProducersHighlight": "African Producers",
+    "Countries": " 50+ ",
+    "CountriesHighlight": "Countries Reached",
+    "Success": "98% ",
+    "SuccessHighlight": "Success Rate"
+  },
+  "OurPurpose": {
+    "OurPurpose": "Our Purpose",
+    "OurPurposeTitle": "Mission & Vision",
+    "OurPurposeDescription": "Driving sustainable economic transformation across Africa",
+    "OurMission": "Our Mission",
+    "OurMissionDescription": "To digitally empower African producers, simplify global trade, and create sustainable economic opportunities by offering an end-to-end platform for international buyers and development partners.",
+    "DigitallyempowerAfricanproducers": "Digitally empower African producers",
+    "Simplifyglobaltradeprocesses": "Simplify global trade processes",
+    "Createsustainableeconomicopportunities": "Create sustainable economic opportunities",
+    "Connectinternationalbuyersseamlessly": "Connect international buyers seamlessly",
+    "OurVision": "Our Vision",
+    "OurVisionDescription": "To become Africa's leading export-oriented digital marketplace and logistics platform, showcasing the continent's rich resources while driving inclusive economic transformation.",
+    "MarketLeadership": "Market Leadership",
+    "MarketLeadershipDescription": "Africa's #1 export marketplace",
+    "ResourceShowcase": "Resource Showcase",
+    "ResourceShowcaseDescription": "Highlighting Africa's rich heritage",
+    "InclusiveGrowth": "Inclusive Growth",
+    "InclusiveGrowthDescription": "Economic transformation for all"
+  },
+  "OurFoundation": {
+    "OurFoundation": "Our Foundation",
+    "OurFoundationTitle": "Core Values",
+    "OurFoundationDescription": "The principles that guide everything we do",
+    "Authenticity": "Authenticity",
+    "AuthenticityDescription": "We ensure all products are genuinely African, preserving the authentic heritage and quality that makes them special.",
+    "Sustainability": "Sustainability",
+    "SustainabilityDescription": "Environmental responsibility and sustainable practices are at the core of our operations and partnerships.",
+    "Integrity": "Integrity",
+    "IntegrityDescription": "Transparent, honest dealings with all stakeholders, building trust through consistent and ethical business practices.",
+    "Innovation": "Innovation",
+    "InnovationDescription": "Leveraging cutting-edge technology to revolutionize traditional African trade and commerce.",
+    "Community": "Community",
+    "CommunityDescription": "Empowering local communities and fostering inclusive growth across the African continent.",
+    "Excellence": "Excellence",
+    "ExcellenceDescription": "Commitment to delivering the highest quality products and services that exceed global standards.",
+    "Collaboration": "Collaboration",
+    "CollaborationDescription": "Building strong partnerships and working together to achieve common goals for African development.",
+    "Passion": "Passion",
+    "PassionDescription": "Driven by genuine love for Africa and dedication to showcasing its beauty and potential to the world."
+  },
+  "WhyChoose": {
+    "WhyChoose": "Why Choose Us",
+    "WhyChooseTitle": "What Makes Us ",
+    "WhyChooseHighlight": "Different",
+    "WhyChooseDescription": "We're not just another marketplace. We're a comprehensive ecosystem designed specifically for African trade, combining traditional values with modern technology.",
+    "SecurePlatform": "Secure Platform",
+    "ISOCertified": "ISO Certified",
+    "Available": "24/7 Available",
+    "Technology": "Technology",
+    "TechnologyTitle": "Advanced Technology Stack",
+    "TechnologyDescription": "Our platform leverages AI, blockchain, and IoT technologies to provide real-time tracking and secure transactions.",
+    "AIpoweredqualityverification": "AI-powered quality verification",
+    "Blockchainsecuredtransactions": "Blockchain-secured transactions",
+    "IoTenabledsupplychaintracking": "IoT-enabled supply chain tracking",
+    "Mobilefirstdesign": "Mobile-first design for accessibility",
+    "AdvancedTechnology": "Advanced Technology",
+    "Logistics": "Logistics",
+    "LogisticsTitle": "Integrated Logistics Network",
+    "LogisticsDescription": "From farm to doorstep, our logistics ensure fast and safe global delivery.",
+    "Coldchainfacilities": "Cold-chain facilities",
+    "Expressshipping": "Express shipping  partnerships",
+    "Customsclearance": "Customs clearance assistance",
+    "Realtimetracking": "Real-time tracking",
+    "GlobalLogistics": "Global Logistics",
+    "Support": "Support",
+    "SupportTitle": "Dedicated Support System",
+    "SupportDescription": "Our multilingual team provides 24/7 assistance worldwide.",
+    "customersupport": "24/7 customer support",
+    "Multilingualhelp": "Multilingual assistance",
+    "Producertraining": "Producer training  programs",
+    "Marketinsights": "Market insights  reports",
+    "DedicatedSupport": "Dedicated Support"
+  },
+  "ExploreProducts": {
+    "ExploreProductsTitle": "Ready to Join Our Mission?",
+    "ExploreProductsDescription": "Whether you're an African producer looking to reach global markets or an international buyer seeking authentic African products, we're here to help.",
+    "ExploreProductsBtn": "Explore Products"
+  },
+  "Products": {
+    "ProductsTitle": "Discover Authentic African Products",
+    "Productshighlight": "& Resources",
+    "ProductsDescription": "Connecting global markets with premium African products.",
+    "ProductsbadgeText": "100% Authentic African Products",
+    "ProductsbtnPrimary": "Explore Products",
+    "ProductsbtnSecondary": "Learn More"
+  },
+  "OurProducts": {
+    "ProductsBadge": "PRODUCTS",
+    "ProductsTitle": "Our Products",
+    "ProductsShowing": "Showing",
+    "ProductsOf": "of",
+    "ProductsError": "Failed to load products",
+    "ProductsOriginAfrica": "Africa",
+    "ProductsProducts": "products",
+    "ProductsLoadingProducts": "Loading products...",
+    "ProductsSearchPlaceholder": "Search Product...",
+    "ProductsReset": "Reset",
+    "ProductsAll": "All",
+    "ProductsPrev": "Pre",
+    "ProductsNext": "Next",
+    "ProductsPage": "Page",
+    "ProductsOfPages": "of"
+  },
+  "ExploreCategories": {
+    "ExploreCategoriesBadge": "Explore Categories",
+    "ExploreCategoriesTitle": "Featured Product Categories",
+    "ExploreCategoriesDescription": "Discover our most popular product categories from across Africa",
+    "Agriculture": {
+      "AgricultureTitle": "Agricultural Products",
+      "AgricultureDescription": "Premium crops and agricultural goods from across Africa",
+      "AgricultureProducts": "150+ Products"
+    },
+    "Fruits": {
+      "FruitsTitle": "Fresh Fruits",
+      "FruitsDescription": "Tropical and exotic fruits from African orchards",
+      "FruitsProducts": "80+ Products"
+    },
+    "Resources": {
+      "ResourcesTitle": "Natural Resources",
+      "ResourcesDescription": "Precious minerals and resources from African mines",
+      "ResourcesProducts": "45+ Products"
+    },
+    "Crafts": {
+      "CraftsTitle": "Crafts & Artisan",
+      "CraftsDescription": "Handcrafted items and traditional African art",
+      "CraftsProducts": "120+ Products"
+    }
+  },
+  "productsNewsLetter": {
+    "productsNewsLetterTitle": "Ready to Start Trading?",
+    "productsNewsLetterDescription": "Connect with African suppliers and discover authentic products for your business. Join thousands of satisfied buyers worldwide.",
+    "productsNewsLetterButton": "Learn More"
+  },
+  "Services": {
+    "HeroTitle": "Our Professional",
+    "HeroHighlight": "Services & Solutions",
+    "HeroDescription": "Empowering African businesses with cutting-edge technology, comprehensive support, and global market access. From marketplace solutions to supply chain management, we've got you covered.",
+    "HeroBadgeText": "Comprehensive Business Solutions"
+  },
+
+  "OurExpertise": {
+    "OurExpertiseBadge": "OUR EXPERTISE",
+    "OurExpertiseTitle": "Core Business Services",
+    "OurExpertiseDescription": "Comprehensive solutions designed to accelerate your growth.",
+    "Service1Title": "Quality African Goods",
+    "Service1Description": "Online cataloging of African commodities and natural resources.",
+    "Service1One": "Catalog management",
+    "Service1Two": "Real-time tracking",
+    "Service2Title": "Supply Chain",
+    "Service2Description": "Complete supply chain design from farmgate to final buyer.",
+    "Service2One": "Logistics optimization",
+    "Service2Two": "Quality control",
+    "Service3Title": "Agri-Technology",
+    "Service3Description": "Smart agriculture practices through digital tools and advisory.",
+    "Service3One": "IoT deployment",
+    "Service3Two": "Precision farming",
+    "Service4Title": "Secure Payments",
+    "Service4Description": "Multi-currency gateway with blockchain-backed validation.",
+    "Service4One": "Blockchain safety",
+    "Service4Two": "Fraud protection",
+    "OurExpertiseButton": "Let's Talk"
+  }, 
+
+
+  
+  "SpecializedSolutionAlt": {
+    "Badge": "SPECIALIZED SOLUTIONS",
+    "Title": "Additional Services",
+    "Description": "Extended services to support every aspect of your business journey",
+
+    "Service1Title": "Authenticity",
+    "Service1Feature1": "Online product catalog management",
+    "Service1Feature2": "Real-time inventory tracking",
+    "Service1Feature3": "Multi-language support",
+    "Service1Feature4": "Find top-rated products in one place",
+
+    "Service2Title": "Market Research & Analytics",
+    "Service2Feature1": "Market trend analysis",
+    "Service2Feature2": "Price monitoring",
+    "Service2Feature3": "Demand forecasting",
+    "Service2Feature4": "Competitive intelligence",
+
+    "Service3Title": "Training & Consultation",
+    "Service3Feature1": "Digital marketing training",
+    "Service3Feature2": "Business development",
+    "Service3Feature3": "Quality standards education",
+    "Service3Feature4": "Technology adoption support",
+
+    "Service4Title": "Sustainability Consulting",
+    "Service4Feature1": "Organic certification support",
+    "Service4Feature2": "Sustainable farming practices",
+    "Service4Feature3": "Environmental compliance",
+    "Service4Feature4": "Carbon footprint reduction",
+
+    "Service5Title": "Buyer Support Services",
+    "Service5Feature1": "Product sourcing assistance",
+    "Service5Feature2": "Supplier verification",
+    "Service5Feature3": "Quality assurance programs",
+    "Service5Feature4": "Order management support",
+
+    "Service6Title": "24/7 Customer Support",
+    "Service6Feature1": "Round-the-clock assistance",
+    "Service6Feature2": "Multi-language support",
+    "Service6Feature3": "Technical troubleshooting",
+    "Service6Feature4": "Priority response system"
+  },
+
+
+   "HowWeWork": {
+    "Badge": "HOW WE WORK",
+    "Title": "Our Service Process",
+    "Description": "A streamlined approach to delivering exceptional results",
+
+    "Step1Title": "Initial Consultation",
+    "Step1Desc": "We begin with understanding your business needs and goals through comprehensive consultation.",
+
+    "Step2Title": "Solution Design",
+    "Step2Desc": "Our experts create customized solutions tailored to your specific requirements.",
+
+    "Step3Title": "Implementation",
+    "Step3Desc": "We deploy our solutions with minimal disruption to your operations.",
+
+    "Step4Title": "Monitoring & Support",
+    "Step4Desc": "Continuous monitoring and ongoing support to ensure optimal performance."
+  },
+
+
+  
+  "BlogPage": {
+    "BadgeText": "EFG Afro Market Blog",
+
+    "Title": "Insights from",
+    "Highlight": "Africa’s Trade Revolution",
+
+    "Description": "Stay updated with the latest trends, market insights, success stories, and developments in African trade and agriculture",
+
+    "Stats": {
+      "Articles": "Articles",
+      "Categories": "Categories",
+      "Readers": "Readers"
+    }
+  },
+
+  
+  "BlogCategories": {
+    "Badge": "Blog Categories",
+    "Title": "Explore Categories",
+    "Description": "Browse articles by category and discover insights across Africa’s trade, technology, and success stories.",
+
+    "AgricultureTitle": "Agriculture",
+    "AgricultureDescription": "Updates and insights on African agriculture, exports, and farming growth.",
+
+    "TechnologyTitle": "Technology",
+    "TechnologyDescription": "Trade tech, digital platforms, and innovation shaping African markets.",
+
+    "MarketInsightsTitle": "Market Insights",
+    "MarketInsightsDescription": "Trends, pricing signals, supply chains, and market opportunities.",
+
+    "SuccessStoriesTitle": "Success Stories",
+    "SuccessStoriesDescription": "Real stories of businesses and communities achieving trade success."
+  },
+
+  
+ 
+
+"RecentPostsSection": {
+  "Badge": "Latest Articles",
+  "Title": "Recent Posts",
+  "EmptyState": "No posts found",
+
+  "Tabs": {
+    "All": "All Articles"
+  },
+
+  "LoadMore": "Load More Articles",
+
+  "Post": {
+    "ReadFull": "Read Full Article",
+    "Views": "views"
+  },
+
+  "Dialog": {
+    "Bookmark": "Bookmark",
+    "Share": "Share",
+    "Close": "Close"
+  }
+},
+
+
+  "TrendingTagsSection": {
+    "Badge": "Popular Topics",
+    "Title": "Trending Tags",
+
+    "Tags": {
+      "AfricanTrade": "#AfricanTrade",
+      "SustainableFarming": "#SustainableFarming",
+      "DigitalAgriculture": "#DigitalAgriculture",
+      "ExportOpportunities": "#ExportOpportunities",
+      "MarketAccess": "#MarketAccess",
+      "Blockchain": "#Blockchain",
+      "CoffeeExport": "#CoffeeExport",
+      "SupplyChain": "#SupplyChain",
+      "FairTrade": "#FairTrade",
+      "AgTech": "#AgTech",
+      "CocoaIndustry": "#CocoaIndustry",
+      "TradeFinance": "#TradeFinance",
+      "GreenTechnology": "#GreenTechnology",
+      "FoodSecurity": "#FoodSecurity",
+      "EcommercePlatform": "#EcommercePlatform"
+    }
+  },
+
+  "contact": {
+      "badgeText": "100% Authentic African Products",
+      "title": "Your Gateway to",
+      "highlight": "African Excellence",
+      "description": "Connecting global markets with premium African agricultural products, natural resources, and handcrafted treasures.",
+      "stats": {
+        "support": "24/7 SUPPORT",
+        "responseTime": "RESPONSE TIME (HRS)",
+        "countries": "COUNTRIES"
+      } 
+},
+
+
+  "inquiry": {
+    "badge": "How can we help?",
+    "heading": "CHOOSE YOUR INQUIRY TYPE",
+    "subtitle": "Select the option that best describes your needs to get personalized assistance",
+
+    "items": {
+      "general": {
+        "title": "General Inquiry",
+        "description": "Questions about our services, platform, or general information about African trade opportunities.",
+        "button": "Get Started"
+      },
+      "product": {
+        "title": "Product Inquiry",
+        "description": "Looking for specific African products? Let us connect you with verified suppliers for your needs.",
+        "button": "Find Products"
+      },
+      "market": {
+        "title": "Market Information",
+        "description": "Need market insights, pricing information, or trade statistics for African products?",
+        "button": "Get Insights"
+      },
+      "support": {
+        "title": "Technical Support",
+        "description": "Need help with your account, orders, or technical issues? Our support team is here to help.",
+        "button": "Get Support"
+      }
+    }
+  },
+
+  
+ 
+  "generalInquiry": {
+    "header": {
+      "title": "General Inquiry",
+      "subtitle": "Fill out the form below and we'll get back to you within 24 hours."
+    },
+
+    "sections": {
+      "personalInformation": "PERSONAL INFORMATION",
+      "companyInformation": "COMPANY INFORMATION",
+      "yourMessage": "YOUR MESSAGE",
+      "communicationPreferences": "COMMUNICATION PREFERENCES"
+    },
+
+    "labels": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "emailAddress": "Email Address",
+      "phoneNumber": "Phone Number",
+      "phoneHint": "Include country code (e.g., +1 234 567 8900)",
+
+      "company": "Company / Organization",
+      "country": "Country",
+      "countryPlaceholder": "Select your country",
+
+      "subject": "Subject",
+      "subjectPlaceholder": "Brief description of your inquiry",
+
+      "priorityLevel": "Priority Level",
+      "priorityOptions": {
+        "normal": "Normal",
+        "high": "High",
+        "urgent": "Urgent"
+      },
+
+      "message": "Message",
+      "messagePlaceholder": "Please provide detailed information about your inquiry, requirements, or questions."
+    },
+
+    "communication": {
+      "preferredContactMethod": "Preferred Contact Method",
+      "email": "Email",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+
+      "yourTimezone": "Your Timezone",
+      "timezonePlaceholder": "Select your timezone",
+
+      "newsletter": "Subscribe to our newsletter for updates and insights"
+    },
+
+    "agreement": {
+      "textPrefix": "I agree to the",
+      "terms": "Terms & Conditions",
+      "and": "and",
+      "privacy": "Privacy Policy"
+    },
+
+    "submit": {
+      "button": "Send Message",
+      "note": "We typically respond within 24 hours during business days."
+    },
+
+    "countries": [
+      "United Arab Emirates",
+      "Saudi Arabia",
+      "Pakistan",
+      "United States",
+      "United Kingdom",
+      "Nigeria",
+      "Kenya"
+    ],
+
+    "timezones": [
+      "GMT +04:00 (Dubai)",
+      "GMT +05:00 (Pakistan)",
+      "GMT +03:00 (Riyadh)",
+      "GMT +00:00 (London)",
+      "GMT -05:00 (New York)"
+    ]
+  },
+
+  
+  "contactInfo": {
+    "office": {
+      "title": "Our Office",
+      "address": "Office 206, Abraj Al Mamzar Building, Block A Al Ittihad Road, PO Box 15058 Dubai, United Arab Emirates",
+      "businessHoursTitle": "Business Hours",
+      "hours": {
+        "weekday": {
+          "label": "Monday – Friday",
+          "time": "9:00 AM – 6:00 PM (GST)"
+        },
+        "saturday": {
+          "label": "Saturday",
+          "time": "10:00 AM – 4:00 PM (GST)"
+        },
+        "sunday": {
+          "label": "Sunday",
+          "time": "Closed"
+        }
+      }
+    },
+
+    "responseTimes": {
+      "title": "Response Times",
+      "general": {
+        "label": "General Inquiries",
+        "time": "Within 4 hours"
+      },
+      "product": {
+        "label": "Product Inquiries",
+        "time": "Within 2 hours"
+      },
+      "support": {
+        "label": "Technical Support",
+        "time": "Within 1 hour"
+      }
+    }
+  },
+
+
+  
+  "faq": {
+    "badge": "Frequently Asked Questions",
+    "title": "Common Questions",
+    "subtitle": "Find quick answers to the most frequently asked questions",
+
+    "items": [
+      {
+        "question": "How can I find reliable African suppliers on your platform?",
+        "answer": "Our platform features a comprehensive verification system for all suppliers. You can browse through verified suppliers, read reviews from other buyers, and check certifications. We also provide detailed supplier profiles with product catalogs and company information."
+      },
+      {
+        "question": "What types of African products are available on your platform?",
+        "answer": "We offer a wide range of authentic African products including agricultural produce (coffee, cocoa, fruits, spices), natural resources, handcrafted items, textiles, and artisanal products. All products undergo quality verification and sustainable sourcing practices."
+      },
+      {
+        "question": "Do you provide assistance with logistics and shipping?",
+        "answer": "Yes, we offer comprehensive logistics solutions including warehousing, packaging, shipping coordination, and customs clearance assistance. Our network of partners ensures your products reach you efficiently and safely."
+      },
+      {
+        "question": "What are your fees and commission rates?",
+        "answer": "Our fee structure is transparent and competitive. Rates vary based on product category, volume, and services required. We offer volume discounts for regular buyers. Contact us for a customized quote based on your specific needs."
+      },
+      {
+        "question": "How do you ensure product quality and authenticity?",
+        "answer": "We have a rigorous quality assurance process including supplier verification, product sampling, third-party testing, and certification requirements. Our team conducts regular audits and maintains strict quality standards throughout the supply chain."
+      },
+      {
+        "question": "What payment methods do you accept?",
+        "answer": "We support multiple payment methods including bank transfers, letters of credit, trade finance solutions, and digital payment platforms. Our secure payment system ensures safe transactions for all buyers."
+      }
+    ]
+  },
+  
+  "footer": {
+    "description": "EFG Afro Market Company is a dynamic digital gateway under the EFG Hub (Enterprise of the Future Generation). Connecting global markets with premium African products.",
+    "contactTitle": "Contact Us",
+    "email": "info@efgafromarket.ae",
+    "phone": "+97142390993",
+    "address": "Office 206, Abraj Al Mamzar Building, Block A Al Ittihad Road, PO Box 15058, Dubai, UAE.",
+    "copyright": "© 2025 EFG-HUB. All rights reserved | Enterprise of the Future Generation"
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
