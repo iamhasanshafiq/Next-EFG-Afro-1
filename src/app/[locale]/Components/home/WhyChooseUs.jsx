@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Container from "../../container";
 
 export default function WhyChooseUs() {
   const t = useTranslations("WhyChooseUs");
@@ -74,7 +75,7 @@ export default function WhyChooseUs() {
   return (
     // 🔒 Layout hamesha LTR (order stable rahe)
     <section dir="ltr" className="bg-gray-50 py-16 sm:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Container>
 
         {/* Badge */}
         <div className="mb-12 flex items-start">
@@ -130,7 +131,7 @@ export default function WhyChooseUs() {
           {/* CENTER IMAGE */}
           <div className="flex justify-center">
             <div className="relative w-full max-w-sm">
-              <div className="rounded-3xl overflow-hidden border-8 border-orange-400 shadow-xl">
+              <div className="rounded-3xl overflow-hidden border-2 border-orange-400 shadow-xl">
                 <Image
                   src={currentFeature.image}
                   alt={t(currentFeature.headingKey)}
@@ -180,7 +181,7 @@ export default function WhyChooseUs() {
 
 
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

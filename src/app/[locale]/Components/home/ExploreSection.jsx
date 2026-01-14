@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Wheat, Apple, Gem, Palette, Cat } from "lucide-react";
 import CategorySkeleton from "../skeletons/CategorySkeleton"; // ✅ skeleton loader
 import axios from "axios";
+import Container from "../../container";
 const ICONS_MAP = {
     wheat: Wheat,
     apple: Apple,
@@ -55,7 +56,7 @@ function ExploreSection() {
     }
     return (
         <section className="w-full py-20" style={{ backgroundColor: "#F8F9FA" }}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Container>
                 {/* HEADER */}
                 <div className="flex flex-col items-center justify-center mb-16">
                     <div
@@ -99,7 +100,7 @@ function ExploreSection() {
                             </div>
                         ))}
                 </div>
-            </div>
+            </Container>
         </section>
     );
 }

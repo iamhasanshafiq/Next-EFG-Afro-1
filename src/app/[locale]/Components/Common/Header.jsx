@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Globe, ChevronDown, Menu, X, User } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Container from "../../container";
 
 const navItems = [
   { key: "Home", path: "/" },
@@ -56,11 +57,10 @@ export default function Header() {
 
   return (
     <nav className="w-full bg-white shadow-sm relative z-50">
-      <div className="max-w-7xl mx-auto px-4">
+      <Container>
         <div
-          className={`h-[78px] flex items-center justify-between ${
-            isRTL ? "flex-row-reverse" : "flex-row"
-          }`}
+          className={`h-[78px] flex items-center justify-between ${isRTL ? "flex-row-reverse" : ""
+            }`}
         >
           {/* LOGO */}
           <img
@@ -71,38 +71,60 @@ export default function Header() {
 
           {/* DESKTOP MENU */}
           <ul
-            className={`hidden md:flex items-center gap-3 font-medium text-gray-800 ${
-              isRTL ? "flex-row-reverse" : "flex-row"
-            }`}
+            className={`hidden md:flex items-center gap-3 font-medium text-gray-800 ${isRTL ? "flex-row-reverse" : ""
+              }`}
           >
             {navItems.map((item) => {
-              // ✅ FIXED ACTIVE LOGIC
               const isHome = item.path === "/";
               const isActive = isHome
                 ? pathname === `/${currentLocale}`
                 : pathname === `/${currentLocale}${item.path}`;
 
               return (
-                <li key={item.key} className="relative">
+                <li key={item.key} className="relative group">
                   <Link
                     href={`/${currentLocale}${item.path}`}
-                    className={`relative px-5 py-2 transition font-medium ${
-                      isActive
-                        ? "text-gray-900"
-                        : "hover:text-green-700"
-                    }`}
+                    className={`relative px-5 py-2 font-medium transition ${isActive ? "text-gray-900" : "hover:text-green-700"
+                      }`}
                   >
                     {t(item.key)}
 
-                    {isActive && (
-                      <>
-                        {/* SILVER ROUNDED PILL (IMAGE JESA) */}
-                        <span className="absolute inset-0 bg-slate-200 rounded-full border border-slate-300 -z-10"></span>
+                    {/* SILVER BACKGROUND (ACTIVE + HOVER) */}
+                    <span
+                      className={`
+                        absolute inset-0
+                        bg-slate-200
+                        rounded-full
+                        py-4
+                        border-1 border-slate-300
+                        -z-10
+                        transition-opacity duration-300
+                        ${isActive
+                          ? "opacity-100"
+                          : "opacity-0 group-hover:opacity-100"
+                        }
+                      `}
+                    />
 
-                        {/* ORANGE UNDERLINE (TEXT SE CHOTI, 3px) */}
-                        <span className="absolute bottom-0 left-[6px] right-[6px] h-[3px] bg-orange-500 rounded-full"></span>
-                      </>
-                    )}
+                    {/* ORANGE UNDERLINE — TRUE 1px GAP */}
+                    <span
+                      className={`
+                        absolute
+                        bottom-[-1px]
+                        left-6
+                        right-6
+                        h-[2px]
+                        bg-orange-500
+                        rounded-full
+                        transform
+                        origin-center
+                        transition-transform duration-300 ease-out
+                        ${isActive
+                          ? "scale-x-100"
+                          : "scale-x-0 group-hover:scale-x-100"
+                        }
+                      `}
+                    />
                   </Link>
                 </li>
               );
@@ -111,9 +133,8 @@ export default function Header() {
 
           {/* DESKTOP RIGHT */}
           <div
-            className={`hidden md:flex items-center gap-4 ${
-              isRTL ? "flex-row-reverse" : ""
-            }`}
+            className={`hidden md:flex items-center gap-4 ${isRTL ? "flex-row-reverse" : ""
+              }`}
           >
             {/* Language */}
             <div className="relative" ref={langRef}>
@@ -128,18 +149,17 @@ export default function Header() {
 
               {langOpen && (
                 <div
-                  className={`absolute ${
-                    isRTL ? "left-0" : "right-0"
-                  } mt-2 bg-white border rounded-lg shadow w-36`}
+                  className={`absolute ${isRTL ? "left-0" : "right-0"
+                    } mt-2 bg-white border rounded-lg shadow w-36`}
                 >
                   {LANGUAGES.map((lang) => (
                     <button
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code)}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-green-50 ${
-                        currentLocale === lang.code &&
-                        "font-semibold text-green-700"
-                      }`}
+                      className={`w-full text-left px-4 py-2 text-sm hover:bg-green-50 ${currentLocale === lang.code
+                          ? "font-semibold text-green-700"
+                          : ""
+                        }`}
                     >
                       {lang.label}
                     </button>
@@ -150,7 +170,7 @@ export default function Header() {
 
             {/* Login */}
             <button className="px-6 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-green-700 to-yellow-600 hover:scale-105 transition">
-               {t("LoginRegister")}
+              {t("LoginRegister")}
             </button>
           </div>
 
@@ -162,9 +182,9 @@ export default function Header() {
             <Menu size={20} />
           </button>
         </div>
-      </div>
+      </Container>
 
-      {/* MOBILE MENU (UNCHANGED) */}
+      {/* MOBILE MENU — unchanged */}
       {mobileOpen && (
         <>
           <div
@@ -173,15 +193,13 @@ export default function Header() {
           />
 
           <div
-            className={`fixed inset-x-4 top-24 bg-white rounded-2xl shadow-xl z-50 p-5 ${
-              isRTL ? "text-right" : "text-left"
-            }`}
+            className={`fixed inset-x-4 top-24 bg-white rounded-2xl shadow-xl z-50 p-5 ${isRTL ? "text-right" : "text-left"
+              }`}
           >
             <button
               onClick={() => setMobileOpen(false)}
-              className={`absolute -top-5 ${
-                isRTL ? "left-4" : "right-4"
-              } h-10 w-10 rounded-xl border bg-white flex items-center justify-center`}
+              className={`absolute -top-5 ${isRTL ? "left-4" : "right-4"
+                } h-10 w-10 rounded-xl border bg-white flex items-center justify-center`}
             >
               <X className="text-orange-500" />
             </button>
@@ -214,11 +232,10 @@ export default function Header() {
                 <button
                   key={lang.code}
                   onClick={() => changeLanguage(lang.code)}
-                  className={`py-2 rounded-xl border text-sm ${
-                    currentLocale === lang.code
+                  className={`py-2 rounded-xl border text-sm ${currentLocale === lang.code
                       ? "bg-green-100 text-green-700 font-semibold"
                       : "bg-gray-100"
-                  }`}
+                    }`}
                 >
                   {lang.label}
                 </button>

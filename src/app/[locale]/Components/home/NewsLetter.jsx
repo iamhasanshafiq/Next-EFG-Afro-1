@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import Container from "../../container";
 
 export default function NewsletterSection() {
   const t = useTranslations("NewsLetter");
@@ -33,7 +34,7 @@ export default function NewsletterSection() {
       dir={isRTL ? "rtl" : "ltr"}
       className="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Container>
 
         {/* GREEN BOX */}
         <div className="mb-16 lg:mb-24">
@@ -103,7 +104,7 @@ export default function NewsletterSection() {
           </div>
         </div>
 
-      </div>
+      </Container>
     </section>
   );
 }

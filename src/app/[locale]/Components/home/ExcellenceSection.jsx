@@ -2,6 +2,7 @@
 
 import { Globe, RefreshCw, Settings, Shield, Truck, Eye } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
+import Container from "../../container";
 
 export default function ExcellenceSection() {
   const t = useTranslations("ExcellenceSection");
@@ -35,7 +36,7 @@ export default function ExcellenceSection() {
       dir={isRTL ? "rtl" : "ltr"}
       className="w-full bg-white py-16 md:py-24 lg:py-32"
     >
-      <div className="max-w-7xl mx-auto px-4">
+      <Container>
 
         {/* Badge */}
         <div className="flex justify-center mb-8">
@@ -131,7 +132,8 @@ export default function ExcellenceSection() {
             );
           })}
         </div>
-      </div>
+      
+      </Container>
     </section>
   );
 }

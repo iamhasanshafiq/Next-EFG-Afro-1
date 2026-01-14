@@ -38,7 +38,7 @@ function OurPurpose() {
         `}
       </style>
 
-      <div className="container max-w-[1450px] w-full mx-auto px-4 sm:px-6">
+      <div className="container max-w-7xl w-full mx-auto px-4 sm:px-6">
         {/* HEADER */}
         <div className="text-center mb-12">
           <span className="w-fit block px-3 py-1 text-sm font-medium text-green-900 bg-gray-200 rounded-full mb-3 flex items-center justify-center gap-2 mx-auto">

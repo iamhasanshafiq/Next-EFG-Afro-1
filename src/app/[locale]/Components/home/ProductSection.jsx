@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import ProductCard from "../common/ProductCard";
 import ProductSkeleton from "../skeletons/ProductSkeleton";
 import { getProducts } from "../products/api/products.api";
+import Container from "../../container";
 
 // ================== IMAGES ==================
 const Cocoa = "/images/coffee.png";
@@ -93,7 +94,7 @@ function ProductSection() {
       dir={isRTL ? "rtl" : "ltr"}
       className="w-full bg-gradient-to-b from-white via-gray-50 to-white py-20"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Container>
 
         {/* ================= HEADER ================= */}
         <div
@@ -151,7 +152,7 @@ function ProductSection() {
         <ProductCard key={product.id} product={product} />
       ))}
 </div>
-      </div>
+      </Container>
     </section>
   );
 }

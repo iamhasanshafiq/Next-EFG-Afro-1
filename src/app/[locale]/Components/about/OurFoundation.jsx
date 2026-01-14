@@ -3,6 +3,7 @@
 import { ShieldHalf, Leaf, Handshake, Globe, Rocket, Star, Users, Heart } from "lucide-react";
 import { Card } from "../index";
 import { useTranslations } from "next-intl";
+import Container from "../../container";
 
 function OurFoundation() {
   const t = useTranslations("OurFoundation");
@@ -10,6 +11,7 @@ function OurFoundation() {
   return (
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="container w-full mx-auto px-4 sm:px-6">
+        <Container>
         {/* HEADER */}
         <div className="text-center mb-5">
           <span className="block mx-auto w-fit flex items-center justify-center px-3 py-1 text-sm font-medium text-emerald-600 bg-gray-200 rounded-full mb-3 gap-2">
@@ -89,6 +91,7 @@ function OurFoundation() {
             />
           </div>
         </section>
+        </Container>
       </div>
     </section>
   );

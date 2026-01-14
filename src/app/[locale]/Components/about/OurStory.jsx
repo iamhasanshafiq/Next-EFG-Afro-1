@@ -17,7 +17,8 @@ function OurStory() {
   const t = useTranslations("OurStory");
 
   return (
-    <div className="max-w-[1400px] mx-auto px-4 sm:px-6 mt-14 flex flex-col md:flex-row rtl:md:flex-row-reverse items-center justify-center gap-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-14 flex flex-col md:flex-row rtl:md:flex-row-reverse items-center justify-center gap-12">
+
       
       {/* LEFT — TEXT */}
       <div className="w-full md:w-1/2 flex flex-col gap-5 rtl:text-right">

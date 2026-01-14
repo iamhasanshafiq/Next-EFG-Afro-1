@@ -2,13 +2,14 @@
 
 import { Eye } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Container from "../../container";
 
 function ExploreProducts() {
   const t = useTranslations("ExploreProducts");
 
   return (
     <div className="flex justify-center">
-      <div className="max-w-300 w-full my-10 h-auto">
+      <Container>
         <div
           suppressHydrationWarning
           className="relative w-[90%] md:w-[100%] h-auto p-6
@@ -56,7 +57,7 @@ function ExploreProducts() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }
