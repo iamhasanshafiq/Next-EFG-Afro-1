@@ -91,7 +91,6 @@ function OurPurpose() {
           </div>
 
           {/* VISION */}
-<<<<<<< HEAD:src/app/[locale]/components/about/OurPurpose.jsx
           <div
             className="bounce-hover h-auto p-6 md:p-8 order-2 rtl:order-1 min-w-68"
             style={{ width: `${cardWidth}%` }}
@@ -105,7 +104,6 @@ function OurPurpose() {
                 {t("OurVision")}
               </h3>
             </div>
-=======
         <div
   className="bounce-hover h-auto p-6 md:p-8 order-2 rtl:order-1"
   style={{ width: `${cardWidth}%` }}
@@ -115,7 +113,6 @@ function OurPurpose() {
     <div className="w-15 h-15 bg-amber-500 rounded-2xl text-4xl text-white flex items-center justify-center">
       <Eye />
     </div>
->>>>>>> 013607bf93d1ff8dc7c9d369837a7e843aef832d:src/app/[locale]/Components/about/OurPurpose.jsx
 
     <h3 className="text-2xl font-bold ml-3 text-gray-800">
       {t("OurVision")}

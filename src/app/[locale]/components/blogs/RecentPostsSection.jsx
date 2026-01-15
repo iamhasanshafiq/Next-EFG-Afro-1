@@ -135,12 +135,8 @@ export default function RecentPostsSection() {
 
           {/* Tabs */}
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-<<<<<<< HEAD
             {tabs.map((t) => (
-
-=======
             {tabs.map((tab) => (
->>>>>>> 11e838509602976d43a9818290aaf50fc61a35d9
               <button
                 key={tab.value}
                 onClick={() => setActive(tab.value)}
@@ -152,6 +148,7 @@ export default function RecentPostsSection() {
               >
                 {tab.label}
               </button>
+            ))}
             ))}
           </div>
 
