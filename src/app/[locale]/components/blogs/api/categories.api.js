@@ -1,7 +1,7 @@
 // src/components/blogs/api/categories.api.js
 import axios from "axios";
 
-const SERVER_URL = "http://15.184.197.96";
+const SERVER_URL = "https://api.efgafromarket.ae";
 
 const CATEGORIES_API = `${SERVER_URL}/mkt/api/marketing/categories`;
 

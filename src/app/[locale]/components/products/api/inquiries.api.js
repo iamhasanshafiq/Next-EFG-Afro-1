@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://15.184.197.96";
+const BASE_URL = "https://api.efgafromarket.ae";
 const INQUIRY_API = `${BASE_URL}/catalog/api/inquiries/guest`;
 
 const createGuestInquiry = async (payload) => {

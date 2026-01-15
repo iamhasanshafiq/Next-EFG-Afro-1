@@ -26,7 +26,7 @@ function ExploreSection() {
         const fetchCategories = async () => {
             try {
                 setLoading(true);
-                const res = await axios.get("http://15.184.197.96/catalog/api/categories");
+                const res = await axios.get("https://api.efgafromarket.ae/catalog/api/categories");
                 if (res.data.status === "success") {
                     const mapped = res.data.data.items.map((item, index) => ({
                         id: item.id,

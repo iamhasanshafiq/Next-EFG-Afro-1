@@ -2,7 +2,7 @@
 import axios from "axios";
 
 // const SERVER_URL = import.meta.env.VITE_SERVER_URL;
-const SERVER_URL = "http://15.184.197.96";
+const SERVER_URL = "https://api.efgafromarket.ae";
 
 
 const BLOGS_API = `${SERVER_URL}/mkt/api/marketing/blogs`;
