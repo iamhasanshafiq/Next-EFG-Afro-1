@@ -1,0 +1,1 @@
+registry.gitlab.com/efg-afro-client/efg-afro-website
