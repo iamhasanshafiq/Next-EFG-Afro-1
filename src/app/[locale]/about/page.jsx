@@ -7,7 +7,7 @@ import {
   OurPurpose,
   OurStory,
   WhyChoose
-} from "@/app/[locale]/Components/index.js";
+} from "@/app/[locale]/components/index.js";
 
 import { Star } from "lucide-react";
 import { useTranslations } from "next-intl";

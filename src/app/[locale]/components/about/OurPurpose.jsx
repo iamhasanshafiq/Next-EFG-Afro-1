@@ -55,10 +55,10 @@ function OurPurpose() {
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-8 justify-center">
+        <div className="flex flex-wrap gap-2 md:gap-8 justify-center">
           {/* MISSION */}
           <div
-            className="bounce-hover h-auto p-6 md:p-8 order-1 rtl:order-2"
+            className="bounce-hover h-auto p-6 md:p-8 order-1 rtl:order-2 min-w-68"
             style={{ width: `${cardWidth}%` }}
             dir="ltr"
           >
@@ -92,7 +92,7 @@ function OurPurpose() {
 
           {/* VISION */}
           <div
-            className="bounce-hover h-auto p-6 md:p-8 order-2 rtl:order-1"
+            className="bounce-hover h-auto p-6 md:p-8 order-2 rtl:order-1 min-w-68"
             style={{ width: `${cardWidth}%` }}
             dir="ltr"
           >

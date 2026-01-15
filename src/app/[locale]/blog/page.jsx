@@ -2,10 +2,10 @@
 
 import { useTranslations } from "next-intl";
 
-import HeroSection from "../Components/common/HeroSection";
-import BlogCategories from "../Components/blogs/BlogCategories";
-import RecentPostsSection from "../Components/blogs/RecentPostsSection";
-import TrendingTagsSection from "../Components/blogs/TrendingTagsSection";
+import HeroSection from "../components/common/HeroSection";
+import BlogCategories from "../components/blogs/BlogCategories";
+import RecentPostsSection from "../components/blogs/RecentPostsSection";
+import TrendingTagsSection from "../components/blogs/TrendingTagsSection";
 
 function Blog() {
   const t = useTranslations("BlogPage");
