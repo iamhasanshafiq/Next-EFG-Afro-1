@@ -118,8 +118,9 @@ function SpecializedSolution() {
         </p>
       </div>
 
-      {/* CARDS */}
+      {/* CARDS – 🔒 LTR LOCK */}
       <div
+        dir="ltr"
         className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:snap-none"
         style={{ WebkitOverflowScrolling: "touch" }}
       >
@@ -130,7 +131,9 @@ function SpecializedSolution() {
             <div
               key={service.id}
               className={`snap-start flex-shrink-0 w-72 lg:w-auto bg-white border-2 border-transparent rounded-xl p-6 shadow-sm flex flex-col items-center justify-center hover:border-green-800 hover:-translate-y-2 group relative overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(22,101,52,0.4)] ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: `${600 + index * 100}ms` }}
             >
@@ -138,7 +141,7 @@ function SpecializedSolution() {
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-800 to-orange-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
 
               {/* ICON */}
-              <div className="bg-green-900 w-16 h-16 rounded-lg flex items-center justify-center text-white text-3xl group-hover:bg-orange-500 group-hover:rotate-6 transition-all duration-500">
+              <div className="bg-green-900 w-16 h-16 rounded-2xl flex items-center justify-center text-white text-3xl group-hover:bg-orange-500 group-hover:rotate-6 transition-all duration-500">
                 <IconComponent size={32} />
               </div>
 
@@ -150,7 +153,10 @@ function SpecializedSolution() {
               {/* FEATURES */}
               <ul className="space-y-2 mt-4 w-full">
                 {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start text-sm text-gray-600">
+                  <li
+                    key={idx}
+                    className="flex items-start text-sm text-gray-600"
+                  >
                     <span className="text-white mr-3 mt-0.5 w-5 h-5 flex-shrink-0 rounded-full bg-emerald-600 flex items-center justify-center text-[10px]">
                       ✓
                     </span>

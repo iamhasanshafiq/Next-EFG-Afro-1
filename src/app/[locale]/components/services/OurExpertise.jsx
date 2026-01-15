@@ -67,13 +67,17 @@ function OurExpertise() {
           >
             {t("OurExpertiseTitle")}
           </h2>
+
           <p className="mt-3 text-gray-600">
             {t("OurExpertiseDescription")}
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="max-w-5xl mx-auto flex gap-4 overflow-x-auto pb-6 snap-x lg:grid lg:grid-cols-2 lg:gap-6 lg:overflow-visible">
+        {/* Cards Grid – 🔒 LTR LOCK */}
+        <div
+          dir="ltr"
+          className="max-w-5xl mx-auto flex gap-4 overflow-x-auto pb-6 snap-x lg:grid lg:grid-cols-2 lg:gap-6 lg:overflow-visible"
+        >
           {services.map((service, index) => (
             <div
               key={service.id}
@@ -112,7 +116,10 @@ function OurExpertise() {
 
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-center text-xs text-gray-600">
+                    <li
+                      key={i}
+                      className="flex items-center text-xs text-gray-600"
+                    >
                       <div className="w-4 h-4 rounded-full bg-green-600 flex items-center justify-center mr-2 text-white text-[8px]">
                         ✓
                       </div>

@@ -18,22 +18,20 @@ export default function ExcellenceSection() {
     { id: 3, titleKey: "Card3Title", descKey: "Card3Description", icon: Settings },
     { id: 4, titleKey: "Card4Title", descKey: "Card4Description", icon: Shield },
     { id: 5, titleKey: "Card5Title", descKey: "Card5Description", icon: Truck },
-    { id: 6, titleKey: "Card6Title", descKey: "Card6Description", icon: Eye }, // Explore card
+    { id: 6, titleKey: "Card6Title", descKey: "Card6Description", icon: Eye },
   ];
 
   // =========================
-  // RTL ORDER LOGIC
+  // RTL ORDER LOGIC (SAFE OVERRIDE)
   // =========================
   const mainServices = services.slice(0, 5);
   const lastService = services[5];
 
-  const displayedServices = isRTL
-    ? [...mainServices].reverse().concat(lastService)
-    : services;
+  const displayedServices = services; // 🔥 HARD FIX – NEVER REVERSE
 
   return (
     <section
-      dir={isRTL ? "rtl" : "ltr"}
+      dir="ltr"   // 🔥 FORCE LTR – Arabic me bhi English layout
       className="w-full bg-white py-16 md:py-24 lg:py-32"
     >
       <Container>
@@ -56,7 +54,10 @@ export default function ExcellenceSection() {
         </p>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          dir="ltr"   // 🔥 DOUBLE SAFE
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {displayedServices.map((service) => {
             const IconComponent = service.icon;
             const isExploreCard = service.icon === Eye;
@@ -132,7 +133,7 @@ export default function ExcellenceSection() {
             );
           })}
         </div>
-      
+
       </Container>
     </section>
   );

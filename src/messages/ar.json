@@ -349,23 +349,31 @@
     "SuccessStoriesDescription": "قصص ملهمة لرجال الأعمال والشركات الأفريقية التي تُحدث تأثيرًا عالميًا."
   },
   "RecentPostsSection": {
-    "Badge": "أحدث المقالات",
-    "Title": "المنشورات الحديثة",
-    "EmptyState": "لا توجد منشورات",
-    "Tabs": {
-      "All": "جميع المقالات"
-    },
-    "LoadMore": "تحميل المزيد من المقالات",
-    "Post": {
-      "ReadFull": "اقرأ المقال كاملًا",
-      "Views": "مشاهدة"
-    },
-    "Dialog": {
-      "Bookmark": "حفظ",
-      "Share": "مشاركة",
-      "Close": "إغلاق"
-    }
+  "Badge": "أحدث المقالات",
+  "Title": "المنشورات الحديثة",
+  "EmptyState": "لا توجد منشورات",
+
+  "Tabs": {
+    "All": "جميع المقالات"
   },
+
+  "LoadMore": "تحميل المزيد من المقالات",
+
+  "Post": {
+    "ReadFull": "اقرأ المقال كاملًا",
+    "Views": "مشاهدة",
+    "Uncategorized": "غير مصنف",
+    "Author": "المشرف العام",
+    "NotAvailable": "—"
+  },
+
+  "Dialog": {
+    "Bookmark": "حفظ",
+    "Share": "مشاركة",
+    "Close": "إغلاق"
+  }
+},
+
   "TrendingTagsSection": {
     "Badge": "المواضيع الشائعة",
     "Title": "العلامات الرائجة",

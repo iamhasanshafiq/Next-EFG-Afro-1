@@ -84,7 +84,7 @@ const HeroSection = ({
               <img
                 src={images.left}
                 alt="Product"
-                className={`absolute left-10 top-10 w-32 hidden md:block ${enableFloating ? 'animate-float' : ''}`}
+                className={`absolute left-10 rounded-2xl shadow-gray-700 shadow-lg top-10 w-32 hidden md:block ${enableFloating ? 'animate-float' : ''}`}
                 style={{ animationDelay: '0s' }}
               />
             )
@@ -119,7 +119,7 @@ const HeroSection = ({
               <img
                 src={images.right}
                 alt="Product"
-                className={`absolute right-10 top-10 w-32 hidden md:block ${enableFloating ? 'animate-float' : ''}`}
+                className={`absolute right-10 rounded-2xl shadow-gray-700 shadow-lg  top-10 w-32 hidden md:block ${enableFloating ? 'animate-float' : ''}`}
                 style={{ animationDelay: '1s' }}
               />
             )
@@ -145,7 +145,7 @@ const HeroSection = ({
                   className={`absolute ${reduceIconSpacing ? 'left-24 bottom-2' : 'left-16 bottom-0'} hidden md:block ${enableFloating ? 'animate-float' : ''}`}
                   style={{ animationDelay: '2s' }}
                 >
-                  <div className="bg-yellow-600 p-4 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-green-100">
+                  <div className="bg-yellow-600 p-4  shadow-lg hover:shadow-xl transition-shadow duration-300 border border-green-100">
                     {/* <Shield className="w-16 h-16 text-white" strokeWidth={1.5} /> */}
                     <ShieldCheck className="w-16 h-16 text-white" />
 
@@ -156,7 +156,7 @@ const HeroSection = ({
                 <img
                   src={images.bottomLeft}
                   alt="Product"
-                  className={`absolute left-16 bottom-0 w-28 hidden md:block ${enableFloating ? 'animate-float' : ''}`}
+                  className={`absolute left-16 rounded-2xl shadow-gray-700 shadow-lg  bottom-0 w-28 hidden md:block ${enableFloating ? 'animate-float' : ''}`}
                   style={{ animationDelay: '2s' }}
                 />
               )
@@ -168,12 +168,12 @@ const HeroSection = ({
                 style={{ transitionDelay: '600ms' }}
               >
                 {btnPrimary && (
-                  <button className="px-8 py-3 bg-[#054B2B] text-white rounded-full text-lg font-semibold hover:bg-green-900 transition-colors duration-300">
+                  <button className="px-8 py-3 bg-[#054B2B] text-white rounded-full text-lg font-semibold hover:bg-orange-500 hover:text-white  transition-colors duration-300">
                     {btnPrimary}
                   </button>
                 )}
                 {btnSecondary && (
-                  <button className="px-8 py-3 border border-[#054B2B] rounded-full text-lg font-semibold hover:bg-green-50 transition-colors duration-300">
+                  <button className="px-8 py-3 border border-[#054B2B] hover:bg-[#054B2B] hover:text-white rounded-full text-lg font-semibold  transition-colors duration-300">
                     {btnSecondary}
                   </button>
                 )}
@@ -196,7 +196,7 @@ const HeroSection = ({
                 <img
                   src={images.bottomRight}
                   alt="Product"
-                  className={`absolute right-16 bottom-0 w-28 hidden md:block ${enableFloating ? 'animate-float' : ''}`}
+                  className={`absolute right-16 rounded-2xl shadow-gray-700 shadow-lg bottom-0 w-28 hidden md:block ${enableFloating ? 'animate-float' : ''}`}
                   style={{ animationDelay: '1.5s' }}
                 />
               )

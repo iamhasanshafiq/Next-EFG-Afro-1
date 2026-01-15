@@ -45,7 +45,10 @@ export default function InquiryTypeSection() {
   ];
 
   return (
-    <section className="w-full bg-white py-20">
+    <section
+      dir="ltr"
+      className="w-full bg-white py-20 text-left"
+    >
       <div className="max-w-7xl mx-auto px-6">
         {/* Badge */}
         <div className="flex justify-center">
@@ -56,8 +59,8 @@ export default function InquiryTypeSection() {
         </div>
 
         {/* Heading */}
-        <div className="mt-10">
-          <h3 className="text-green-900 font-extrabold tracking-widest text-sm">
+        <div className="mt-5 text-center">
+          <h3 className="text-green-900 font-extrabold tracking-widest text-4xl">
             {t("heading")}
           </h3>
         </div>

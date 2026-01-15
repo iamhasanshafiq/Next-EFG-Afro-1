@@ -91,6 +91,7 @@ function OurPurpose() {
           </div>
 
           {/* VISION */}
+<<<<<<< HEAD:src/app/[locale]/components/about/OurPurpose.jsx
           <div
             className="bounce-hover h-auto p-6 md:p-8 order-2 rtl:order-1 min-w-68"
             style={{ width: `${cardWidth}%` }}
@@ -104,32 +105,62 @@ function OurPurpose() {
                 {t("OurVision")}
               </h3>
             </div>
+=======
+        <div
+  className="bounce-hover h-auto p-6 md:p-8 order-2 rtl:order-1"
+  style={{ width: `${cardWidth}%` }}
+  dir="ltr"
+>
+  <div className="flex items-center mb-4">
+    <div className="w-15 h-15 bg-amber-500 rounded-2xl text-4xl text-white flex items-center justify-center">
+      <Eye />
+    </div>
+>>>>>>> 013607bf93d1ff8dc7c9d369837a7e843aef832d:src/app/[locale]/Components/about/OurPurpose.jsx
 
-            <p className="text-gray-600 mb-6">
-              {t("OurVisionDescription")}
-            </p>
+    <h3 className="text-2xl font-bold ml-3 text-gray-800">
+      {t("OurVision")}
+    </h3>
+  </div>
 
-            <div className="space-y-4">
-              {[
-                { icon: Trophy, title: t("MarketLeadership"), desc: t("MarketLeadershipDescription") },
-                { icon: Gem, title: t("ResourceShowcase"), desc: t("ResourceShowcaseDescription") },
-                { icon: Users, title: t("InclusiveGrowth"), desc: t("InclusiveGrowthDescription") },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="border-l-6 rtl:border-l-0 rtl:border-r-6 border-amber-600 p-4 bg-gray-100 hover:bg-[#fcf2ef] rounded-2xl flex items-center gap-4 transform transition-transform duration-500 hover:translate-x-2 rtl:hover:-translate-x-2"
-                >
-                  <div className="w-12 h-12 bg-amber-600 rounded-2xl text-2xl text-white flex items-center justify-center">
-                    <item.icon />
-                  </div>
-                  <div>
-                    <p className="font-medium text-gray-800">{item.title}</p>
-                    <p className="text-sm text-gray-600">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+  <p className="text-gray-600 mb-6">
+    {t("OurVisionDescription")}
+  </p>
+
+  <div className="space-y-4">
+    {[
+      {
+        icon: Trophy,
+        title: t("MarketLeadership"),
+        desc: t("MarketLeadershipDescription"),
+      },
+      {
+        icon: Gem,
+        title: t("ResourceShowcase"),
+        desc: t("ResourceShowcaseDescription"),
+      },
+      {
+        icon: Users,
+        title: t("InclusiveGrowth"),
+        desc: t("InclusiveGrowthDescription"),
+      },
+    ].map((item, i) => (
+      <div
+        key={i}
+        className="border-l-4 border-amber-500 p-4 bg-gray-100 hover:bg-[#fcf2ef] rounded-2xl flex items-center gap-4 transform transition-transform duration-500 hover:translate-x-2"
+      >
+        <div className="w-12 h-12 bg-amber-500 rounded-2xl text-2xl text-white flex items-center justify-center">
+          <item.icon />
+        </div>
+
+        <div>
+          <p className="font-medium text-gray-800">{item.title}</p>
+          <p className="text-sm text-gray-600">{item.desc}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
         </div>
       </div>
     </section>

@@ -12,13 +12,11 @@ import {
   MapPin,
   ChevronUp,
 } from "lucide-react";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import Container from "../../container";
 
 function Footer() {
   const t = useTranslations("footer");
-  const locale = useLocale();
-  const isRTL = locale === "ar";
 
   const [showTop, setShowTop] = useState(false);
 
@@ -33,8 +31,7 @@ function Footer() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
-    <footer className="w-full m-0 p-0">
-      
+    <footer className="w-full m-0 p-0 mt-10" dir="ltr">
       <div
         className="relative w-full"
         style={{
@@ -50,49 +47,40 @@ function Footer() {
 
           <div className="max-w-7xl mx-auto px-6 py-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
-              {/* Left Section */}
-              <div className="flex flex-col gap-6">
+
+              {/* LEFT SECTION */}
+              <div className="flex flex-col gap-6 text-left">
                 <img
                   src="/images/logo.png"
                   alt="EFG Afro Market"
                   className="h-16 w-fit"
                 />
 
-                <p className="text-gray-700 leading-7 max-w-lg">
+                <p className="text-gray-700 leading-7 max-w-lg" dir="ltr">
                   {t("description")}
                 </p>
 
-                <div
-                  className={`flex gap-3 ${
-                    isRTL ? "justify-end" : ""
-                  }`}
-                >
-                  <SocialIcon label="Facebook">
+                <div className="flex gap-3">
+                  <SocialIcon href="https://www.facebook.com/EFGAFROMARKET/" label="Facebook">
                     <Facebook size={18} />
                   </SocialIcon>
-                  <SocialIcon label="Twitter">
+                  <SocialIcon href="https://x.com/efgafromarket" label="Twitter">
                     <Twitter size={18} />
                   </SocialIcon>
-                  <SocialIcon label="LinkedIn">
+                  <SocialIcon href="https://www.linkedin.com/company/efgafromarket" label="LinkedIn">
                     <Linkedin size={18} />
                   </SocialIcon>
-                  <SocialIcon label="Instagram">
+                  <SocialIcon href="https://www.instagram.com/efgafromarket/" label="Instagram">
                     <Instagram size={18} />
                   </SocialIcon>
-                  <SocialIcon label="YouTube">
+                  <SocialIcon href="https://youtube.com/c/efgafromarket" label="YouTube">
                     <Youtube size={18} />
                   </SocialIcon>
                 </div>
               </div>
 
-              {/* Right Section */}
-              <div
-                className={`max-w-md w-full ${
-                  isRTL
-                    ? "md:justify-self-start text-right"
-                    : "md:justify-self-end text-left"
-                }`}
-              >
+              {/* RIGHT SECTION */}
+              <div className="max-w-md w-full md:justify-self-end text-left">
                 <h3 className="text-lg font-bold text-[#0B4E3C] mb-6 relative inline-block">
                   {t("contactTitle")}
                   <span className="absolute left-0 -bottom-2 h-0.75 w-10 bg-[#D67C2A]" />
@@ -102,24 +90,26 @@ function Footer() {
                   <ContactRow
                     icon={<Mail size={20} />}
                     text={t("email")}
-                    isRTL={isRTL}
+                    href="mailto:example@example.com"
                   />
 
                   <ContactRow
                     icon={<PhoneCall size={20} />}
                     text={t("phone")}
-                    isRTL={isRTL}
+                    href="tel:+1234567890"
                   />
 
                   <ContactRow
                     icon={<MapPin size={20} />}
                     text={t("address")}
-                    isRTL={isRTL}
+                    href="https://goo.gl/maps/example"
                   />
                 </div>
               </div>
+
             </div>
 
+            {/* COPYRIGHT */}
             <div className="mt-14 border-t border-gray-400/40 pt-6 text-center text-gray-700">
               {t("copyright")}
             </div>
@@ -127,19 +117,16 @@ function Footer() {
         </div>
       </div>
 
-      {/* Scroll To Top */}
+      {/* SCROLL TO TOP */}
       {showTop && (
         <button
           onClick={scrollToTop}
-          className={`fixed bottom-6 ${
-            isRTL ? "left-6" : "right-6"
-          } h-12 w-12 rounded-full bg-[#0B4E3C] text-white flex items-center justify-center shadow-lg hover:opacity-90 transition`}
+          className="fixed bottom-6 right-6 h-12 w-12 rounded-full bg-[#0B4E3C] text-white flex items-center justify-center shadow-lg hover:opacity-90 transition"
           aria-label="Scroll to top"
         >
           <ChevronUp size={22} />
         </button>
       )}
-      
     </footer>
   );
 }
@@ -148,10 +135,12 @@ export default Footer;
 
 /* ---------------- Sub Components ---------------- */
 
-function SocialIcon({ children, label }) {
+function SocialIcon({ children, label, href }) {
   return (
     <a
-      href="#"
+      href={href || "#"}
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label={label}
       className="h-10 w-10 rounded-full border border-[#0B4E3C]/40 bg-white/50 backdrop-blur flex items-center justify-center text-[#0B4E3C] transition-all duration-300 ease-out hover:-translate-y-1 hover:text-white hover:bg-gradient-to-br hover:from-green-900 hover:to-orange-400/80 shadow-sm hover:shadow-lg cursor-pointer"
     >
@@ -160,16 +149,17 @@ function SocialIcon({ children, label }) {
   );
 }
 
-
-function ContactRow({ icon, text, isRTL }) {
+function ContactRow({ icon, text, href }) {
   return (
-    <div
-      className={`flex items-start gap-4 text-gray-700 ${
-        isRTL ? "flex-row-reverse text-right" : ""
-      }`}
+    <a
+      href={href || "#"}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-start gap-4 text-gray-700 hover:text-[#0B4E3C] transition"
     >
+      {/* Icon always LEFT */}
       <div className="mt-0.5 text-[#D67C2A]">{icon}</div>
       <p className="leading-7">{text}</p>
-    </div>
+    </a>
   );
 }
