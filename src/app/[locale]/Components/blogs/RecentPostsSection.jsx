@@ -91,7 +91,7 @@ export default function RecentPostsSection() {
         value: c.slug,
       })),
     ];
-  }, [categoriesApi]);
+  }, [categoriesApi, t]);
 
   /* ---------------- Map Blogs ---------------- */
   const allPosts = useMemo(() => {
@@ -134,17 +134,17 @@ export default function RecentPostsSection() {
 
           {/* Tabs */}
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            {tabs.map((t) => (
+            {tabs.map((tab) => (
               <button
-                key={t.value}
-                onClick={() => setActive(t.value)}
+                key={tab.value}
+                onClick={() => setActive(tab.value)}
                 className={
-                  active === t.value
+                  active === tab.value
                     ? "px-8 py-3 rounded-full bg-[#0B4E3C] text-white font-semibold"
                     : "px-8 py-3 rounded-full border text-gray-700"
                 }
               >
-                {t.label}
+                {tab.label}
               </button>
             ))}
           </div>
@@ -196,7 +196,7 @@ export default function RecentPostsSection() {
       </section>
 
       {/* Dialog */}
-      <ArticleDialog open={open} post={activePost} onClose={() => setOpen(false)} />
+      <ArticleDialog open={open} post={activePost} onClose={() => setOpen(false)} t={t} />
     </>
   );
 }
@@ -236,7 +236,7 @@ function PostCard({ post, onRead, t }) {
 
 
 /* ---------------- Dialog ---------------- */
-function ArticleDialog({ open, post, onClose }) {
+function ArticleDialog({ open, post, onClose, t }) {
   useEffect(() => {
     if (!open) return;
     document.body.style.overflow = "hidden";
@@ -249,13 +249,13 @@ function ArticleDialog({ open, post, onClose }) {
     <div className="fixed inset-0 z-50">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/40"
+        className="absolute inset-0 bg-black/40 transition-opacity duration-300"
         onClick={onClose}
       />
 
       {/* Modal wrapper */}
       <div className="absolute inset-0 flex items-center justify-center p-4">
-        <div className="bg-white w-full max-w-5xl h-[85vh] rounded-2xl overflow-hidden flex flex-col shadow-2xl">
+        <div className="bg-white w-full max-w-5xl h-[85vh] rounded-2xl overflow-hidden flex flex-col shadow-2xl animate-modal-in">
 
           {/* ===== Header (fixed) ===== */}
           <div className="flex justify-between items-center px-6 py-4 border-b shrink-0">
