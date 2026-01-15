@@ -223,9 +223,10 @@ export default function Header() {
               ))}
             </div>
 
-            <button className="mt-5 w-full py-3 rounded-xl text-white font-semibold bg-gradient-to-r from-green-700 to-yellow-600 flex items-center justify-center gap-2">
+            <Link href={`https://dashboard.efgafromarket.ae/`}  className="mt-5 w-full py-3 rounded-xl text-white font-semibold bg-gradient-to-r from-green-700 to-yellow-600 flex items-center justify-center gap-2">
               <User size={18} /> {t("LoginRegister")}
-            </button>
+
+            </Link>
 
             <div className="mt-3 grid grid-cols-5 gap-2">
               {LANGUAGES.map((lang) => (
