@@ -169,9 +169,11 @@ export default function Header() {
             </div>
 
             {/* Login */}
-            <button className="px-6 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-green-700 to-yellow-600 hover:scale-105 transition">
+            <Link
+            href={`https://dashboard.efgafromarket.ae/`}
+            className="px-6 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-green-700 to-yellow-600 hover:scale-105 transition">
               {t("LoginRegister")}
-            </button>
+            </Link>
           </div>
 
           {/* MOBILE BUTTON */}
