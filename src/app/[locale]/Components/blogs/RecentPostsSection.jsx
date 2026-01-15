@@ -98,11 +98,12 @@ export default function RecentPostsSection() {
     return blogsApi.map((b) => ({
       id: b.uuid || b.id,
       title: b.title,
-      category: b?.category?.title || "Uncategorized",
-      readTime: b.readingTime || "—",
+      category: b?.category?.title || t("Post.Uncategorized"),
+     readTime: b.readingTime || t("Post.NotAvailable"),
       excerpt: makeExcerpt(b.content, 140),
       content: b.content,
-      author: "Super Admin",
+      author: t("Post.Author"),
+
       date: formatDate(b.createdAt),
       views: b.views ?? 0,
       likes: b.likes ?? 0,
@@ -135,6 +136,7 @@ export default function RecentPostsSection() {
           {/* Tabs */}
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             {tabs.map((t) => (
+
               <button
                 key={t.value}
                 onClick={() => setActive(t.value)}
@@ -339,6 +341,7 @@ function makeExcerpt(text = "", max = 140) {
 }
 
 function formatDate(iso) {
-  if (!iso) return "—";
+  if (!iso) return t("Post.NotAvailable");
   return new Date(iso).toLocaleDateString();
 }
+

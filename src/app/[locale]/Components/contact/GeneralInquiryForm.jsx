@@ -20,9 +20,9 @@ export default function GeneralInquiryForm() {
     agree: false,
   });
 
- const countries = t.raw("countries");
+  const countries = t.raw("countries");
 
-const timezones = t.raw("timezones");
+  const timezones = t.raw("timezones");
 
   const inputBase =
     "w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-800 outline-none transition " +
@@ -59,7 +59,7 @@ const timezones = t.raw("timezones");
   };
 
   return (
-    <section className="py-16" style={{ backgroundColor: "#F8F9FA" }}>
+    <section dir="ltr" className="py-16 text-left" style={{ backgroundColor: "#F8F9FA" }}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Main Card */}
         <div className="bg-white border border-emerald-100 rounded-2xl shadow-lg shadow-black/5 overflow-hidden">
@@ -93,25 +93,25 @@ const timezones = t.raw("timezones");
                 <div className="mt-6 space-y-6">
                   <div>
                     <label className={labelBase}>{t("labels.firstName")}
-</label>
+                    </label>
                     <input className={`${inputBase} mt-2`} />
                   </div>
 
                   <div>
                     <label className={labelBase}>{t("labels.lastName")}
-</label>
+                    </label>
                     <input className={`${inputBase} mt-2`} />
                   </div>
 
                   <div>
                     <label className={labelBase}>{t("labels.emailAddress")}
-</label>
+                    </label>
                     <input type="email" className={`${inputBase} mt-2`} />
                   </div>
 
                   <div>
                     <label className={labelBase}>{t("labels.phoneNumber")}
-</label>
+                    </label>
                     <input className={`${inputBase} mt-2`} />
                     <p className="mt-2 text-xs text-gray-500">
                       {t("labels.phoneHint")}
@@ -125,23 +125,23 @@ const timezones = t.raw("timezones");
               <div>
                 <div className={sectionTitle}>
                   <Building2 size={18} />
-                 {t("sections.companyInformation")}
+                  {t("sections.companyInformation")}
 
                 </div>
 
                 <div className="mt-6 space-y-6">
                   <div>
                     <label className={labelBase}>{t("labels.company")}
-</label>
+                    </label>
                     <input className={`${inputBase} mt-2`} />
                   </div>
 
                   <div>
                     <label className={labelBase}>{t("labels.country")}
-</label>
+                    </label>
                     <Select value="" onChange={() => { }}>
                       <option value="">{t("labels.countryPlaceholder")}
-</option>
+                      </option>
                       {countries.map((c) => (
                         <option key={c} value={c}>
                           {c}
@@ -152,7 +152,7 @@ const timezones = t.raw("timezones");
 
                   <div>
                     <label className={labelBase}>{t("labels.subject")}
-</label>
+                    </label>
                     <input
                       className={`${inputBase} mt-2`}
                       placeholder={t("labels.subjectPlaceholder")}
@@ -161,7 +161,7 @@ const timezones = t.raw("timezones");
 
                   <div>
                     <label className={labelBase}>{t("labels.priorityLevel")}
-</label>
+                    </label>
                     <Select
                       value={form.priority}
                       onChange={(e) =>
@@ -169,11 +169,11 @@ const timezones = t.raw("timezones");
                       }
                     >
                       <option>{t("labels.priorityOptions.normal")}
-</option>
+                      </option>
                       <option>{t("labels.priorityOptions.high")}
-</option>
+                      </option>
                       <option>{t("labels.priorityOptions.urgent")}
-</option>
+                      </option>
                     </Select>
                   </div>
                 </div>
@@ -192,7 +192,7 @@ const timezones = t.raw("timezones");
 
                 <div className="mt-6">
                   <label className={labelBase}>{t("labels.message")}
-</label>
+                  </label>
                   <textarea
                     className={`${inputBase} mt-2 min-h-[150px] resize-none`}
                     placeholder={t("labels.messagePlaceholder")}
@@ -256,7 +256,7 @@ const timezones = t.raw("timezones");
                       <div className="relative">
                         <select className={`${inputBase} appearance-none pr-10`}>
                           <option>{t("communication.timezonePlaceholder")}
-</option>
+                          </option>
                           {timezones.map((t) => (
                             <option key={t}>{t}</option>
                           ))}
@@ -294,7 +294,7 @@ const timezones = t.raw("timezones");
                     />
                     <span>
                       {t("agreement.textPrefix")}
-{" "}
+                      {" "}
                       <a
                         href="#"
                         className="font-medium text-emerald-800 hover:underline"

@@ -8,7 +8,7 @@ function ExploreProducts() {
   const t = useTranslations("ExploreProducts");
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center ">
       <Container>
         <div
           suppressHydrationWarning
@@ -27,12 +27,15 @@ function ExploreProducts() {
             className="relative z-10 flex flex-col md:flex-row items-center md:items-start justify-between m-auto h-60 md:h-50 gap-4 md:gap-0 px-10"
           >
             {/* TEXT */}
-            <div className="w-full h-full md:w-2/3 flex flex-col justify-center rtl:text-right">
-              <h1 className="text-white text-2xl md:text-3xl font-bold">
+           <div className="w-full h-full md:w-2/3 flex flex-col justify-center items-start">
+
+              <h1 className="text-white text-2xl md:text-3xl font-bold text-left">
+
                 {t("ExploreProductsTitle")}
               </h1>
 
-              <p className="text-white text-base md:text-lg font-medium mt-2">
+              <p className="text-white text-base md:text-lg font-medium mt-2 text-left">
+
                 {t("ExploreProductsDescription")}
               </p>
             </div>

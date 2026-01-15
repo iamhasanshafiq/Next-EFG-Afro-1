@@ -29,7 +29,10 @@ export default function TrendingTagsSection() {
   );
 
   return (
-    <section className="w-full py-20 bg-white relative overflow-hidden">
+    <section
+      dir="ltr"  
+      className="w-full py-20 bg-white relative overflow-hidden"
+    >
       {/* Soft background glow */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[450px] rounded-full bg-gray-200/40 blur-3xl" />

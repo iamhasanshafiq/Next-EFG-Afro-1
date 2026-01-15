@@ -40,21 +40,18 @@ function NewsLetter() {
           {/* RIGHT BUTTON */}
           <div className="w-full md:w-1/3 flex justify-center md:justify-end">
             <button
-              className="
-                flex items-center gap-3
-                px-7 py-4
-                rounded-xl
-                border border-white/60
-                text-white font-semibold
-                backdrop-blur-sm
-                transition-all duration-300
-                hover:bg-white hover:text-green-900
-                hover:shadow-xl hover:shadow-black/30
-              "
-            >
-              <Info size={20} />
-              {t("productsNewsLetterButton")}
-            </button>
+                suppressHydrationWarning
+                className="flex items-center justify-center text-lg gap-2
+                bg-white/10 backdrop-blur-sm border-2 border-gray-300
+                rounded-3xl text-white font-medium py-4 px-5
+                transform transition-all duration-500
+                hover:-translate-y-1 hover:bg-white hover:text-green-900
+                focus:-translate-y-1 focus:bg-white focus:text-green-900"
+              >
+                <Info className="text-lg" />
+                {t("productsNewsLetterButton")}
+              </button>
+
           </div>
 
         </div>

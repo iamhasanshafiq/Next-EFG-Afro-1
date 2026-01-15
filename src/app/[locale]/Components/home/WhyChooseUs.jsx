@@ -144,32 +144,38 @@ export default function WhyChooseUs() {
           </div>
 
           {/* RIGHT () */}
-       <div
-  className={`space-y-8 ${isRTL ? "text-right" : "text-left"}`}
+<div
+  className={`space-y-8 text-left`}
 >
-
   <h3 className="text-3xl sm:text-4xl font-bold text-orange-500">
-    {t(currentFeature.headingKey)}
-  </h3>
+      {t(currentFeature.headingKey)}
+    </h3>
 
-  <p className="text-gray-600">
-    {t(currentFeature.contentKey)}
-  </p>
+  {/* 🔥 HEADER + CONTENT AS ONE DIV */}
+  <div
+    dir="ltr"
+    className="space-y-4 rounded-lg  bg-gray-50 border-l-4 pl-4 border-orange-400 shadow p-4"
+  >
+    
 
+    <p className="text-gray-600">
+      {t(currentFeature.contentKey)}
+    </p>
+  </div>
+
+  {/* 🔥 BENEFITS */}
   <div className="space-y-4">
     {currentFeature.benefitsKeys.map((benefitKey, index) => (
       <div
         key={index}
-        dir="ltr"   // 🔥 HARD FIX – ROW NEVER FLIPS
-        className={`flex items-center gap-4 pb-4 rounded-lg border-orange-400
-          ${isRTL ? "border-r-4 pr-4" : "border-l-4 pl-4"}
+        dir="ltr"   // 🔥 ROW NEVER FLIPS
+        className={`flex items-center  gap-4 pb-4 rounded-lg bg-gray-50
+          border-l-4 pl-4 border-orange-400 shadow
         `}
       >
         <span
           dir={isRTL ? "rtl" : "ltr"}   // 🔥 TEXT DIRECTION SAFE
-          className={`font-medium text-gray-700 w-full ${
-            isRTL ? "text-right" : "text-left"
-          }`}
+          className="font-medium text-gray-700 w-full text-left"
         >
           {t(benefitKey)}
         </span>
@@ -178,6 +184,8 @@ export default function WhyChooseUs() {
   </div>
 
 </div>
+
+
 
 
         </div>

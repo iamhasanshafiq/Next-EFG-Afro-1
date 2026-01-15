@@ -75,7 +75,7 @@ function WhyChoose() {
         className="max-w-7xl w-full flex flex-col md:flex-row gap-12 items-center"
       >
         {/* LEFT — TEXT */}
-        <div className="w-full md:w-1/2 px-6 rtl:text-right">
+        <div className="w-full md:w-1/2 px-6 rtl:items-end">
           <span
             dir="ltr"
             className="inline-flex self-start items-center gap-2 bg-gray-200 text-green-900 px-3 py-1 rounded-full mb-6"

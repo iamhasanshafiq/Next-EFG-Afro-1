@@ -21,49 +21,54 @@ function OurStory() {
 
       
       {/* LEFT — TEXT */}
-      <div className="w-full md:w-1/2 flex flex-col gap-5 rtl:text-right">
-        <div className="w-fit px-6 py-2 bg-gray-200 text-green-900 rounded-full shadow font-medium">
-          ⭐ {t("OurStory")}
-        </div>
+      <div className="w-full md:w-1/2 flex flex-col gap-5 text-left items-start rtl:items-end">
 
-      
 
-        <h1 className="text-4xl font-bold">
-          {t("OurStoryTitle")} 
-           <span className="text-transparent bg-gradient-to-r from-green-900 to-amber-600 bg-clip-text">
-             {t("OurStoryHighlight")}
-          </span>
-          {t("OurStoryTitle1")}
-        </h1>
+  <div className=" w-fit px-6 py-2 bg-gray-200 text-green-900 rounded-full shadow font-medium ">
+  ⭐ {t("OurStory")}
+</div>
 
-        <p className="text-gray-600 max-w-xl">
-          {t("OurStoryDescription")}
-        </p>
 
-        <div className="flex flex-col gap-6 mt-4">
-          <div className="flex items-center gap-3">
-            <Globe className="text-green-900" />
-            {t("DigitalGatewaytoAfrica")}
-          </div>
-          <div className="flex items-center gap-3">
-            <Handshake className="text-green-900" />
-            {t("EmpoweringLocalProducers")}
-          </div>
-          <div className="flex items-center gap-3">
-            <Rocket className="text-green-900" />
-            {t("FutureReadyCommerce")}
-          </div>
-        </div>
+  <h1 className="text-4xl font-bold">
+    {t("OurStoryTitle")}
+    <span className="text-transparent bg-gradient-to-r from-green-900 to-amber-600 bg-clip-text">
+      {t("OurStoryHighlight")}
+    </span>
+    {t("OurStoryTitle1")}
+  </h1>
 
-        <div className="flex gap-5 mt-6 ">
-          <button className="w-40 py-4 rounded-3xl bg-green-900 text-white flex items-center justify-center gap-2 font-semibold transition hover:bg-amber-600 hover:scale-105">
-            <MessageCircle /> {t("LetsTalk")}
-          </button>
-          <button className="w-40 py-4 rounded-3xl border border-green-900 text-green-900 flex items-center justify-center gap-2 font-semibold transition hover:bg-green-900 hover:text-white hover:scale-105">
-            <ArrowDown /> {t("LearnMore")}
-          </button>
-        </div>
-      </div>
+  <p className="text-gray-600 max-w-xl">
+    {t("OurStoryDescription")}
+  </p>
+
+  <div className="flex flex-col gap-6 mt-4">
+    <div className="flex items-center gap-3 ltr:flex-row rtl:flex-row-reverse">
+      <Globe className="text-green-900" />
+      {t("DigitalGatewaytoAfrica")}
+    </div>
+
+    <div className="flex items-center gap-3 ltr:flex-row rtl:flex-row-reverse">
+      <Handshake className="text-green-900" />
+      {t("EmpoweringLocalProducers")}
+    </div>
+
+    <div className="flex items-center gap-3 ltr:flex-row rtl:flex-row-reverse">
+      <Rocket className="text-green-900" />
+      {t("FutureReadyCommerce")}
+    </div>
+  </div>
+
+  <div className="flex gap-5 mt-6 ltr:justify-start rtl:justify-end">
+    <button className="w-40 py-4 rounded-3xl bg-green-900 text-white flex items-center gap-2 ltr:flex-row rtl:flex-row-reverse justify-center font-semibold transition hover:bg-amber-600 hover:scale-105">
+      <MessageCircle /> {t("LetsTalk")}
+    </button>
+
+    <button className="w-40 py-4 rounded-3xl border border-green-900 text-green-900 flex items-center gap-2 ltr:flex-row rtl:flex-row-reverse justify-center font-semibold transition hover:bg-green-900 hover:text-white hover:scale-105">
+      <ArrowDown /> {t("LearnMore")}
+    </button>
+  </div>
+</div>
+
 
       {/* RIGHT — IMAGE (LOCKED) */}
       <div

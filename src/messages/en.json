@@ -394,7 +394,10 @@
 
   "Post": {
     "ReadFull": "Read Full Article",
-    "Views": "views"
+    "Views": "views",
+    "Uncategorized": "Uncategorized",
+    "Author": "Super Admin",
+    "NotAvailable": "—"
   },
 
   "Dialog": {
@@ -403,6 +406,7 @@
     "Close": "Close"
   }
 },
+
 
 
   "TrendingTagsSection": {

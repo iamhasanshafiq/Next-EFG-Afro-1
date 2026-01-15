@@ -81,10 +81,10 @@ function HowWeWork() {
                   className={`ml-20 md:ml-0 md:w-1/2 ${
                     alignEnd
                       ? isRTL
-                        ? "md:pr-16 text-right"
+                        ? "md:pr-16 text-left"
                         : "md:pl-16 text-left"
                       : isRTL
-                        ? "md:pl-16 text-right"
+                        ? "md:pl-16 text-left"
                         : "md:pr-16 md:mr-auto text-left md:text-right"
                   }`}
                 >
