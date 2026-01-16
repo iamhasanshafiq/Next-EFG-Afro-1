@@ -16,12 +16,13 @@ const navItems = [
   { key: "Contact", path: "/contact" },
 ];
 
+/* 🔥 FLAGS PNG INSTEAD OF EMOJI */
 const LANGUAGES = [
-  { code: "en", label: "🇺🇸 EN" },
-  { code: "ar", label: "🇸🇦 AR" },
-  { code: "zh", label: "🇨🇳 ZH" },
-  { code: "fr", label: "🇫🇷 FR" },
-  { code: "es", label: "🇪🇸 ES" },
+  { code: "en", label: "EN", flag: "/pngs/Australia.png" },
+  { code: "ar", label: "AR", flag: "/pngs/Saudi_Arabia.png" },
+  { code: "zh", label: "ZH", flag: "/pngs/china.png" },
+  { code: "fr", label: "FR", flag: "/pngs/france.png" },
+  { code: "es", label: "ES", flag: "/pngs/spain.png" },
 ];
 
 export default function Header() {
@@ -93,7 +94,6 @@ export default function Header() {
                   >
                     {t(item.key)}
 
-                    {/* SILVER BG */}
                     <span
                       className={`
                         absolute inset-0 bg-slate-200 rounded-full -z-10
@@ -106,7 +106,6 @@ export default function Header() {
                       `}
                     />
 
-                    {/* ORANGE UNDERLINE */}
                     <span
                       className={`
                         absolute bottom-[-1px] left-6 right-6 h-[2px]
@@ -152,12 +151,17 @@ export default function Header() {
                     <button
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code)}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-green-50 ${
+                      className={`w-full flex items-center gap-2 px-4 py-2 text-sm hover:bg-green-50 ${
                         currentLocale === lang.code
                           ? "font-semibold text-green-700"
                           : ""
                       }`}
                     >
+                      <img
+                        src={lang.flag}
+                        alt={lang.label}
+                        className="w-5 h-5 object-contain"
+                      />
                       {lang.label}
                     </button>
                   ))}
@@ -230,31 +234,9 @@ export default function Header() {
                   `}
                 >
                   {t(item.key)}
-
-                  {/* ORANGE UNDERLINE — MOBILE */}
-                  <span
-                    className={`
-                      absolute bottom-1 left-6 right-6 h-[2px]
-                      bg-orange-500 rounded-full
-                      transition-transform duration-300
-                      ${
-                        pathname === `/${currentLocale}${item.path}`
-                          ? "scale-x-100"
-                          : "scale-x-0"
-                      }
-                    `}
-                  />
                 </Link>
               ))}
             </div>
-
-            {/* MOBILE LOGIN */}
-            <Link
-              href="https://dashboard.efgafromarket.ae/"
-              className="mt-5 w-full py-3 rounded-xl text-white font-semibold bg-gradient-to-r from-green-700 to-yellow-600 flex items-center justify-center gap-2"
-            >
-              <User size={18} /> {t("LoginRegister")}
-            </Link>
 
             {/* MOBILE LANG */}
             <div className="mt-3 grid grid-cols-5 gap-2">
@@ -262,12 +244,17 @@ export default function Header() {
                 <button
                   key={lang.code}
                   onClick={() => changeLanguage(lang.code)}
-                  className={`py-2 rounded-xl border text-sm ${
+                  className={`py-2 rounded-xl border text-sm flex items-center justify-center gap-1 ${
                     currentLocale === lang.code
                       ? "bg-green-100 text-green-700 font-semibold"
                       : "bg-gray-100"
                   }`}
                 >
+                  <img
+                    src={lang.flag}
+                    alt={lang.label}
+                    className="w-4 h-4 object-contain"
+                  />
                   {lang.label}
                 </button>
               ))}
