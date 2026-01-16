@@ -1,7 +1,16 @@
 "use client";
 
-import { ShieldHalf, Leaf, Handshake, Globe, Rocket, Star, Users, Heart } from "lucide-react";
-import { Card } from "../index";
+import {
+  ShieldHalf,
+  Leaf,
+  Handshake,
+  Globe,
+  Rocket,
+  Star,
+  Users,
+  Heart,
+} from "lucide-react";
+import Card from "../common/Card";
 import { useTranslations } from "next-intl";
 import Container from "../../container";
 
@@ -29,9 +38,10 @@ function OurFoundation() {
           </div>
 
           {/* CARDS */}
-          <section className="max-w-7xl mx-auto px-2 md:px-4 py-12">
+          <section className="max-w-7xl mx-auto px-4 py-12">
             <div
-              className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4"
+              dir="ltr" // 🔥 IMPORTANT: Arabic mein bhi English jaisa flow
+              className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:gap-6 lg:overflow-visible lg:snap-none"
               style={{ WebkitOverflowScrolling: "touch" }}
             >
               <Card

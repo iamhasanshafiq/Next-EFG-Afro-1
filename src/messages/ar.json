@@ -374,27 +374,28 @@
   }
 },
 
-  "TrendingTagsSection": {
-    "Badge": "المواضيع الشائعة",
-    "Title": "العلامات الرائجة",
-    "Tags": {
-      "AfricanTrade": "#AfricanTrade",
-      "SustainableFarming": "#SustainableFarming",
-      "DigitalAgriculture": "#DigitalAgriculture",
-      "ExportOpportunities": "#ExportOpportunities",
-      "MarketAccess": "#MarketAccess",
-      "Blockchain": "#Blockchain",
-      "CoffeeExport": "#CoffeeExport",
-      "SupplyChain": "#SupplyChain",
-      "FairTrade": "#FairTrade",
-      "AgTech": "#AgTech",
-      "CocoaIndustry": "#CocoaIndustry",
-      "TradeFinance": "#TradeFinance",
-      "GreenTechnology": "#GreenTechnology",
-      "FoodSecurity": "#FoodSecurity",
-      "EcommercePlatform": "#EcommercePlatform"
-    }
-  },
+"TrendingTagsSection": {
+  "Badge": "المواضيع الشائعة",
+  "Title": "العلامات الرائجة",
+  "Tags": {
+    "AfricanTrade": "#التجارة_الأفريقية",
+    "SustainableFarming": "#الزراعة_المستدامة",
+    "DigitalAgriculture": "#الزراعة_الرقمية",
+    "ExportOpportunities": "#فرص_التصدير",
+    "MarketAccess": "#الوصول_إلى_الأسواق",
+    "Blockchain": "#البلوك_تشين",
+    "CoffeeExport": "#تصدير_القهوة",
+    "SupplyChain": "#سلسلة_التوريد",
+    "FairTrade": "#التجارة_العادلة",
+    "AgTech": "#التقنية_الزراعية",
+    "CocoaIndustry": "#صناعة_الكاكاو",
+    "TradeFinance": "#تمويل_التجارة",
+    "GreenTechnology": "#التكنولوجيا_الخضراء",
+    "FoodSecurity": "#الأمن_الغذائي",
+    "EcommercePlatform": "#منصات_التجارة_الإلكترونية"
+  }
+},
+
   "contact": {
     "badgeText": "100% منتجات أفريقية أصيلة",
     "title": "بوابتك إلى  التميز الأفريقي",

@@ -7,5 +7,576 @@
     "Blog": "博客",
     "Contact": "联系我们 ",
     "LoginRegister": "登录/注册"
+  },
+  "Home": {
+    "Title": "通往",
+    "highlight": "非洲卓越",
+    "Description": "将全球市场与优质非洲产品连接起来。",
+    "BadgeText": "100% 正宗非洲产品",
+    "BtnPrimary": "探索产品",
+    "BtnSecondary": "了解更多"
+  },
+  "Stats": {
+    "Products": "产品",
+    "Countries": "国家",
+    "Customers": "客户"
+  },
+  "ExploreSection": {
+    "EXPLORE": "探索",
+    "PopularCategories": "热门分类",
+    "EXPLOREDescription": "探索我们丰富多样的正宗非洲产品"
+  },
+  "ProductSection": {
+    "PRODUCTS": "产品",
+    "RecommendedForYou": "为您推荐",
+    "PRODUCTSDescription": "根据全球需求精选产品"
+  },
+  "WhyChooseUs": {
+    "WHYCHOOSEUS": "为什么选择我们",
+    "WhyChooseEFGAfroMarket": "为什么选择 EFG Afro Market",
+    "OrganicProducts": "100% 有机产品",
+    "OrganicProductsDescription": "直接来自非洲农场的认证有机产品",
+    "ExpressGlobalDelivery": "全球快速配送",
+    "ExpressGlobalDeliveryDescription": "安全快捷的全球运输服务",
+    "SatisfactionGuarantee": "满意保障",
+    "SatisfactionGuaranteeDescription": "您的满意是我们的首要任务",
+    "OrganicProductsTitle": "健康食品是好心情的关键",
+    "OrganicProductsContent1": "我们的有机产品精心挑选自非洲各地的认证农场。每一件产品都经过严格的质量检测，确保为您提供最优质的非洲农产品。",
+    "OrganicProductsContent2": "非洲各地认证有机农场",
+    "OrganicProductsContent3": "严格的质量检测标准",
+    "OrganicProductsContent4": "从农场直达市场",
+    "OrganicProductsContent5": "可持续农业实践",
+    "ExpressGlobalDeliveryTitle": "快速且安全的全球运输",
+    "ExpressGlobalDeliveryContent1": "我们提供带有实时追踪的快速运输选项，确保您的非洲产品无论身在何处都能新鲜准时送达。",
+    "ExpressGlobalDeliveryContent2": "提供快速运输服务",
+    "ExpressGlobalDeliveryContent3": "所有订单支持实时追踪",
+    "ExpressGlobalDeliveryContent4": "温控运输系统",
+    "ExpressGlobalDeliveryContent5": "安全包装保障",
+    "SatisfactionGuaranteeTitle": "您的满意是我们的承诺",
+    "SatisfactionGuaranteeContent1": "我们对每一件销售的产品负责。我们的卓越承诺让您放心购物，如有任何不满意，我们将竭诚为您解决。",
+    "SatisfactionGuaranteeContent2": "30 天退款保障",
+    "SatisfactionGuaranteeContent3": "24/7 全天候客户支持",
+    "SatisfactionGuaranteeContent4": "每一笔订单均有质量保障",
+    "SatisfactionGuaranteeContent5": "无忧退换服务"
+  },
+
+   "ExcellenceSection": {
+    "OUREXCELLENCE": "我们的卓越",
+    "ComprehensiveServicesActivities": "综合服务与业务",
+    "OUREXCELLENCEDescription": "探索我们完整的专业服务范围",
+    "Card1Title": "全球市场平台",
+    "Card1Description": "非洲商品、文化产品和自然资源的在线展示与目录管理。",
+    "Card2Title": "供应链管理",
+    "Card2Description": "从农场到最终买家的完整供应链设计与实时追踪。",
+    "Card3Title": "农业科技整合",
+    "Card3Description": "通过数字工具、传感器和移动咨询服务实现智能农业。",
+    "Card4Title": "安全支付系统",
+    "Card4Description": "支持多币种支付的区块链安全交易系统。",
+    "Card5Title": "进出口支持",
+    "Card5Description": "清关、文件处理及国际市场准入咨询。",
+    "Card6Title": "探索所有服务",
+    "Card6Description": "深入了解我们全面的服务与业务内容"
+  },
+  "NewsLetter": {
+    "NewsLetterTitle": "不错过 EFG Afro Market 的最新动态",
+    "OUREXCELLENCEDescription": "获取最新产品、优惠及市场资讯",
+    "NewsLetterPlaceHolder": "请输入您的电子邮箱地址",
+    "Send": "发送",
+    "WeDeliver": "全球配送",
+    "FRESH": "100% 新鲜",
+    "HealthyProducts": "健康产品",
+    "QUALITYFIRST": "质量第一",
+    "ECOFRIENDLY": "环保友好",
+    "FARMFOOD": "农场食品",
+    "NATURALFOOD": "天然食品"
+  },
+  "About": {
+    "AboutTitle": "连接非洲丰富的文化遗产",
+    "AboutHighlight": "全球机遇",
+    "AboutDescription": "了解我们的旅程、使命与愿景，见证我们如何将非洲传统产业与现代数字商业相结合",
+    "AboutBadgeText": "关于 EFG Afro Market"
+  },
+  "OurStory": {
+    "OurStory": "我们的故事",
+    "OurStoryTitle": "连接非洲的",
+    "OurStoryTitle1": "与数字商业",
+    "OurStoryHighlight": "传统产业",
+    "OurStoryDescription": "EFG Afro Market 公司是 EFG 集团（未来世代企业）旗下的数字门户，致力于将非洲社区、自然资源和产品带入国际市场。",
+    "DigitalGatewaytoAfrica": "非洲数字门户",
+    "EmpoweringLocalProducers": "赋能本地生产者",
+    "FutureReadyCommerce": "面向未来的商业模式",
+    "LetsTalk": "联系我们",
+    "LearnMore": "了解更多",
+    "ConnectingAfricatotheWorld": "连接非洲与世界",
+    "Empoweringcommunitiesthrough": "通过数字创新赋能社区",
+    "Producers": "1000+",
+    "ProducersHighlight": "非洲生产者",
+    "Countries": "50+",
+    "CountriesHighlight": "覆盖国家",
+    "Success": "98%",
+    "SuccessHighlight": "成功率"
+  },
+
+   "OurPurpose": {
+    "OurPurpose": "我们的宗旨",
+    "OurPurposeTitle": "使命与愿景",
+    "OurPurposeDescription": "推动非洲可持续经济转型",
+    "OurMission": "我们的使命",
+    "OurMissionDescription": "通过端到端平台赋能非洲生产者，简化全球贸易，并为国际买家和发展伙伴创造可持续经济机会。",
+    "DigitallyempowerAfricanproducers": "数字化赋能非洲生产者",
+    "Simplifyglobaltradeprocesses": "简化全球贸易流程",
+    "Createsustainableeconomicopportunities": "创造可持续经济机会",
+    "Connectinternationalbuyersseamlessly": "无缝连接国际买家",
+    "OurVision": "我们的愿景",
+    "OurVisionDescription": "成为非洲领先的出口型数字市场与物流平台，展示非洲丰富资源，推动包容性经济转型。",
+    "MarketLeadership": "市场领导力",
+    "MarketLeadershipDescription": "非洲第一出口市场",
+    "ResourceShowcase": "资源展示",
+    "ResourceShowcaseDescription": "展示非洲丰富的文化与资源",
+    "InclusiveGrowth": "包容性增长",
+    "InclusiveGrowthDescription": "惠及所有人的经济转型"
+  },
+  "OurFoundation": {
+    "OurFoundation": "我们的基石",
+    "OurFoundationTitle": "核心价值观",
+    "OurFoundationDescription": "指导我们一切行动的原则",
+    "Authenticity": "真实性",
+    "AuthenticityDescription": "我们确保所有产品均为正宗非洲产品，保留其独特的文化传承与品质。",
+    "Sustainability": "可持续性",
+    "SustainabilityDescription": "环境责任与可持续实践是我们运营和合作的核心。",
+    "Integrity": "诚信",
+    "IntegrityDescription": "以透明和诚实的方式与所有利益相关者合作，通过一致且合乎道德的商业实践建立信任。",
+    "Innovation": "创新",
+    "InnovationDescription": "利用前沿技术革新传统的非洲贸易与商业模式。",
+    "Community": "社区",
+    "CommunityDescription": "赋能本地社区，推动非洲大陆的包容性增长。",
+    "Excellence": "卓越",
+    "ExcellenceDescription": "致力于提供超越全球标准的高质量产品与服务。",
+    "Collaboration": "合作",
+    "CollaborationDescription": "建立稳固的伙伴关系，共同推动非洲发展。",
+    "Passion": "热情",
+    "PassionDescription": "源于对非洲的热爱，致力于向世界展示其美丽与潜力。"
+  },
+  "WhyChoose": {
+    "WhyChoose": "为什么选择我们",
+    "WhyChooseTitle": "让我们",
+    "WhyChooseHighlight": "与众不同",
+    "WhyChooseDescription": "我们不仅仅是一个市场平台，而是一个专为非洲贸易打造的综合生态系统，将传统价值与现代技术相结合。",
+    "SecurePlatform": "安全平台",
+    "ISOCertified": "ISO 认证",
+    "Available": "全天候可用",
+    "Technology": "技术",
+    "TechnologyTitle": "先进技术架构",
+    "TechnologyDescription": "我们的平台采用 AI、区块链和物联网技术，实现实时追踪与安全交易。",
+    "AIpoweredqualityverification": "AI 驱动的质量验证",
+    "Blockchainsecuredtransactions": "区块链安全交易",
+    "IoTenabledsupplychaintracking": "物联网供应链追踪",
+    "Mobilefirstdesign": "移动优先的无障碍设计",
+    "AdvancedTechnology": "先进技术",
+    "Logistics": "物流",
+    "LogisticsTitle": "整合物流网络",
+    "LogisticsDescription": "从农场到家门口，我们的物流确保快速安全的全球配送。",
+    "Coldchainfacilities": "冷链设施",
+    "Expressshipping": "快速运输合作伙伴",
+    "Customsclearance": "清关协助",
+    "Realtimetracking": "实时追踪",
+    "GlobalLogistics": "全球物流",
+    "Support": "支持",
+    "SupportTitle": "专属支持体系",
+    "SupportDescription": "我们的多语言团队提供 24/7 全天候全球支持。",
+    "customersupport": "24/7 客户支持",
+    "Multilingualhelp": "多语言协助",
+    "Producertraining": "生产者培训项目",
+    "Marketinsights": "市场洞察报告",
+    "DedicatedSupport": "专属支持"
+  },
+
+   "ExploreProducts": {
+    "ExploreProductsTitle": "准备加入我们的使命吗？",
+    "ExploreProductsDescription": "无论您是希望进入全球市场的非洲生产者，还是寻找正宗非洲产品的国际买家，我们都在这里为您提供支持。",
+    "ExploreProductsBtn": "探索产品"
+  },
+  "Products": {
+    "ProductsTitle": "探索正宗非洲产品",
+    "Productshighlight": "与资源",
+    "ProductsDescription": "将全球市场与优质非洲产品连接起来。",
+    "ProductsbadgeText": "100% 正宗非洲产品",
+    "ProductsbtnPrimary": "探索产品",
+    "ProductsbtnSecondary": "了解更多"
+  },
+  "OurProducts": {
+    "ProductsBadge": "产品",
+    "ProductsTitle": "我们的产品",
+    "ProductsShowing": "显示",
+    "ProductsOf": "共",
+    "ProductsError": "加载产品失败",
+    "ProductsOriginAfrica": "非洲",
+    "ProductsProducts": "产品",
+    "ProductsLoadingProducts": "正在加载产品...",
+    "ProductsSearchPlaceholder": "搜索产品...",
+    "ProductsReset": "重置",
+    "ProductsAll": "全部",
+    "ProductsPrev": "上一页",
+    "ProductsNext": "下一页",
+    "ProductsPage": "页",
+    "ProductsOfPages": "共"
+  },
+  "ExploreCategories": {
+    "ExploreCategoriesBadge": "探索分类",
+    "ExploreCategoriesTitle": "精选产品分类",
+    "ExploreCategoriesDescription": "探索来自非洲各地的热门产品分类",
+    "Agriculture": {
+      "AgricultureTitle": "农产品",
+      "AgricultureDescription": "来自非洲各地的优质农作物与农产品",
+      "AgricultureProducts": "150+ 产品"
+    },
+    "Fruits": {
+      "FruitsTitle": "新鲜水果",
+      "FruitsDescription": "来自非洲果园的热带与特色水果",
+      "FruitsProducts": "80+ 产品"
+    },
+    "Resources": {
+      "ResourcesTitle": "自然资源",
+      "ResourcesDescription": "来自非洲矿区的珍贵矿产与资源",
+      "ResourcesProducts": "45+ 产品"
+    },
+    "Crafts": {
+      "CraftsTitle": "手工艺与工匠产品",
+      "CraftsDescription": "手工制作的非洲传统艺术与工艺品",
+      "CraftsProducts": "120+ 产品"
+    }
+  },
+  "productsNewsLetter": {
+    "productsNewsLetterTitle": "准备开始贸易了吗？",
+    "productsNewsLetterDescription": "与非洲供应商建立联系，发现适合您业务的正宗产品。加入全球成千上万满意买家的行列。",
+    "productsNewsLetterButton": "了解更多"
+  },
+
+   "Services": {
+    "HeroTitle": "我们的专业",
+    "HeroHighlight": "服务与解决方案",
+    "HeroDescription": "通过前沿技术、全面支持和全球市场准入赋能非洲企业。从市场平台解决方案到供应链管理，我们为您提供全方位支持。",
+    "HeroBadgeText": "综合商业解决方案"
+  },
+  "OurExpertise": {
+    "OurExpertiseBadge": "我们的专长",
+    "OurExpertiseTitle": "核心业务服务",
+    "OurExpertiseDescription": "旨在加速您业务增长的综合解决方案。",
+    "Service1Title": "优质非洲商品",
+    "Service1Description": "非洲商品与自然资源的在线目录管理。",
+    "Service1One": "目录管理",
+    "Service1Two": "实时追踪",
+    "Service2Title": "供应链",
+    "Service2Description": "从农场到最终买家的完整供应链设计。",
+    "Service2One": "物流优化",
+    "Service2Two": "质量控制",
+    "Service3Title": "农业科技",
+    "Service3Description": "通过数字工具和咨询服务实现智能农业实践。",
+    "Service3One": "物联网部署",
+    "Service3Two": "精准农业",
+    "Service4Title": "安全支付",
+    "Service4Description": "支持区块链验证的多币种支付网关。",
+    "Service4One": "区块链安全",
+    "Service4Two": "防欺诈保护",
+    "OurExpertiseButton": "联系我们"
+  },
+  "SpecializedSolutionAlt": {
+    "Badge": "专业解决方案",
+    "Title": "附加服务",
+    "Description": "支持您业务旅程各个阶段的扩展服务",
+    "Service1Title": "真实性",
+    "Service1Feature1": "在线产品目录管理",
+    "Service1Feature2": "实时库存追踪",
+    "Service1Feature3": "多语言支持",
+    "Service1Feature4": "在一个平台查找高评分产品",
+    "Service2Title": "市场研究与分析",
+    "Service2Feature1": "市场趋势分析",
+    "Service2Feature2": "价格监测",
+    "Service2Feature3": "需求预测",
+    "Service2Feature4": "竞争情报",
+    "Service3Title": "培训与咨询",
+    "Service3Feature1": "数字营销培训",
+    "Service3Feature2": "业务发展",
+    "Service3Feature3": "质量标准教育",
+    "Service3Feature4": "技术采用支持",
+    "Service4Title": "可持续发展咨询",
+    "Service4Feature1": "有机认证支持",
+    "Service4Feature2": "可持续农业实践",
+    "Service4Feature3": "环境合规",
+    "Service4Feature4": "减少碳足迹",
+    "Service5Title": "买家支持服务",
+    "Service5Feature1": "产品采购协助",
+    "Service5Feature2": "供应商验证",
+    "Service5Feature3": "质量保障计划",
+    "Service5Feature4": "订单管理支持",
+    "Service6Title": "24/7 客户支持",
+    "Service6Feature1": "全天候协助",
+    "Service6Feature2": "多语言支持",
+    "Service6Feature3": "技术故障排除",
+    "Service6Feature4": "优先响应机制"
+  },
+
+
+
+  "HowWeWork": {
+    "Badge": "我们的工作方式",
+    "Title": "我们的服务流程",
+    "Description": "高效流畅的流程，确保卓越成果",
+    "Step1Title": "初步咨询",
+    "Step1Desc": "我们通过全面的咨询深入了解您的业务需求与目标。",
+    "Step2Title": "解决方案设计",
+    "Step2Desc": "我们的专家根据您的具体需求定制专属解决方案。",
+    "Step3Title": "实施执行",
+    "Step3Desc": "我们在尽量不影响您现有运营的情况下部署解决方案。",
+    "Step4Title": "监控与支持",
+    "Step4Desc": "持续监控并提供长期支持，确保最佳运行效果。"
+  },
+  "BlogPage": {
+    "BadgeText": "EFG Afro Market 博客",
+    "Title": "洞察来自",
+    "Highlight": "非洲贸易革命",
+    "Description": "掌握非洲贸易与农业领域的最新趋势、市场洞察、成功案例与发展动态",
+    "Stats": {
+      "Articles": "文章",
+      "Categories": "分类",
+      "Readers": "读者"
+    }
+  },
+  "BlogCategories": {
+    "Badge": "博客分类",
+    "Title": "探索分类",
+    "Description": "按分类浏览文章，发现非洲贸易、科技与成功故事的深度洞察。",
+    "AgricultureTitle": "农业",
+    "AgricultureDescription": "关于非洲农业、出口及农业增长的最新动态与洞察。",
+    "TechnologyTitle": "科技",
+    "TechnologyDescription": "塑造非洲市场的贸易技术、数字平台与创新。",
+    "MarketInsightsTitle": "市场洞察",
+    "MarketInsightsDescription": "趋势分析、价格信号、供应链与市场机遇。",
+    "SuccessStoriesTitle": "成功故事",
+    "SuccessStoriesDescription": "企业与社区实现贸易成功的真实案例。"
+  },
+
+  "RecentPostsSection": {
+    "Badge": "最新文章",
+    "Title": "近期发布",
+    "EmptyState": "暂无文章",
+    "Tabs": {
+      "All": "全部文章"
+    },
+    "LoadMore": "加载更多文章",
+    "Post": {
+      "ReadFull": "阅读全文",
+      "Views": "浏览量",
+      "Uncategorized": "未分类",
+      "Author": "超级管理员",
+      "NotAvailable": "—"
+    },
+    "Dialog": {
+      "Bookmark": "收藏",
+      "Share": "分享",
+      "Close": "关闭"
+    }
+  },
+  "TrendingTagsSection": {
+    "Badge": "热门话题",
+    "Title": "趋势标签",
+    "Tags": {
+      "AfricanTrade": "#非洲贸易",
+      "SustainableFarming": "#可持续农业",
+      "DigitalAgriculture": "#数字农业",
+      "ExportOpportunities": "#出口机会",
+      "MarketAccess": "#市场准入",
+      "Blockchain": "#区块链",
+      "CoffeeExport": "#咖啡出口",
+      "SupplyChain": "#供应链",
+      "FairTrade": "#公平贸易",
+      "AgTech": "#农业科技",
+      "CocoaIndustry": "#可可产业",
+      "TradeFinance": "#贸易金融",
+      "GreenTechnology": "#绿色科技",
+      "FoodSecurity": "#粮食安全",
+      "EcommercePlatform": "#电子商务平台"
+    }
+  },
+  "contact": {
+    "badgeText": "100% 正宗非洲产品",
+    "title": "通往",
+    "highlight": "非洲卓越",
+    "description": "将全球市场与优质非洲农产品、自然资源和手工艺珍品连接起来。",
+    "stats": {
+      "support": "24/7 支持",
+      "responseTime": "响应时间（小时）",
+      "countries": "国家"
+    }
+  },
+  "inquiry": {
+    "badge": "我们如何帮助您？",
+    "heading": "选择您的咨询类型",
+    "subtitle": "请选择最符合您需求的选项，以获得个性化支持",
+    "items": {
+      "general": {
+        "title": "一般咨询",
+        "description": "关于我们的服务、平台或非洲贸易机会的一般问题。",
+        "button": "开始咨询"
+      },
+      "product": {
+        "title": "产品咨询",
+        "description": "正在寻找特定的非洲产品？让我们为您对接经过验证的供应商。",
+        "button": "查找产品"
+      },
+      "market": {
+        "title": "市场信息",
+        "description": "需要非洲产品的市场洞察、价格信息或贸易数据？",
+        "button": "获取洞察"
+      },
+      "support": {
+        "title": "技术支持",
+        "description": "账户、订单或技术问题需要帮助？我们的支持团队随时为您服务。",
+        "button": "获取支持"
+      }
+    }
+  },
+  "generalInquiry": {
+    "header": {
+      "title": "一般咨询",
+      "subtitle": "请填写以下表格，我们将在 24 小时内与您联系。"
+    },
+    "sections": {
+      "personalInformation": "个人信息",
+      "companyInformation": "公司信息",
+      "yourMessage": "您的留言",
+      "communicationPreferences": "沟通偏好"
+    },
+    "labels": {
+      "firstName": "名字",
+      "lastName": "姓氏",
+      "emailAddress": "电子邮箱",
+      "phoneNumber": "电话号码",
+      "phoneHint": "包含国家代码（例如：+1 234 567 8900）",
+      "company": "公司 / 组织",
+      "country": "国家",
+      "countryPlaceholder": "选择国家",
+      "subject": "主题",
+      "subjectPlaceholder": "简要描述您的咨询内容",
+      "priorityLevel": "优先级",
+      "priorityOptions": {
+        "normal": "普通",
+        "high": "高",
+        "urgent": "紧急"
+      },
+      "message": "留言内容",
+      "messagePlaceholder": "请详细说明您的咨询、需求或问题。"
+    },
+    "communication": {
+      "preferredContactMethod": "首选联系方式",
+      "email": "电子邮件",
+      "phone": "电话",
+      "whatsapp": "WhatsApp",
+      "yourTimezone": "您的时区",
+      "timezonePlaceholder": "选择时区",
+      "newsletter": "订阅我们的新闻通讯，获取最新动态与洞察"
+    },
+    "agreement": {
+      "textPrefix": "我同意",
+      "terms": "条款与条件",
+      "and": "以及",
+      "privacy": "隐私政策"
+    },
+    "submit": {
+      "button": "发送消息",
+      "note": "我们通常在工作日 24 小时内回复。"
+    },
+    "countries": [
+      "阿拉伯联合酋长国",
+      "沙特阿拉伯",
+      "巴基斯坦",
+      "美国",
+      "英国",
+      "尼日利亚",
+      "肯尼亚"
+    ],
+    "timezones": [
+      "GMT +04:00（迪拜）",
+      "GMT +05:00（巴基斯坦）",
+      "GMT +03:00（利雅得）",
+      "GMT +00:00（伦敦）",
+      "GMT -05:00（纽约）"
+    ]
+  },
+  "contactInfo": {
+    "office": {
+      "title": "我们的办公室",
+      "address": "阿联酋迪拜 Al Ittihad 路 Abraj Al Mamzar 大厦 A 座 206 室，邮政信箱 15058",
+      "businessHoursTitle": "营业时间",
+      "hours": {
+        "weekday": {
+          "label": "周一至周五",
+          "time": "上午 9:00 – 下午 6:00（GST）"
+        },
+        "saturday": {
+          "label": "周六",
+          "time": "上午 10:00 – 下午 4:00（GST）"
+        },
+        "sunday": {
+          "label": "周日",
+          "time": "休息"
+        }
+      }
+    },
+    "responseTimes": {
+      "title": "响应时间",
+      "general": {
+        "label": "一般咨询",
+        "time": "4 小时内"
+      },
+      "product": {
+        "label": "产品咨询",
+        "time": "2 小时内"
+      },
+      "support": {
+        "label": "技术支持",
+        "time": "1 小时内"
+      }
+    }
+  },
+  "faq": {
+    "badge": "常见问题",
+    "title": "常见问题解答",
+    "subtitle": "快速找到最常见问题的答案",
+    "items": [
+      {
+        "question": "如何在平台上找到可靠的非洲供应商？",
+        "answer": "我们的平台对所有供应商实施严格的验证体系。您可以浏览已验证的供应商、查看买家评价以及相关认证信息，并访问详细的供应商资料。"
+      },
+      {
+        "question": "平台上提供哪些类型的非洲产品？",
+        "answer": "我们提供包括农产品（咖啡、可可、水果、香料）、自然资源、手工艺品、纺织品等多种正宗非洲产品。所有产品均经过质量与可持续来源验证。"
+      },
+      {
+        "question": "是否提供物流与运输支持？",
+        "answer": "是的，我们提供仓储、包装、运输协调以及清关协助等全方位物流解决方案，确保产品安全高效送达。"
+      },
+      {
+        "question": "费用和佣金如何计算？",
+        "answer": "我们的费用结构透明且具有竞争力，具体取决于产品类别、数量及所需服务。大宗或长期合作可享受优惠。"
+      },
+      {
+        "question": "如何确保产品质量与真实性？",
+        "answer": "我们实行严格的质量保证流程，包括供应商验证、产品抽样、第三方检测和定期审核。"
+      },
+      {
+        "question": "支持哪些付款方式？",
+        "answer": "我们支持银行转账、信用证、贸易融资解决方案以及数字支付平台，确保交易安全。"
+      }
+    ]
+  },
+  "footer": {
+    "description": "EFG Afro Market 公司是 EFG Hub（未来世代企业）旗下的数字门户，致力于将全球市场与优质非洲产品连接起来。",
+    "contactTitle": "联系我们",
+    "email": "info@efgafromarket.ae",
+    "phone": "+97142390993",
+    "address": "阿联酋迪拜 Al Ittihad 路 Abraj Al Mamzar 大厦 A 座 206 室，邮政信箱 15058。",
+    "copyright": "© 2025 EFG-HUB. 保留所有权利 | 未来世代企业"
   }
 }
+
