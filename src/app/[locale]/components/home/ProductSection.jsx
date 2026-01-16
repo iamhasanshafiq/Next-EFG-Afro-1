@@ -52,8 +52,11 @@ function ProductSection() {
     const fetchProducts = async () => {
       try {
         setLoading(true);
+
+        // API se max 12 products
         const items = await getProducts(12);
 
+        // Products ko map kar ke image + default values add kar rahe hain
         const mapped = items.map((item) => ({
           ...item,
           image: getProductImage(item.name),
@@ -74,9 +77,10 @@ function ProductSection() {
     fetchProducts();
   }, []);
 
-  // ================== FILTER ==================
+  // ================== CATEGORY FILTER ==================
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
+
     setFiltered(
       category === "All"
         ? products
@@ -84,42 +88,46 @@ function ProductSection() {
     );
   };
 
-  // ================== ERROR ==================
+  // ================== ERROR UI ==================
   if (error) {
-    return <p className="text-center text-red-500 mt-20">{error}</p>;
+    return (
+      <p className="text-center text-red-500 mt-20">
+        {error}
+      </p>
+    );
   }
 
   return (
     <section
       dir={isRTL ? "rtl" : "ltr"}
-      className="w-full bg-gradient-to-b from-white via-gray-50 to-white py-20"
+      className="w-full bg-gradient-to-b from-white via-gray-50 to-white py-16"
     >
       <Container>
 
         {/* ================= HEADER ================= */}
         <div
-          className={`flex flex-col items-center justify-center mb-12 ${
+          className={`flex flex-col items-center mb-10 ${
             isRTL ? "text-right" : "text-center"
           }`}
         >
-          <div className="inline-flex items-center justify-center mb-6 px-4 py-2 rounded-full bg-[#055440]">
-            <span className="text-white font-semibold text-sm tracking-wide">
+          <div className="inline-flex items-center mb-5 px-4 py-2 rounded-full bg-[#055440]">
+            <span className="text-white font-semibold text-sm">
               {t("PRODUCTS")}
             </span>
           </div>
 
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {t("RecommendedForYou")}
           </h2>
 
-          <p className="text-lg text-gray-600 max-w-2xl">
+          <p className="text-base text-gray-600 max-w-2xl">
             {t("PRODUCTSDescription")}
           </p>
         </div>
 
         {/* ================= CATEGORIES ================= */}
         <div
-          className={`flex gap-3 pb-6 mb-12 justify-center flex-wrap ${
+          className={`flex gap-2 mb-10 justify-center flex-wrap ${
             isRTL ? "flex-row-reverse" : ""
           }`}
         >
@@ -127,11 +135,11 @@ function ProductSection() {
             <button
               key={category}
               onClick={() => handleCategoryChange(category)}
-              className={`px-6 py-2 rounded-full font-medium border-2 transition-all duration-300
+              className={`px-4 py-1.5 text-sm rounded-full border transition-all
                 ${
                   activeCategory === category
                     ? "bg-[#055440] text-white border-[#055440]"
-                    : "border-gray-300 text-gray-700 hover:bg-[#055440] hover:text-white hover:border-[#055440]"
+                    : "border-gray-300 text-gray-700 hover:bg-[#055440] hover:text-white"
                 }`}
             >
               {category}
@@ -141,17 +149,28 @@ function ProductSection() {
 
         {/* ================= PRODUCTS GRID ================= */}
         <div
-  dir="ltr"   // ✅ FIX: PRODUCTS HAMESHA SEEDHE
-  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5"
->
-  {loading
-    ? Array.from({ length: 12 }).map((_, i) => (
-        <ProductSkeleton key={i} />
-      ))
-    : filtered.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
-</div>
+          dir="ltr" // ✅ PRODUCTS LTR rahenge even in Arabic
+          className="
+            grid
+            grid-cols-2        /* 📱 Mobile → 2 cards per row */
+            sm:grid-cols-3     /* 📱 Large mobile → 3 cards */
+            md:grid-cols-4     /* 💻 Tablet */
+            lg:grid-cols-6     /* 🖥 Desktop */
+            gap-4              /* 🔽 Gap thoda kam for mobile */
+          "
+        >
+          {loading
+            ? Array.from({ length: 12 }).map((_, i) => (
+                <ProductSkeleton key={i} />
+              ))
+            : filtered.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                />
+              ))}
+        </div>
+
       </Container>
     </section>
   );

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Truck,
   TrendingUp,
@@ -7,16 +7,24 @@ import {
   ShoppingCart,
   Leaf,
   Headset,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 function SpecializedSolution() {
-  const [isVisible, setIsVisible] = useState(false);
   const t = useTranslations("SpecializedSolutionAlt");
+  const sliderRef = useRef(null);
+
+  // 🔒 HARD HYDRATION FIX
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
+    setMounted(true);
   }, []);
+
+  // ⛔ VERY IMPORTANT (prevents hydration error)
+  if (!mounted) return null;
 
   const services = [
     {
@@ -87,86 +95,141 @@ function SpecializedSolution() {
     },
   ];
 
+  // 🔹 Mobile: slide exactly ONE card (center)
+  const slideLeft = () => {
+    const card = sliderRef.current?.querySelector(".snap-center");
+    if (!card) return;
+
+    sliderRef.current.scrollBy({
+      left: -(card.offsetWidth + 16),
+      behavior: "smooth",
+    });
+  };
+
+  const slideRight = () => {
+    const card = sliderRef.current?.querySelector(".snap-center");
+    if (!card) return;
+
+    sliderRef.current.scrollBy({
+      left: card.offsetWidth + 16,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="max-w-7xl mx-auto px-4 py-12">
       {/* HEADER */}
-      <div className="text-center mb-5">
-        <span
-          className={`mx-auto w-fit flex items-center justify-center px-3 py-1 text-sm font-medium text-emerald-600 bg-gray-200 rounded-full mb-5 gap-2 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          }`}
-        >
+      <div className="text-center mb-8">
+        <span className="mx-auto w-fit flex items-center justify-center px-3 py-1 text-sm font-medium text-emerald-600 bg-gray-200 rounded-full mb-5">
           {t("Badge")}
         </span>
 
-        <h2
-          className={`text-3xl mb-3 sm:text-4xl font-bold text-gray-800 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-          style={{ transitionDelay: "200ms" }}
-        >
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-3">
           {t("Title")}
         </h2>
 
-        <p
-          className={`text-gray-500 mb-3 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-          style={{ transitionDelay: "400ms" }}
-        >
+        <p className="text-gray-500 max-w-2xl mx-auto">
           {t("Description")}
         </p>
       </div>
 
-      {/* CARDS – 🔒 LTR LOCK */}
-      <div
-        dir="ltr"
-        className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:snap-none"
-        style={{ WebkitOverflowScrolling: "touch" }}
-      >
-        {services.map((service, index) => {
-          const IconComponent = service.icon;
+      {/* SLIDER / GRID */}
+      <div className="relative">
+        {/* LEFT BUTTON (mobile only) */}
+        <button
+          onClick={slideLeft}
+          className="lg:hidden absolute left-0 top-1/2 -translate-y-1/2 z-20
+            bg-white shadow-lg rounded-full p-2
+            hover:bg-green-900 hover:text-white transition"
+        >
+          <ChevronLeft />
+        </button>
 
-          return (
-            <div
-              key={service.id}
-              className={`snap-start flex-shrink-0 w-72 lg:w-auto bg-white border-2 border-transparent rounded-xl p-6 shadow-sm flex flex-col items-center justify-center hover:border-green-800 hover:-translate-y-2 group relative overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(22,101,52,0.4)] ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-10"
-              }`}
-              style={{ transitionDelay: `${600 + index * 100}ms` }}
-            >
-              {/* TOP BORDER */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-800 to-orange-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        {/* RIGHT BUTTON (mobile only) */}
+        <button
+          onClick={slideRight}
+          className="lg:hidden absolute right-0 top-1/2 -translate-y-1/2 z-20
+            bg-white shadow-lg rounded-full p-2
+            hover:bg-green-900 hover:text-white transition"
+        >
+          <ChevronRight />
+        </button>
 
-              {/* ICON */}
-              <div className="bg-green-900 w-16 h-16 rounded-2xl flex items-center justify-center text-white text-3xl group-hover:bg-orange-500 group-hover:rotate-6 transition-all duration-500">
-                <IconComponent size={32} />
+        {/* CARDS */}
+        <div
+          ref={sliderRef}
+          dir="ltr"
+          className="
+            flex gap-4 overflow-x-auto pb-4 scrollbar-hide
+            snap-x snap-mandatory
+            px-[8vw]
+
+            lg:grid lg:grid-cols-3 lg:gap-6
+            lg:px-0 lg:overflow-visible lg:snap-none
+          "
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
+          {services.map((service) => {
+            const IconComponent = service.icon;
+
+            return (
+              <div
+                key={service.id}
+                className="
+                  relative group
+                  snap-center flex-shrink-0
+                  w-[85vw] sm:w-[75vw] md:w-[320px] lg:w-auto
+                  bg-white border-2 border-transparent
+                  rounded-xl overflow-hidden
+                  p-6 shadow-sm flex flex-col items-center justify-center
+                  transition-all duration-300
+                  hover:border-green-800 hover:-translate-y-2
+                "
+              >
+                {/* TOP HOVER BORDER (ROUNDED & CLIPPED) */}
+                <div
+                  className="
+                    absolute top-0 left-0 right-0
+                    h-[3px] rounded-t-xl
+                    bg-gradient-to-r from-green-800 to-orange-400
+                    scale-x-0 group-hover:scale-x-100
+                    origin-left transition-transform duration-500
+                  "
+                />
+
+                {/* ICON */}
+                <div
+                  className="
+                    bg-green-900 w-16 h-16 rounded-2xl
+                    flex items-center justify-center text-white mb-4
+                    group-hover:bg-orange-500 group-hover:rotate-6
+                    transition-all duration-500
+                  "
+                >
+                  <IconComponent size={32} />
+                </div>
+
+                {/* TITLE */}
+                <h3 className="text-xl font-bold text-center mb-3 group-hover:text-green-800 transition-colors">
+                  {service.title}
+                </h3>
+
+                {/* FEATURES */}
+                <ul className="space-y-2 w-full">
+                  {service.features.map((feature, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-start text-sm text-gray-600"
+                    >
+                      <span className="text-emerald-600 mr-2 mt-0.5">✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
-
-              {/* TITLE */}
-              <h3 className="text-xl font-bold mt-4 text-center group-hover:text-green-800 transition-colors duration-300">
-                {service.title}
-              </h3>
-
-              {/* FEATURES */}
-              <ul className="space-y-2 mt-4 w-full">
-                {service.features.map((feature, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-start text-sm text-gray-600"
-                  >
-                    <span className="text-white mr-3 mt-0.5 w-5 h-5 flex-shrink-0 rounded-full bg-emerald-600 flex items-center justify-center text-[10px]">
-                      ✓
-                    </span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </section>
   );

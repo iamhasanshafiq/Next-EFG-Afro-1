@@ -163,10 +163,12 @@ const HeroSection = ({
             )}
             {btnPrimary || btnSecondary ? (
               <div
-                className={`flex gap-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                  }`}
-                style={{ transitionDelay: '600ms' }}
-              >
+  className={`flex flex-col sm:flex-row gap-4 w-[70%] sm:w-auto transition-all duration-1000 ${
+    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+  }`}
+  style={{ transitionDelay: '600ms' }}
+>
+
                 {btnPrimary && (
                   <button className="px-8 py-3 bg-[#054B2B] text-white rounded-full text-lg font-semibold hover:bg-orange-500 hover:text-white  transition-colors duration-300">
                     {btnPrimary}
@@ -205,7 +207,8 @@ const HeroSection = ({
         )}
         {/* Stats Section - Fade in with stagger */}
         {showStats && (
-          <div className="mt-20 flex justify-center gap-20 text-center">
+         <div className="mt-20 flex flex-col sm:flex-row flex-wrap justify-center gap-10 sm:gap-20 text-center">
+
             <div
               className="transition-all duration-700"
               style={{

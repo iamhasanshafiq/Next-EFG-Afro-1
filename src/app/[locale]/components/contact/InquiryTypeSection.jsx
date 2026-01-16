@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useEffect, useRef, useState } from "react";
 import Card from "../common/Card";
 import {
   MessageCircle,
@@ -7,11 +8,24 @@ import {
   LineChart,
   LifeBuoy,
   HelpCircle,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function InquiryTypeSection() {
   const t = useTranslations("inquiry");
+  const sliderRef = useRef(null);
+
+  // 🔒 HARD HYDRATION FIX
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // ⛔ Prevent hydration mismatch
+  if (!mounted) return null;
 
   const items = [
     {
@@ -44,6 +58,27 @@ export default function InquiryTypeSection() {
     },
   ];
 
+  // 🔹 Mobile: slide exactly ONE card (center)
+  const slideLeft = () => {
+    const card = sliderRef.current?.querySelector(".snap-center");
+    if (!card) return;
+
+    sliderRef.current.scrollBy({
+      left: -(card.offsetWidth + 24),
+      behavior: "smooth",
+    });
+  };
+
+  const slideRight = () => {
+    const card = sliderRef.current?.querySelector(".snap-center");
+    if (!card) return;
+
+    sliderRef.current.scrollBy({
+      left: card.offsetWidth + 24,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section
       dir="ltr"
@@ -72,19 +107,63 @@ export default function InquiryTypeSection() {
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {items.map((it, idx) => (
-            <Card
-              key={idx}
-              icon={it.icon}
-              title={it.title}
-              description={it.description}
-              buttonText={it.buttonText}
-              onButtonClick={() => console.log(`${it.title} clicked`)}
-              bgType={it.bgType}
-            />
-          ))}
+        {/* SLIDER / GRID */}
+        <div className="relative mt-14">
+          {/* LEFT BUTTON (mobile only) */}
+          <button
+            onClick={slideLeft}
+            className="lg:hidden absolute left-0 top-1/2 -translate-y-1/2 z-20
+              bg-white shadow-lg rounded-full p-2
+              hover:bg-green-900 hover:text-white transition"
+          >
+            <ChevronLeft />
+          </button>
+
+          {/* RIGHT BUTTON (mobile only) */}
+          <button
+            onClick={slideRight}
+            className="lg:hidden absolute right-0 top-1/2 -translate-y-1/2 z-20
+              bg-white shadow-lg rounded-full p-2
+              hover:bg-green-900 hover:text-white transition"
+          >
+            <ChevronRight />
+          </button>
+
+          {/* CARDS */}
+          <div
+            ref={sliderRef}
+            dir="ltr"
+            className="
+              flex gap-10 overflow-x-auto scrollbar-hide
+              snap-x snap-mandatory
+              px-[10vw]
+
+              lg:grid lg:grid-cols-4 lg:gap-10
+              lg:px-0 lg:overflow-visible lg:snap-none
+            "
+            style={{ WebkitOverflowScrolling: "touch" }}
+          >
+            {items.map((it, idx) => (
+              <div
+                key={idx}
+                className="
+                  snap-center flex-shrink-0
+                  w-[85vw] sm:w-[70vw] md:w-[320px] lg:w-auto
+                "
+              >
+                <Card
+                  icon={it.icon}
+                  title={it.title}
+                  description={it.description}
+                  buttonText={it.buttonText}
+                  onButtonClick={() =>
+                    console.log(`${it.title} clicked`)
+                  }
+                  bgType={it.bgType}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

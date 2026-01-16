@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { Globe, ChevronDown, Menu, X, User } from "lucide-react";
+import { Globe, ChevronDown, Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Container from "../../container";
 
@@ -16,7 +16,6 @@ const navItems = [
   { key: "Contact", path: "/contact" },
 ];
 
-/* 🔥 FLAGS PNG INSTEAD OF EMOJI */
 const LANGUAGES = [
   { code: "en", label: "EN", flag: "/pngs/Australia.png" },
   { code: "ar", label: "AR", flag: "/pngs/Saudi_Arabia.png" },
@@ -29,11 +28,16 @@ export default function Header() {
   const t = useTranslations("Header");
   const pathname = usePathname();
   const router = useRouter();
+
   const currentLocale = pathname.split("/")[1] || "en";
+  const cleanPath = pathname.replace(/\/$/, "");
 
   const [langOpen, setLangOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const langRef = useRef(null);
+
+  const [showHeader, setShowHeader] = useState(true);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleOutside = (e) => {
@@ -43,6 +47,23 @@ export default function Header() {
     };
     document.addEventListener("click", handleOutside);
     return () => document.removeEventListener("click", handleOutside);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+        setShowHeader(false);
+      } else {
+        setShowHeader(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const changeLanguage = (code) => {
@@ -56,212 +77,223 @@ export default function Header() {
   const isRTL = currentLocale === "ar";
 
   return (
-    <nav className="w-full bg-white shadow-sm relative z-50">
-      <Container>
-        <div
-          className={`h-[78px] flex items-center justify-between ${
-            isRTL ? "flex-row-reverse" : ""
-          }`}
-        >
-          {/* LOGO */}
-          <img
-            src="/images/logo.png"
-            alt="EFG Logo"
-            className="w-16 h-12 object-contain"
-          />
+    <>
+      <div className="h-[78px]" />
 
-          {/* DESKTOP MENU */}
-          <ul
-            className={`hidden lg:flex items-center gap-3 font-medium text-gray-800 ${
+      <nav
+        className={`
+          fixed top-0 left-0 w-full bg-white shadow-sm z-50
+          transition-transform duration-300 ease-in-out
+          ${showHeader ? "translate-y-0" : "-translate-y-full"}
+        `}
+      >
+        <Container>
+          <div
+            className={`h-[78px] flex items-center justify-between ${
               isRTL ? "flex-row-reverse" : ""
             }`}
           >
-            {navItems.map((item) => {
-              const isHome = item.path === "/";
-              const isActive = isHome
-                ? pathname === `/${currentLocale}`
-                : pathname === `/${currentLocale}${item.path}`;
-
-              return (
-                <li key={item.key} className="relative group">
-                  <Link
-                    href={`/${currentLocale}${item.path}`}
-                    className={`relative px-5 py-2 font-medium transition ${
-                      isActive
-                        ? "text-gray-900"
-                        : "hover:text-green-700"
-                    }`}
-                  >
-                    {t(item.key)}
-
-                    <span
-                      className={`
-                        absolute inset-0 bg-slate-200 rounded-full -z-10
-                        transition-opacity duration-300
-                        ${
-                          isActive
-                            ? "opacity-100"
-                            : "opacity-0 group-hover:opacity-100"
-                        }
-                      `}
-                    />
-
-                    <span
-                      className={`
-                        absolute bottom-[-1px] left-6 right-6 h-[2px]
-                        bg-orange-500 rounded-full
-                        transition-transform duration-300
-                        ${
-                          isActive
-                            ? "scale-x-100"
-                            : "scale-x-0 group-hover:scale-x-100"
-                        }
-                      `}
-                    />
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-
-          {/* DESKTOP RIGHT */}
-          <div
-            className={`hidden lg:flex items-center gap-4 ${
-              isRTL ? "flex-row-reverse" : ""
-            }`}
-          >
-            {/* LANGUAGE */}
-            <div className="relative" ref={langRef}>
-              <button
-                onClick={() => setLangOpen(!langOpen)}
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 border hover:border-green-600"
-              >
-                <Globe size={16} className="text-green-700" />
-                {currentLocale.toUpperCase()}
-                <ChevronDown size={16} />
-              </button>
-
-              {langOpen && (
-                <div
-                  className={`absolute ${
-                    isRTL ? "left-0" : "right-0"
-                  } mt-2 bg-white border rounded-lg shadow w-36`}
-                >
-                  {LANGUAGES.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => changeLanguage(lang.code)}
-                      className={`w-full flex items-center gap-2 px-4 py-2 text-sm hover:bg-green-50 ${
-                        currentLocale === lang.code
-                          ? "font-semibold text-green-700"
-                          : ""
-                      }`}
-                    >
-                      <img
-                        src={lang.flag}
-                        alt={lang.label}
-                        className="w-5 h-5 object-contain"
-                      />
-                      {lang.label}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* LOGIN */}
-            <Link
-              href="https://dashboard.efgafromarket.ae/"
-              className="px-6 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-green-700 to-yellow-600 hover:scale-105 transition"
-            >
-              {t("LoginRegister")}
-            </Link>
-          </div>
-
-          {/* MOBILE BUTTON */}
-          <button
-            onClick={() => setMobileOpen(true)}
-            className="lg:hidden h-10 w-10 rounded-full border flex items-center justify-center"
-          >
-            <Menu size={20} />
-          </button>
-        </div>
-      </Container>
-
-      {/* MOBILE MENU */}
-      {mobileOpen && (
-        <>
-          <div
-            className="fixed inset-0 bg-black/30 z-40"
-            onClick={() => setMobileOpen(false)}
-          />
-
-          <div
-            className={`fixed inset-x-4 top-24 bg-white rounded-2xl shadow-xl z-50 p-5 ${
-              isRTL ? "text-right" : "text-left"
-            }`}
-          >
-            <button
-              onClick={() => setMobileOpen(false)}
-              className={`absolute -top-5 ${
-                isRTL ? "left-4" : "right-4"
-              } h-10 w-10 rounded-xl border bg-white flex items-center justify-center`}
-            >
-              <X className="text-orange-500" />
-            </button>
-
             <img
               src="/images/logo.png"
-              alt="logo"
-              className="w-16 mx-auto mb-4"
+              alt="EFG Logo"
+              className="w-25 h-auto object-contain transition-transform duration-300 hover:scale-110"
             />
 
-            {/* MOBILE LINKS */}
-            <div className="grid grid-cols-2 gap-3">
-              {navItems.map((item) => (
-                <Link
-                  key={item.key}
-                  href={`/${currentLocale}${item.path}`}
-                  onClick={() => setMobileOpen(false)}
-                  className={`
-                    relative py-3 rounded-xl text-center font-medium
-                    border-2 border-gray-200 hover:border-gray-400
-                    ${
-                      pathname === `/${currentLocale}${item.path}`
-                        ? "bg-gray-300"
-                        : "bg-gray-50 hover:bg-green-50"
-                    }
-                  `}
+            <ul
+              className={`hidden lg:flex items-center gap-3 font-medium text-gray-800 ${
+                isRTL ? "flex-row-reverse" : ""
+              }`}
+            >
+              {navItems.map((item) => {
+                const isHome = item.path === "/";
+                const isActive = isHome
+                  ? cleanPath === `/${currentLocale}`
+                  : cleanPath === `/${currentLocale}${item.path}`;
+
+                return (
+                  <li key={item.key} className="relative group">
+                    <Link
+                      href={`/${currentLocale}${item.path}`}
+                      className={`relative px-5 py-2 font-medium transition ${
+                        isActive
+                          ? "text-gray-900"
+                          : "hover:text-green-700"
+                      }`}
+                    >
+                      {t(item.key)}
+
+                      <span
+                        className={`
+                          absolute inset-0 rounded-full -z-10
+                          bg-slate-200
+                          transition-opacity duration-300
+                          opacity-0
+                          ${isActive ? "opacity-100" : ""}
+                          lg:group-hover:opacity-100
+                        `}
+                      />
+
+                      <span
+                        className={`
+                          absolute bottom-[-1px] left-6 right-6 h-[2px]
+                          bg-orange-500 rounded-full
+                          transition-transform duration-300 origin-left
+                          scale-x-0
+                          ${isActive ? "scale-x-100" : ""}
+                          lg:group-hover:scale-x-100
+                        `}
+                      />
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+
+            <div
+              className={`hidden lg:flex items-center gap-4 ${
+                isRTL ? "flex-row-reverse" : ""
+              }`}
+            >
+              <div className="relative" ref={langRef}>
+                <button
+                  onClick={() => setLangOpen(!langOpen)}
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 border hover:border-green-600"
                 >
-                  {t(item.key)}
-                </Link>
-              ))}
+                  <Globe size={16} className="text-green-700" />
+                  {currentLocale.toUpperCase()}
+                  <ChevronDown size={16} />
+                </button>
+
+                {langOpen && (
+                  <div
+                    className={`absolute ${
+                      isRTL ? "left-0" : "right-0"
+                    } mt-2 bg-white border rounded-lg shadow w-36`}
+                  >
+                    {LANGUAGES.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => changeLanguage(lang.code)}
+                        className={`w-full flex items-center gap-2 px-4 py-2 text-sm hover:bg-green-50 ${
+                          currentLocale === lang.code
+                            ? "font-semibold text-green-700"
+                            : ""
+                        }`}
+                      >
+                        <img
+                          src={lang.flag}
+                          alt={lang.label}
+                          className="w-5 h-5 object-contain"
+                        />
+                        {lang.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <Link
+                href="https://dashboard.efgafromarket.ae/"
+                className="px-6 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-green-700 to-yellow-600 hover:scale-105 transition"
+              >
+                {t("LoginRegister")}
+              </Link>
             </div>
 
-            {/* MOBILE LANG */}
-            <div className="mt-3 grid grid-cols-5 gap-2">
-              {LANGUAGES.map((lang) => (
-                <button
-                  key={lang.code}
-                  onClick={() => changeLanguage(lang.code)}
-                  className={`py-2 rounded-xl border text-sm flex items-center justify-center gap-1 ${
-                    currentLocale === lang.code
-                      ? "bg-green-100 text-green-700 font-semibold"
-                      : "bg-gray-100"
-                  }`}
-                >
-                  <img
-                    src={lang.flag}
-                    alt={lang.label}
-                    className="w-4 h-4 object-contain"
-                  />
-                  {lang.label}
-                </button>
-              ))}
-            </div>
+            <button
+              onClick={() => setMobileOpen(true)}
+              className="lg:hidden h-10 w-10 rounded-full border flex items-center justify-center"
+            >
+              <Menu size={20} />
+            </button>
           </div>
-        </>
-      )}
-    </nav>
+        </Container>
+
+        {mobileOpen && (
+          <>
+            <div
+              className="fixed inset-0 bg-black/30 z-40"
+              onClick={() => setMobileOpen(false)}
+            />
+
+            <div
+              dir="ltr"
+              className={`fixed inset-x-4 top-24 bg-white rounded-2xl shadow-xl z-50 p-5 ${
+                isRTL ? "text-right" : "text-left"
+              }`}
+            >
+              <button
+                onClick={() => setMobileOpen(false)}
+                className={`absolute -top-5 ${
+                  isRTL ? "left-4" : "right-4"
+                } h-10 w-10 rounded-xl border bg-white flex items-center justify-center`}
+              >
+                <X className="text-orange-500" />
+              </button>
+
+              <img
+                src="/images/logo.png"
+                alt="logo"
+                className="w-25 h-auto mx-auto mb-4"
+              />
+
+              <div className="grid grid-cols-2 gap-3 ltr">
+                {navItems.map((item) => {
+                  const isHome = item.path === "/";
+                  const isActive = isHome
+                    ? cleanPath === `/${currentLocale}`
+                    : cleanPath === `/${currentLocale}${item.path}`;
+
+                  return (
+                    <Link
+                      key={item.key}
+                      href={`/${currentLocale}${item.path}`}
+                      onClick={() => setMobileOpen(false)}
+                      className={`
+                        relative py-3 rounded-xl text-center font-medium
+                        border-2 border-gray-200
+                        ${
+                          isActive
+                            ? "bg-gray-100"
+                            : "bg-gray-50 hover:bg-green-50"
+                        }
+                      `}
+                    >
+                      <span className="relative inline-block">
+                        {t(item.key)}
+                        {isActive && (
+                          <span className="absolute left-0 right-0 -bottom-1 h-[2px] bg-orange-500 rounded-full" />
+                        )}
+                      </span>
+                    </Link>
+                  );
+                })}
+              </div>
+
+              <div className="mt-3 grid grid-cols-5 gap-2 ltr">
+                {LANGUAGES.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => changeLanguage(lang.code)}
+                    className={`py-2 rounded-xl border text-sm flex items-center justify-center gap-1 ${
+                      currentLocale === lang.code
+                        ? "bg-green-100 text-green-700 font-semibold"
+                        : "bg-gray-100"
+                    }`}
+                  >
+                    <img
+                      src={lang.flag}
+                      alt={lang.label}
+                      className="w-4 h-4 object-contain"
+                    />
+                    {lang.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
+      </nav>
+    </>
   );
 }

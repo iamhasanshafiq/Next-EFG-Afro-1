@@ -1,11 +1,31 @@
 "use client";
 
+import React, { useEffect, useRef, useState } from "react";
 import Card from "../common/Card";
-import { Wheat, Cpu, TrendingUp, Trophy, ListFilter } from "lucide-react";
+import {
+  Wheat,
+  Cpu,
+  TrendingUp,
+  Trophy,
+  ListFilter,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function BlogCategories() {
   const t = useTranslations("BlogCategories");
+  const sliderRef = useRef(null);
+
+  // 🔒 HARD HYDRATION FIX
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // ⛔ prevent hydration mismatch
+  if (!mounted) return null;
 
   const categories = [
     {
@@ -38,6 +58,27 @@ export default function BlogCategories() {
     },
   ];
 
+  // 🔹 Mobile: slide exactly ONE card (center)
+  const slideLeft = () => {
+    const card = sliderRef.current?.querySelector(".snap-center");
+    if (!card) return;
+
+    sliderRef.current.scrollBy({
+      left: -(card.offsetWidth + 24),
+      behavior: "smooth",
+    });
+  };
+
+  const slideRight = () => {
+    const card = sliderRef.current?.querySelector(".snap-center");
+    if (!card) return;
+
+    sliderRef.current.scrollBy({
+      left: card.offsetWidth + 24,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="w-full bg-white py-20">
       <div className="max-w-7xl mx-auto px-6">
@@ -59,21 +100,60 @@ export default function BlogCategories() {
           {t("Description")}
         </p>
 
-        {/* Cards – 🔒 LTR LOCK */}
-        <div
-          dir="ltr"
-          className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10"
-        >
-          {categories.map((cat, idx) => (
-            <Card
-              key={idx}
-              icon={cat.icon}
-              title={cat.title}
-              description={cat.description}
-              articles={cat.articles}
-              bgType={cat.bgType}
-            />
-          ))}
+        {/* SLIDER / GRID */}
+        <div className="relative mt-16">
+          {/* LEFT BUTTON (mobile only) */}
+          <button
+            onClick={slideLeft}
+            className="lg:hidden absolute left-0 top-1/2 -translate-y-1/2 z-20
+              bg-white shadow-lg rounded-full p-2
+              hover:bg-green-900 hover:text-white transition"
+          >
+            <ChevronLeft />
+          </button>
+
+          {/* RIGHT BUTTON (mobile only) */}
+          <button
+            onClick={slideRight}
+            className="lg:hidden absolute right-0 top-1/2 -translate-y-1/2 z-20
+              bg-white shadow-lg rounded-full p-2
+              hover:bg-green-900 hover:text-white transition"
+          >
+            <ChevronRight />
+          </button>
+
+          {/* CARDS */}
+          <div
+            ref={sliderRef}
+            dir="ltr"
+            className="
+              flex gap-8 overflow-x-auto scrollbar-hide
+              snap-x snap-mandatory
+              px-[10vw]
+
+              lg:grid lg:grid-cols-4 lg:gap-10
+              lg:px-0 lg:overflow-visible lg:snap-none
+            "
+            style={{ WebkitOverflowScrolling: "touch" }}
+          >
+            {categories.map((cat, idx) => (
+              <div
+                key={idx}
+                className="
+                  snap-center flex-shrink-0
+                  w-[85vw] sm:w-[70vw] md:w-[320px] lg:w-auto
+                "
+              >
+                <Card
+                  icon={cat.icon}
+                  title={cat.title}
+                  description={cat.description}
+                  articles={cat.articles}
+                  bgType={cat.bgType}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

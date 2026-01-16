@@ -1,7 +1,15 @@
 "use client";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useRef, useState } from "react";
-import { Wheat, Apple, Gem, Palette, Cat, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Wheat,
+  Apple,
+  Gem,
+  Palette,
+  Cat,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import CategorySkeleton from "../skeletons/CategorySkeleton";
 import axios from "axios";
 import Container from "../../container";
@@ -20,7 +28,7 @@ function ExploreSection() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const sliderRef = useRef(null); // 🔹 slider ref
+  const sliderRef = useRef(null);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -36,9 +44,10 @@ function ExploreSection() {
             count: item.products_count
               ? `${item.products_count}+ Products`
               : "0+ Products",
-            icon: Object.keys(ICONS_MAP)[
-              index % Object.keys(ICONS_MAP).length
-            ],
+            icon:
+              Object.keys(ICONS_MAP)[
+                index % Object.keys(ICONS_MAP).length
+              ],
           }));
           setCategories(mapped);
         } else {
@@ -61,19 +70,35 @@ function ExploreSection() {
     ) : null;
   };
 
-  // 🔹 Slide exactly ONE card
+  // Mobile slider
   const slideLeft = () => {
     if (!sliderRef.current) return;
-    sliderRef.current.scrollBy({ left: -280, behavior: "smooth" });
+    const card = sliderRef.current.querySelector(".snap-center");
+    if (!card) return;
+
+    sliderRef.current.scrollBy({
+      left: -(card.offsetWidth + 24),
+      behavior: "smooth",
+    });
   };
 
   const slideRight = () => {
     if (!sliderRef.current) return;
-    sliderRef.current.scrollBy({ left: 280, behavior: "smooth" });
+    const card = sliderRef.current.querySelector(".snap-center");
+    if (!card) return;
+
+    sliderRef.current.scrollBy({
+      left: card.offsetWidth + 24,
+      behavior: "smooth",
+    });
   };
 
   if (error) {
-    return <p className="text-center text-red-500 mt-20">{error}</p>;
+    return (
+      <p className="text-center text-red-500 mt-20">
+        {error}
+      </p>
+    );
   }
 
   return (
@@ -103,9 +128,9 @@ function ExploreSection() {
           </p>
         </div>
 
-        {/* 🔹 SLIDER + BUTTONS */}
+        {/* SLIDER + GRID */}
         <div className="relative">
-          {/* LEFT BUTTON (mobile only) */}
+          {/* Mobile arrows */}
           <button
             onClick={slideLeft}
             className="md:hidden absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-2 hover:bg-[#055440] hover:text-white transition"
@@ -113,7 +138,6 @@ function ExploreSection() {
             <ChevronLeft />
           </button>
 
-          {/* RIGHT BUTTON (mobile only) */}
           <button
             onClick={slideRight}
             className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-2 hover:bg-[#055440] hover:text-white transition"
@@ -124,17 +148,25 @@ function ExploreSection() {
           {/* CATEGORIES */}
           <div
             ref={sliderRef}
-            dir="ltr"
             className="
               flex gap-6 overflow-x-auto scrollbar-hide
-              md:grid md:grid-cols-3 lg:grid-cols-5
-              md:overflow-visible
-              px-8
+              snap-x snap-mandatory
+              px-[12vw]
+
+              md:grid md:grid-cols-5
+              md:justify-center
+              md:gap-8
+              md:px-0
+              md:overflow-visible md:snap-none
             "
+            style={{ WebkitOverflowScrolling: "touch" }}
           >
             {loading
               ? Array.from({ length: 5 }).map((_, i) => (
-                  <div key={i} className="min-w-[260px] md:min-w-0">
+                  <div
+                    key={i}
+                    className="snap-center flex-shrink-0 w-[260px]"
+                  >
                     <CategorySkeleton />
                   </div>
                 ))
@@ -142,7 +174,7 @@ function ExploreSection() {
                   <div
                     key={category.id}
                     className="
-                      min-w-[260px] md:min-w-0
+                      snap-center flex-shrink-0 md:w-[230px] w-[250px]
                       bg-white rounded-2xl p-8 shadow-sm
                       transition-all duration-300 ease-out
                       hover:scale-105 cursor-pointer group
@@ -155,7 +187,7 @@ function ExploreSection() {
                     }}
                   >
                     <div
-                      className="flex items-center justify-center w-24 h-24 rounded-xl mb-6 group-hover:shadow-lg transition-shadow duration-300 mx-auto"
+                      className="flex items-center justify-center w-24 h-24 rounded-xl mb-6 mx-auto"
                       style={{ backgroundColor: "#055440" }}
                     >
                       {renderIcon(category.icon)}
