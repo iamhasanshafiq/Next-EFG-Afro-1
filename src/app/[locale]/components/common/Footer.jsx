@@ -13,7 +13,7 @@ import {
   ChevronUp,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Container from "../../container";
+import Image from "next/image";
 
 function Footer() {
   const t = useTranslations("footer");
@@ -50,9 +50,11 @@ function Footer() {
 
               {/* LEFT SECTION */}
               <div className="flex flex-col gap-6 text-left">
-                <img
+                <Image
                   src="/images/logo.png"
                   alt="EFG Afro Market"
+                  width={100}
+                  height={100}
                   className="h-16 w-fit"
                 />
 
@@ -121,7 +123,7 @@ function Footer() {
       {showTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 h-12 w-12 rounded-full bg-[#0B4E3C] text-white flex items-center justify-center shadow-lg hover:opacity-90 transition"
+          className="fixed bottom-6 right-6 h-12 w-12 rounded-full bg-[#0B4E3C] text-white flex items-center justify-center shadow-lg hover:opacity-90 transition z-50 hover:cursor-pointer"
           aria-label="Scroll to top"
         >
           <ChevronUp size={22} />
@@ -133,7 +135,7 @@ function Footer() {
 
 export default Footer;
 
-/* ---------------- Sub Components ---------------- */
+/* ---------------- Sub components ---------------- */
 
 function SocialIcon({ children, label, href }) {
   return (
@@ -142,7 +144,7 @@ function SocialIcon({ children, label, href }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="h-10 w-10 rounded-full border border-[#0B4E3C]/40 bg-white/50 backdrop-blur flex items-center justify-center text-[#0B4E3C] transition-all duration-300 ease-out hover:-translate-y-1 hover:text-white hover:bg-gradient-to-br hover:from-green-900 hover:to-orange-400/80 shadow-sm hover:shadow-lg cursor-pointer"
+      className="h-10 w-10 rounded-full border border-[#0B4E3C]/40 bg-white/50 backdrop-blur flex items-center justify-center text-[#0B4E3C] transition-all duration-300 ease-out hover:-translate-y-1 hover:text-white hover:bg-linear-to-br hover:from-green-900 hover:to-orange-400/80 shadow-sm hover:shadow-lg cursor-pointer"
     >
       {children}
     </a>

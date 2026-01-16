@@ -5,7 +5,7 @@ import {
   OurExpertise,
   SpecializedSolution,
   HeroSection
-} from "@/app/[locale]/Components/index.js";
+} from "@/app/[locale]/components/index.js";
 import { Settings } from "lucide-react";
 import { useTranslations } from "next-intl";
 
