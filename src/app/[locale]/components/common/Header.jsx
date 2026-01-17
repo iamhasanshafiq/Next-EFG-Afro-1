@@ -89,9 +89,8 @@ export default function Header() {
       >
         <Container>
           <div
-            className={`h-[78px] flex items-center justify-between ${
-              isRTL ? "flex-row-reverse" : ""
-            }`}
+            className={`h-[78px] flex items-center justify-between ${isRTL ? "flex-row-reverse" : ""
+              }`}
           >
             <img
               src="/images/logo.png"
@@ -100,9 +99,8 @@ export default function Header() {
             />
 
             <ul
-              className={`hidden lg:flex items-center gap-3 font-medium text-gray-800 ${
-                isRTL ? "flex-row-reverse" : ""
-              }`}
+              className={`hidden lg:flex items-center gap-3 font-medium text-gray-800 ${isRTL ? "flex-row-reverse" : ""
+                }`}
             >
               {navItems.map((item) => {
                 const isHome = item.path === "/";
@@ -114,11 +112,10 @@ export default function Header() {
                   <li key={item.key} className="relative group">
                     <Link
                       href={`/${currentLocale}${item.path}`}
-                      className={`relative px-5 py-2 font-medium transition ${
-                        isActive
-                          ? "text-gray-900"
-                          : "hover:text-green-700"
-                      }`}
+                      className={`relative px-5 py-2 font-medium transition ${isActive
+                        ? "text-gray-900"
+                        : "hover:text-green-700"
+                        }`}
                     >
                       {t(item.key)}
 
@@ -150,35 +147,49 @@ export default function Header() {
             </ul>
 
             <div
-              className={`hidden lg:flex items-center gap-4 ${
-                isRTL ? "flex-row-reverse" : ""
-              }`}
+              className={`hidden lg:flex items-center gap-4 ${isRTL ? "flex-row-reverse" : ""
+                }`}
             >
-              <div className="relative" ref={langRef}>
-                <button
-                  onClick={() => setLangOpen(!langOpen)}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 border hover:border-green-600"
-                >
-                  <Globe size={16} className="text-green-700" />
-                  {currentLocale.toUpperCase()}
-                  <ChevronDown size={16} />
-                </button>
+              <div
+                className="relative"
+                ref={langRef}
+                style={{ direction: "ltr", unicodeBidi: "isolate" }}
+              >
+
+               <button
+  onClick={() => setLangOpen(!langOpen)}
+  suppressHydrationWarning
+  className="px-4 py-2 rounded-full bg-gray-100 border hover:border-green-600"
+>
+  <span
+    dir="ltr"
+    className="flex flex-row items-center gap-2"
+  >
+    <Globe size={16} className="text-green-700" />
+    {currentLocale.toUpperCase()}
+    <ChevronDown size={16} />
+  </span>
+</button>
+
 
                 {langOpen && (
-                  <div
-                    className={`absolute ${
-                      isRTL ? "left-0" : "right-0"
-                    } mt-2 bg-white border rounded-lg shadow w-36`}
-                  >
+                  <div className="absolute right-0 mt-2 bg-white border rounded-lg shadow w-36">
+
                     {LANGUAGES.map((lang) => (
                       <button
                         key={lang.code}
                         onClick={() => changeLanguage(lang.code)}
-                        className={`w-full flex items-center gap-2 px-4 py-2 text-sm hover:bg-green-50 ${
-                          currentLocale === lang.code
-                            ? "font-semibold text-green-700"
+                        suppressHydrationWarning
+                        className={`w-full flex items-center gap-2 px-4 py-2 text-sm
+    hover:bg-gray-200  border-b border-gray-400
+    ${currentLocale === lang.code
+                            ? "bg-gray-200  font-semibold text-grar-800"
                             : ""
-                        }`}
+                          }
+    ${lang.code === LANGUAGES[0].code ? "rounded-t-lg" : ""}
+    ${lang.code === LANGUAGES[LANGUAGES.length - 1].code ? "rounded-b-lg" : ""}
+  `}
+                        style={{ direction: "ltr" }}
                       >
                         <img
                           src={lang.flag}
@@ -218,15 +229,13 @@ export default function Header() {
 
             <div
               dir="ltr"
-              className={`fixed inset-x-4 top-24 bg-white rounded-2xl shadow-xl z-50 p-5 ${
-                isRTL ? "text-right" : "text-left"
-              }`}
+              className={`fixed inset-x-4 top-24 bg-white rounded-2xl shadow-xl z-50 p-5 ${isRTL ? "text-right" : "text-left"
+                }`}
             >
               <button
                 onClick={() => setMobileOpen(false)}
-                className={`absolute -top-5 ${
-                  isRTL ? "left-4" : "right-4"
-                } h-10 w-10 rounded-xl border bg-white flex items-center justify-center`}
+                className={`absolute -top-5 ${isRTL ? "left-4" : "right-4"
+                  } h-10 w-10 rounded-xl border bg-white flex items-center justify-center`}
               >
                 <X className="text-orange-500" />
               </button>
@@ -252,10 +261,9 @@ export default function Header() {
                       className={`
                         relative py-3 rounded-xl text-center font-medium
                         border-2 border-gray-200
-                        ${
-                          isActive
-                            ? "bg-gray-100"
-                            : "bg-gray-50 hover:bg-green-50"
+                        ${isActive
+                          ? "bg-gray-100"
+                          : "bg-gray-50 hover:bg-green-50"
                         }
                       `}
                     >
@@ -275,11 +283,10 @@ export default function Header() {
                   <button
                     key={lang.code}
                     onClick={() => changeLanguage(lang.code)}
-                    className={`py-2 rounded-xl border text-sm flex items-center justify-center gap-1 ${
-                      currentLocale === lang.code
-                        ? "bg-green-100 text-green-700 font-semibold"
-                        : "bg-gray-100"
-                    }`}
+                    className={`py-2 rounded-xl border text-sm flex items-center justify-center gap-1 ${currentLocale === lang.code
+                      ? "bg-gray-200 border-2 border-gray-400 font-semibold text-grar-800"
+                      : "bg-gray-100"
+                      }`}
                   >
                     <img
                       src={lang.flag}

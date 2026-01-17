@@ -1,3 +1,4 @@
+// ExploreProducts.jsx
 "use client";
 
 import { Eye } from "lucide-react";
@@ -11,7 +12,6 @@ function ExploreProducts() {
     <div className="flex justify-center">
       <Container>
         <div
-          suppressHydrationWarning
           className="
             relative
             w-[90%] md:w-full
@@ -28,9 +28,8 @@ function ExploreProducts() {
           {/* overlay */}
           <div className="absolute inset-0 bg-green-900/70 rounded-3xl"></div>
 
-          {/* 🔒 LAYOUT LOCK */}
+          {/* MAIN CONTENT */}
           <div
-            dir="ltr"
             className="
               relative z-10
               flex flex-col md:flex-row
@@ -41,25 +40,31 @@ function ExploreProducts() {
               py-8 md:py-0
               min-h-[320px] md:min-h-0
             "
+            style={{
+              direction: "ltr",        // ✅ hydration-safe
+              unicodeBidi: "isolate",  // ✅ RTL page se isolate
+            }}
           >
             {/* TEXT */}
-            <div className="w-full md:w-2/3 flex flex-col justify-center items-start">
-              <h1 className="text-white text-2xl md:text-3xl font-bold text-left">
+            <div className="w-full md:w-2/3 flex flex-col justify-center items-start text-left">
+              <h1 className="text-white text-2xl md:text-3xl font-bold">
                 {t("ExploreProductsTitle")}
               </h1>
 
-              <p className="text-white text-base md:text-lg font-medium mt-3 text-left">
+              <p className="text-white text-base md:text-lg font-medium mt-3">
                 {t("ExploreProductsDescription")}
               </p>
             </div>
 
-            {/* BUTTON (ALWAYS RIGHT) */}
+            {/* BUTTON */}
             <div
-              dir="ltr"
               className="w-full md:w-1/3 flex justify-center md:justify-end items-center"
+              style={{
+                direction: "ltr",
+                unicodeBidi: "isolate",
+              }}
             >
               <button
-                suppressHydrationWarning
                 className="
                   flex items-center justify-center gap-2
                   text-base md:text-lg

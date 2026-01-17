@@ -17,65 +17,65 @@ function OurStory() {
   const t = useTranslations("OurStory");
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-14 flex flex-col md:flex-row rtl:md:flex-row-reverse items-center justify-center gap-12">
-
-      
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-14 flex flex-col md:flex-row rtl:md:flex-row-reverse items-center justify-center gap-12 overflow-x-hidden">
       {/* LEFT — TEXT */}
       <div className="w-full md:w-1/2 flex flex-col gap-5 text-left items-start rtl:items-end">
+        <div className=" w-fit px-6 py-2 bg-gray-200 text-green-900 rounded-full shadow font-medium ">
+          ⭐ {t("OurStory")}
+        </div>
 
+        <h1 className="text-4xl font-bold">
+          {t("OurStoryTitle")}
+          <span className="text-transparent bg-gradient-to-r from-green-900 to-amber-600 bg-clip-text">
+            {t("OurStoryHighlight")}
+          </span>
+          {t("OurStoryTitle1")}
+        </h1>
 
-  <div className=" w-fit px-6 py-2 bg-gray-200 text-green-900 rounded-full shadow font-medium ">
-  ⭐ {t("OurStory")}
-</div>
+        <p className="text-gray-600 max-w-xl">
+          {t("OurStoryDescription")}
+        </p>
 
+        <div className="flex flex-col gap-6 mt-4">
+          <div className="flex items-center gap-3 ltr:flex-row rtl:flex-row-reverse">
+            <Globe className="text-green-900" />
+            {t("DigitalGatewaytoAfrica")}
+          </div>
 
-  <h1 className="text-4xl font-bold">
-    {t("OurStoryTitle")}
-    <span className="text-transparent bg-gradient-to-r from-green-900 to-amber-600 bg-clip-text">
-      {t("OurStoryHighlight")}
-    </span>
-    {t("OurStoryTitle1")}
-  </h1>
+          <div className="flex items-center gap-3 ltr:flex-row rtl:flex-row-reverse">
+            <Handshake className="text-green-900" />
+            {t("EmpoweringLocalProducers")}
+          </div>
 
-  <p className="text-gray-600 max-w-xl">
-    {t("OurStoryDescription")}
-  </p>
+          <div className="flex items-center gap-3 ltr:flex-row rtl:flex-row-reverse">
+            <Rocket className="text-green-900" />
+            {t("FutureReadyCommerce")}
+          </div>
+        </div>
 
-  <div className="flex flex-col gap-6 mt-4">
-    <div className="flex items-center gap-3 ltr:flex-row rtl:flex-row-reverse">
-      <Globe className="text-green-900" />
-      {t("DigitalGatewaytoAfrica")}
-    </div>
+        <div className="flex gap-5 mt-6 ltr:justify-start rtl:justify-end">
+          <button className="w-40 py-4 rounded-3xl bg-green-900 text-white flex items-center gap-2 ltr:flex-row rtl:flex-row-reverse justify-center font-semibold transition hover:bg-amber-600 hover:scale-105">
+            <MessageCircle /> {t("LetsTalk")}
+          </button>
 
-    <div className="flex items-center gap-3 ltr:flex-row rtl:flex-row-reverse">
-      <Handshake className="text-green-900" />
-      {t("EmpoweringLocalProducers")}
-    </div>
-
-    <div className="flex items-center gap-3 ltr:flex-row rtl:flex-row-reverse">
-      <Rocket className="text-green-900" />
-      {t("FutureReadyCommerce")}
-    </div>
-  </div>
-
-  <div className="flex gap-5 mt-6 ltr:justify-start rtl:justify-end">
-    <button className="w-40 py-4 rounded-3xl bg-green-900 text-white flex items-center gap-2 ltr:flex-row rtl:flex-row-reverse justify-center font-semibold transition hover:bg-amber-600 hover:scale-105">
-      <MessageCircle /> {t("LetsTalk")}
-    </button>
-
-    <button className="w-40 py-4 rounded-3xl border border-green-900 text-green-900 flex items-center gap-2 ltr:flex-row rtl:flex-row-reverse justify-center font-semibold transition hover:bg-green-900 hover:text-white hover:scale-105">
-      <ArrowDown /> {t("LearnMore")}
-    </button>
-  </div>
-</div>
-
+          <button className="w-40 py-4 rounded-3xl border border-green-900 text-green-900 flex items-center gap-2 ltr:flex-row rtl:flex-row-reverse justify-center font-semibold transition hover:bg-green-900 hover:text-white hover:scale-105">
+            <ArrowDown /> {t("LearnMore")}
+          </button>
+        </div>
+      </div>
 
       {/* RIGHT — IMAGE (LOCKED) */}
       <div
         dir="ltr"
-        className="w-full md:w-1/2 relative pr-16"
+        className="w-full md:w-1/2 relative pr-0 md:pr-16 overflow-x-hidden md:overflow-visible"
+
+        style={{
+          direction: "ltr",
+          unicodeBidi: "isolate",
+        }}
       >
-        <div className="w-full h-[500px] overflow-hidden rounded-xl">
+        {/* 👇 ONLY THIS LINE CHANGED (responsive overflow) */}
+        <div className="w-full h-[500px] overflow-hidden md:overflow-visible rounded-xl">
           <img
             src={WorldImg}
             alt=""
@@ -98,7 +98,7 @@ function OurStory() {
           </p>
         </div>
 
-        <div className="absolute top-1/2 left-[-10%] -translate-y-1/2 bg-white border rounded-xl shadow p-3 flex gap-3 animate-bounceSlow">
+        <div className="absolute top-1/2 left-0 md:left-[-10%] -translate-y-1/2 bg-white border rounded-xl shadow p-3 flex gap-3 animate-bounceSlow">
           <Globe className="text-green-700" />
           <p className="font-semibold">
             {t("Countries")}

@@ -182,7 +182,7 @@ function OurProducts() {
             <SearchSkeleton />
           ) : (
             <div className="w-full bg-white flex flex-wrap items-center justify-center p-3 rounded-2xl border border-gray-200 shadow-sm">
-              <div className="w-full md:w-[90%] flex items-center gap-3">
+              <div className="w-full md:w-[90%] flex flex-col md:flex-row items-center gap-3">
                 <div className="flex items-center gap-2 w-full border border-gray-300 rounded-xl px-4 py-3 focus-within:ring-2 focus-within:ring-green-700">
                   <Search className="text-gray-400" size={18} />
                   <input
@@ -197,7 +197,7 @@ function OurProducts() {
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="p-3 w-[18%]  bg-gray-200 border-2 border-gray-400 text-green-900 hover:bg-orange-500 hover:text-white rounded-xl flex items-center justify-center gap-2 transition"
+                  className="p-3 font-medium  bg-gray-200 border-2 border-gray-400 text-gray-900 hover:bg-orange-500 hover:text-white rounded-xl flex items-center justify-center gap-2 transition"
                 >
                   <RotateCcw size={18} /> {t("ProductsReset")}
                 </button>

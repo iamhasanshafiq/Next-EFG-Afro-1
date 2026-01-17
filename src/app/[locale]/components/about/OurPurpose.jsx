@@ -48,7 +48,7 @@ function OurPurpose() {
   };
 
   return (
-    <section className="w-full py-20 bg-gray-50">
+    <section className="w-full py-20 bg-gray-50 overflow-x-hidden">
       {/* 🔹 Hover animation */}
       <style>{`
         @keyframes smoothBounce {
@@ -117,7 +117,11 @@ function OurPurpose() {
                 lg:grid lg:grid-cols-2 lg:gap-8
                 lg:overflow-visible lg:snap-none
               "
-              style={{ WebkitOverflowScrolling: "touch" }}
+              style={{
+                WebkitOverflowScrolling: "touch",
+                direction: "ltr",          // ✅ ADDED (fix RTL flip)
+                unicodeBidi: "isolate",    // ✅ ADDED (isolate from RTL tree)
+              }}
             >
               {/* MISSION */}
               <div
@@ -126,6 +130,7 @@ function OurPurpose() {
                   w-[85vw] sm:w-[70vw] md:w-[60vw]
                   lg:w-auto
                   p-6 md:p-8
+                  force-left
                 "
               >
                 <div className="flex items-center mb-4">
@@ -163,6 +168,7 @@ function OurPurpose() {
                   w-[85vw] sm:w-[70vw] md:w-[60vw]
                   lg:w-auto
                   p-6 md:p-8
+                  force-left
                 "
               >
                 <div className="flex items-center mb-4">

@@ -40,7 +40,8 @@ function OurFoundation() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section className="py-16 md:py-24 bg-gray-50 overflow-x-hidden">
+      {/* ↑ ADDED overflow-x-hidden (page overflow fix) */}
       <Container>
         {/* HEADER */}
         <div className="text-center mb-6">
@@ -90,7 +91,16 @@ function OurFoundation() {
                 md:grid md:grid-cols-4 md:gap-6
                 md:overflow-visible md:snap-none
               "
-              style={{ WebkitOverflowScrolling: "touch" }}
+              style={{
+                WebkitOverflowScrolling: "touch",
+
+                /* ✅ ADDED — RTL isolation (cards seedhe) */
+                direction: "ltr",
+                unicodeBidi: "isolate",
+
+                /* ✅ ADDED — px-[15vw] override (overflow fix) */
+                paddingInline: "7vw",
+              }}
             >
               {/* EACH CARD WRAPPED (DO NOT TOUCH Card.jsx) */}
               <div className="snap-center flex-shrink-0 w-[280px] sm:w-[300px] md:w-auto">
