@@ -1,6 +1,6 @@
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
-import { Header, Footer } from "@/app/[locale]/Components";
+import { Header, Footer } from "@/app/[locale]/components";
 
 const SUPPORTED_LOCALES = ["en", "ar", "fr", "es", "zh"];
 

@@ -8,7 +8,7 @@ import {
   ExploreSection,
   ProductSection,
   WhyChooseUs,
-} from "@/app/[locale]/Components";
+} from "@/app/[locale]/components";
 
 import NewsLetter from "@/app/[locale]/components/home/NewsLetter";
 

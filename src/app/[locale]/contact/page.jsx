@@ -1,10 +1,10 @@
 "use client";
 
-import HeroSection from "../Components/common/HeroSection";
-import InquiryTypeSection from "../Components/contact/InquiryTypeSection";
-import ContactInfoSection from "../Components/contact/ContactInfoSection";
-import FAQSection from "../Components/contact/FAQSection";
-import GeneralInquiryForm from "../Components/contact/GeneralInquiryForm";
+import HeroSection from "../components/common/HeroSection";
+import InquiryTypeSection from "../components/contact/InquiryTypeSection";
+import ContactInfoSection from "../components/contact/ContactInfoSection";
+import FAQSection from "../components/contact/FAQSection";
+import GeneralInquiryForm from "../components/contact/GeneralInquiryForm";
 import { useTranslations, useLocale } from "next-intl";
 
 function Contact() {
