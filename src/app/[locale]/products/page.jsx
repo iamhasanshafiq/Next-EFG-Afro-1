@@ -1,6 +1,6 @@
 "use client";
 
-import { HeroSection, ExploreCategories, NewsLetter, OurProducts } from "@/app/[locale]/components";
+import { HeroSection, ExploreCategories, NewsLetter, OurProducts } from "@/app/[locale]/Components";
 import { useTranslations } from "next-intl";
 
 function Products() {

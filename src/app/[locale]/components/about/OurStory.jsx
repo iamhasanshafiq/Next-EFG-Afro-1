@@ -75,13 +75,17 @@ function OurStory() {
         }}
       >
         {/* 👇 ONLY THIS LINE CHANGED (responsive overflow) */}
-        <div className="w-full h-[500px] overflow-hidden md:overflow-visible rounded-xl">
-          <img
-            src={WorldImg}
-            alt=""
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-          />
-        </div>
+      {/* IMAGE WRAPPER — SIZE LOCKED */}
+<div className="relative w-full h-[500px] overflow-hidden rounded-xl">
+  <img
+  src={WorldImg}
+  alt=""
+  className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-110 transform-gpu will-change-transform origin-center"
+/>
+
+
+</div>
+
 
         <div className="absolute bottom-6 left-6 text-white max-w-[70%]">
           <p className="text-2xl font-semibold">

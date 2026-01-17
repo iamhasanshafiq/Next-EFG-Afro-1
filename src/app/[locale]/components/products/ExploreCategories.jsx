@@ -96,15 +96,8 @@ function ExploreCategories() {
           {/* CATEGORY CARDS */}
           <div
             ref={sliderRef}
-            className="
-              flex gap-6 overflow-x-auto scrollbar-hide
-              snap-x snap-mandatory
-              px-[12vw]
+            className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory px-[12vw] sm:flex-wrap sm:justify-center sm:overflow-visible sm:snap-none sm:px-0"
 
-              sm:flex-wrap sm:justify-center
-              sm:overflow-visible sm:snap-none
-              sm:px-0
-            "
             style={{ WebkitOverflowScrolling: "touch" }}
           >
             {categories.length === 0
